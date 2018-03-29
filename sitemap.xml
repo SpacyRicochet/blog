@@ -4303,6 +4303,15 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>https://ashfurrow.com/blog/coding-interview-take-home-challenges/</loc>
+    <lastmod>2018-03-29T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <image:image>
+      <image:loc>https://ashfurrow.com/img/blog/coding-interview-take-home-challenges/background.jpg</image:loc>
+    </image:image>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://ashfurrow.com/blog/react-native-starter-resources/</loc>
     <lastmod>2018-03-29T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
