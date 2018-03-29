@@ -14,7 +14,7 @@
 
 &lt;p&gt;&lt;blockquote class="twitter-tweet" data-lang="en"&gt;&lt;p lang="en" dir="ltr"&gt;Artsy is reviewing its engineering hiring practices and I&amp;rsquo;m reminded of the take-home challenge I got when I interviewed 4 years ago:&lt;br&gt;&lt;br&gt;&amp;ldquo;Here&amp;rsquo;s an ObjC class we want to open source. Create a repo, basic tests, CI, and a good readme.&amp;rdquo;&lt;br&gt;&lt;br&gt;It&amp;rsquo;s still up: &lt;a href="https://t.co/bsQKgAXSoO"&gt;https://t.co/bsQKgAXSoO&lt;/a&gt;&lt;/p&gt;&amp;mdash; Ash Furrow (or is it?) (it is.) (@ashfurrow) &lt;a href="https://twitter.com/ashfurrow/status/979355315085955072?ref_src=twsrc%5Etfw"&gt;March 29, 2018&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src="https://platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt; &lt;/p&gt;
 
-&lt;p&gt;Take-home challenges are better than evaluating coding skills during an interview because they more accurately reflect the environment a coder will be working in. In my opinion, they only valid in-person coding challenges are ones where the interviewer pairs with the candidate and they work together. But I digress.&lt;/p&gt;
+&lt;p&gt;Take-home challenges are better than evaluating coding skills during an interview because they more accurately reflect the environment a coder will be working in. In my opinion, the only valid in-person coding challenges are ones where the interviewer pairs with the candidate and they work together. But I digress.&lt;/p&gt;
 
 &lt;p&gt;The developer I&amp;rsquo;m mentoring got one of these challenges and it was about as good a challenge as you could get. It had:&lt;/p&gt;
 
