@@ -944,7 +944,11 @@ ga('send', 'pageview');</script><noscript><link href="/css/all.css" rel="stylesh
 </li>
 </ul></div>
 </div></nav><header class="intro-header" style="background-image: url('/img/backgrounds/default.jpg');"><div class="header-dimmer"></div>
-<div class="container"><div class="row"><div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1"><div class="post-heading"><h1>Objective-C Memory Deallocation Advice</h1></div></div></div></div></header><div class="container">
+<div class="container"><div class="row"><div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1"><div class="post-heading">
+<h1>Objective-C Memory Deallocation Advice</h1>
+<hr class="small">
+<span class="subheading">October  7, 2011</span>
+</div></div></div></div></header><div class="container">
 <article><div class="row"><div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
 <p>Hey iOS nerd friends, I need your help. I fetched, store, and display models to the use in batches of twelve. A batch is represented by an NSArray instance and is stored in a cache which responds to low memory warnings by clearing out the batches no currently in use. The models themselves form a doubly-linked list (ie: each one has an __unsafe_unretained property to each previous and next). I navigate through the models this way sometimes, and through the “batches” way others.</p>
 
@@ -988,7 +992,7 @@ ga('send', 'pageview');</script><noscript><link href="/css/all.css" rel="stylesh
 
 <p></p>
 <hr>
-<span class="meta">Posted on October  7, 2011</span>
+<span class="meta"><a href="https://github.com/ashfurrow/blog/blob/master/source/blog/2011-10-07-objective-c-memory-deallocation-advice.html.markdown">Please submit typo corrections on GitHub</a></span>
 </div></div></article><div class="row"><div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
 <hr>
 <ul class="pager article_pager">
