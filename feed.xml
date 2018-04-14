@@ -4,10 +4,36 @@
   <id>https://ashfurrow.com/blog</id>
   <link href="https://ashfurrow.com/"/>
   <link href="https://ashfurrow.com/feed.xml" rel="self"/>
-  <updated>2018-03-29T20:24:22+00:00</updated>
+  <updated>2018-04-14T15:28:26+00:00</updated>
   <author>
     <name>Ash Furrow</name>
   </author>
+  <entry>
+    <title>Removing Google Analytics</title>
+    <link rel="alternate" href="https://ashfurrow.com/blog/removing-google-analytics/"/>
+    <id>https://ashfurrow.com/blog/removing-google-analytics/</id>
+    <published>2018-04-14T15:28:26+00:00</published>
+    <updated>2018-04-14T15:28:26+00:00</updated>
+    <author>
+      <name>Ash Furrow</name>
+    </author>
+    <content type="html">&lt;p&gt;I have been using Google Analytics on my website for nearly its entire existence. Back when it was hosted on Squarespace. Back when it was a Wordpress server. Back when it was served over iWeb.&lt;/p&gt;
+
+&lt;p&gt;And I used to really care about the data. I would frequently check to see how many visits my site got. At one point, I even &lt;a href="https://ashfurrow.com/blog/removing-ads/"&gt;served ads&lt;/a&gt;. The data &lt;em&gt;mattered&lt;/em&gt; to me. I &lt;em&gt;cared&lt;/em&gt; about it.&lt;/p&gt;
+
+&lt;p&gt;But that was a long time ago. I haven&amp;rsquo;t actually checked my analytics in&amp;hellip; gosh I don&amp;rsquo;t know how long. I can&amp;rsquo;t remember it. And I haven&amp;rsquo;t &lt;em&gt;done&lt;/em&gt; anything with the data for a &lt;em&gt;long&lt;/em&gt; time.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;
+
+&lt;p&gt;Then I saw this:&lt;/p&gt;
+
+&lt;p&gt;&lt;blockquote class="twitter-tweet" data-lang="en"&gt;&lt;p lang="en" dir="ltr"&gt;We’ve been using Google Analytics on the &lt;a href="https://twitter.com/CocoaPods?ref_src=twsrc%5Etfw"&gt;@CocoaPods&lt;/a&gt; website for 6 years, but we stopped getting much value from it a few years ago.&lt;br&gt;&lt;br&gt;As of today, there is no more tracking on the site: &lt;a href="https://t.co/4dbrEHjw1B"&gt;https://t.co/4dbrEHjw1B&lt;/a&gt;&lt;/p&gt;&amp;mdash; let {orta} = therox (@orta) &lt;a href="https://twitter.com/orta/status/980054309751676928?ref_src=twsrc%5Etfw"&gt;March 31, 2018&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src="https://platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt; &lt;/p&gt;
+
+&lt;p&gt;And it made me wonder: should I be collecting data on visitors to my blog? Does it help me? Who &lt;em&gt;does&lt;/em&gt; it help? Who might it hurt?&lt;/p&gt;
+
+&lt;p&gt;I didn&amp;rsquo;t have satisfying answers to these questions, so &lt;a href="https://github.com/ashfurrow/blog/commit/75a6ca33822613df1c46218b983d6491a4d52349"&gt;I have removed Google Analytics tracking from ashfurrow.com&lt;/a&gt;.&lt;/p&gt;
+</content>
+  </entry>
   <entry>
     <title>Coding Interview Take-Home Challenges</title>
     <link rel="alternate" href="https://ashfurrow.com/blog/coding-interview-take-home-challenges/"/>
@@ -444,82 +470,6 @@ Synergy is when a group behaves in a way not predicted by the behaviour of its c
 &lt;hr&gt;
 
 &lt;p&gt;If you want to track your mood with software, you have a few options. There&amp;rsquo;s the app I&amp;rsquo;m using that I linked to earlier, as well as &lt;a href="https://expo.io/@kkemple/hwyd"&gt;HWYD&lt;/a&gt;, detailed in &lt;a href="https://medium.com/@kurtiskemple/introducing-hwyd-an-app-for-graphing-depression-442a508c2016"&gt;this awesome blog post&lt;/a&gt; and is &lt;a href="https://github.com/kkemple/hwyd"&gt;also open source&lt;/a&gt;.&lt;/p&gt;
-</content>
-  </entry>
-  <entry>
-    <title>Progress and Pianos</title>
-    <link rel="alternate" href="https://ashfurrow.com/blog/progress-and-pianos/"/>
-    <id>https://ashfurrow.com/blog/progress-and-pianos/</id>
-    <published>2018-01-29T00:59:07+00:00</published>
-    <updated>2018-01-29T00:59:07+00:00</updated>
-    <author>
-      <name>Ash Furrow</name>
-    </author>
-    <content type="html">&lt;p&gt;For over a year now, I have been &lt;a href="https://ashfurrow.com/blog/learning-guitar/"&gt;learning guitar&lt;/a&gt;. And it&amp;rsquo;s been going great, but also not great. I enjoy guitar, but I am still very much &lt;em&gt;learning&lt;/em&gt; guitar. I&amp;rsquo;m not proficient in the styles I want to be. And, I have plateaued. There are songs I listen to, &lt;em&gt;want&lt;/em&gt; to learn, but can&amp;rsquo;t. Not because the songs are too advanced, but because of &lt;em&gt;me&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;I&amp;rsquo;ve been &lt;a href="https://ashfurrow.com/blog/proprioception/"&gt;struggling&lt;/a&gt; with depression since September, which contributes to the rut I find myself in on guitar. Depression has a way of magnifying challenges, and so the challenges of mastering the skills necessary to learn new songs are magnified. Moreover, the &lt;em&gt;joy&lt;/em&gt; of learning is mostly lost.&lt;/p&gt;
-
-&lt;p&gt;Luckily I&amp;rsquo;m improving! I really am, things are better and still improving – but after a few months of this kind of avoidance, one naturally develops habits. I got in the &lt;em&gt;habit&lt;/em&gt; of avoiding guitar, which is now something I need to break. But, once again, that&amp;rsquo;s a challenge that is being magnified.&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;
-
-&lt;hr&gt;
-
-&lt;p&gt;For as long as the Artsy Auctions team has existed, we have talked about getting a piano for the office. Not a &lt;em&gt;real&lt;/em&gt; piano of course, a digital one. One with nice weighted keys. We could pool our money and spend – maybe $500? – on a piano, connect some headphones so only the player will hear it, and put it somewhere in the office.&lt;/p&gt;
-
-&lt;p&gt;How nice would it be to have a piano just &lt;em&gt;available&lt;/em&gt; at the office? Stuck on a problem? Frustrated with something? Bored at lunch? Step away for a few minutes&amp;hellip; 𝓉𝑜 𝓉𝒽𝑒 𝓅𝒾𝒶𝓃𝑜.&lt;/p&gt;
-
-&lt;p&gt;We talked about it for well over a year, when last fall I finally took action on it. Pooling money and buying the piano is the easy part; the biggest dependency of my &lt;em&gt;Office Piano&lt;/em&gt; OmniFocus project was &lt;em&gt;Get Permission from Ops&lt;/em&gt;. Does Artsy have enough space in the office? Will we &lt;em&gt;continue&lt;/em&gt; to have enough space? Where will it go? Will it be disruptive to Artsy colleagues? I scouted out some prospective locations for the piano, considered logistics, and sent a proposal to Artsy&amp;rsquo;s Ops team.&lt;/p&gt;
-
-&lt;p&gt;It took some time to get a response, but eventually they gave us tentative permission! Ops were very open to the idea in principle, but naturally had some questions. We went back and forth over Slack for weeks before I happened to bump into a colleague on the Ops team. I asked about the state of their team&amp;rsquo;s discussion about the piano and, turns out, the Ops team was busy opening Artsy&amp;rsquo;s new London office, so (duh!) they were pretty busy. The piano just hadn&amp;rsquo;t been top-of-discussion while the team was split across continents. Even still, by talking with my colleague for two minutes we clarified all of the outstanding details. Face-to-face had accomplished in minutes what weeks of Slack could not in weeks.&lt;/p&gt;
-
-&lt;p&gt;2017 ended with a note from the colleague I&amp;rsquo;d briefly chatted with. Ops had officially given the thumbs-up on our office piano plan! The rest was up to us.&lt;/p&gt;
-
-&lt;hr&gt;
-
-&lt;p&gt;You probably don&amp;rsquo;t know this about me because it&amp;rsquo;s never been a part of my adult life, but I played piano &lt;em&gt;daily&lt;/em&gt; from ages 11 to 18.&lt;/p&gt;
-
-&lt;p&gt;I had to ask my parents, repeatedly and for what felt like forever, to get a piano. Piano&amp;rsquo;s aren&amp;rsquo;t exactly cheap, or even easy to actually buy. And so, I was given a&amp;hellip; well, I don&amp;rsquo;t remember what they were called but I thought of them as tests. These were characteristic of my childhood: demonstrate the responsibility necessary to earn a privilege.&lt;/p&gt;
-
-&lt;p&gt;Kids in the fifth grade of my elementary school all learn the recorder together, and my parents bought me lessons from a good family friend and neighbour, &lt;a href="http://thedowntownbluesband.com/bios/index.html#lloydbragdon"&gt;Lloyd&lt;/a&gt;. He ran a music store out of his garage across the road and he was my first formal music teacher. Lloyd was key to my entire musical education, but especially so in grade five.&lt;/p&gt;
-
-&lt;p&gt;By the end of the school year, I &lt;em&gt;excelled&lt;/em&gt; at playing recorder. I mean, today at the age of 29 I have some doubts about my memories of being a child who was &lt;em&gt;good&lt;/em&gt; at recorder. But importantly, I had rapidly developed an understanding of music&amp;rsquo;s most important fundamentals: notation, basic theory, rhythm, sub-dividing measures. I could sight-read. And I utterly &lt;em&gt;loved&lt;/em&gt; playing recorder. &lt;/p&gt;
-
-&lt;p&gt;My parents were convinced. Lloyd helped them buy an affordable upright piano. Then he tuned it for us and put me in touch with his relative, Marie.&lt;/p&gt;
-
-&lt;p&gt;Marie quickly became a mentor and friend. A talented musician and gentle teacher, she played organ at a church down the road and taught piano lessons after school. She emphasized form, technique, feeling. She demanded proper posture and wrist position (and keeping fingernails short). She lent me sci-fi novels like &lt;em&gt;Close Encounters of the Third Kind&lt;/em&gt; and &lt;em&gt;Dune&lt;/em&gt;. When I was thirteen and terrified in the weeks following 9/11, Marie was the one I turned to for help dealing with my anxiety.&lt;/p&gt;
-
-&lt;p&gt;Under her guidance, I prepared for the town&amp;rsquo;s annual music festival. I swept up in every category I competed in. Not really fair, an eleven year-old competing against six year-olds. (We had all been playing for less than a year, but still. The rules were changed the next year to adjudicate participants against a &lt;em&gt;rubric&lt;/em&gt; instead of against &lt;em&gt;each other&lt;/em&gt;.)&lt;/p&gt;
-
-&lt;p&gt;I was invited to play in the festival&amp;rsquo;s closing concert, on both piano and alto saxophone (I had joined the school band to learn it and had taken supplementary lessons from Lloyd).&lt;/p&gt;
-
-&lt;p&gt;Each year, I looked forward to the music festival. My parents still boast that they never had to tell me to practice.&lt;/p&gt;
-
-&lt;p&gt;After graduating, I left my home town to go to university. I lost my musical support network. I lost my routine. I lost my free time. I stopped playing music. For a decade, until 2017 when I bought a ukulele, and then guitar, and now&amp;hellip; the office piano.&lt;/p&gt;
-
-&lt;hr&gt;
-
-&lt;p&gt;Attendees would start trickling in soon. I had less than a half hour before &lt;a href="http://peerlab.community"&gt;peer lab&lt;/a&gt; started, so I had to hurry getting set up. I&amp;rsquo;d already printed off &lt;a href="https://musescore.com/user/3471/scores/1352881"&gt;sheet music&lt;/a&gt; of &lt;em&gt;The Entertainer&lt;/em&gt;, a ragtime jazz song I had memorized in grade 8. I wanted my re-introduction to piano to be gentle. I was nervous, but excited.&lt;/p&gt;
-
-&lt;p&gt;I sit down. I begin, slow at first. Then faster. Then I blink. I look down at my watch: a half hour had passed. How could a half hour had already passed? I had to stop, it was difficult.&lt;/p&gt;
-
-&lt;p&gt;&lt;blockquote class="twitter-tweet" data-lang="en"&gt;&lt;p lang="en" dir="ltr"&gt;I was there for peer lab this morning and snuck away for about a half hour of piano. Had some trouble remembering the bass clef notation, but it came back to me pretty quickly! I am excited.&lt;/p&gt;&amp;mdash; The SI Unit Respecter (@ashfurrow) &lt;a href="https://twitter.com/ashfurrow/status/954809752239865858?ref_src=twsrc%5Etfw"&gt;January 20, 2018&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src="https://platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt; &lt;/p&gt;
-
-&lt;p&gt;The week went by. I got three more, quick sessions in on the piano and I was amazed by how much I remembered. I had bought some sheet music books of popular songs for the office. I picked &lt;em&gt;The Piano Man&lt;/em&gt; by Billy Joel and started sight-reading it – slow at first, then fster. I felt exhilarated.&lt;/p&gt;
-
-&lt;p&gt;&lt;blockquote class="twitter-tweet" data-conversation="none" data-lang="en"&gt;&lt;p lang="en" dir="ltr"&gt;Other things they’ve helped:&lt;br&gt;&lt;br&gt;- staying off twitter at work, unless it’s to complain about work&lt;br&gt;- getting to the office by 9:00, and forcing myself to leave at 5:00&lt;br&gt;- motivation: I’m leading a well-defined and interesting project, an internal tool to help out my colleagues&lt;/p&gt;&amp;mdash; The SI Unit Respecter (@ashfurrow) &lt;a href="https://twitter.com/ashfurrow/status/956666738933936128?ref_src=twsrc%5Etfw"&gt;January 25, 2018&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src="https://platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt; &lt;/p&gt;
-
-&lt;p&gt;I&amp;rsquo;m trying to have a better work/life balance in 2018, and part of that is getting to and leaving the office at strict times. That goal is orthogonal to my desire to immerse myself in playing piano.&lt;/p&gt;
-
-&lt;p&gt;You can see where this is going.&lt;/p&gt;
-
-&lt;p&gt;Apartments in Manhattan&amp;rsquo;s East Village are tiny. So, a piano. How does that even fit? I didn&amp;rsquo;t see any space in our room (singular). I talked to Ashley and told her how important this was to me, and she wasted no time helping me figure out where a piano could go in our apartment. We spent the weekend rearranging and doing some general spring-cleaning to cut-down on stuff. &lt;/p&gt;
-
-&lt;p&gt;I&amp;rsquo;m glad I have a supportive partner. She&amp;rsquo;s excited to get to know this part of me for the first time. Our piano arrives on Wednesday.&lt;/p&gt;
-
-&lt;p&gt;I don&amp;rsquo;t know what&amp;rsquo;s about to happen, but for the first time since August, I feel like things are about to &lt;em&gt;improve&lt;/em&gt;. Like, it&amp;rsquo;s been a while since I&amp;rsquo;ve felt &lt;em&gt;anything&lt;/em&gt; was going to improve; best-case scenario was things only stayed as bad as they are. And today, something is changed. I feel optimistic again. And I intend to capitalize on that optimism: through therapy, I have learned to fold improvements in my mood back in on themselves. Feedback loops. The virtuous complement to the &lt;a href="https://en.wikipedia.org/wiki/Virtuous_circle_and_vicious_circle"&gt;vicious circles&lt;/a&gt; I had experienced with depression. &lt;/p&gt;
-
-&lt;p&gt;Medication changes I started two months ago have finally stabilized, and have brought me back to the frame of mind I had in August: ready to turn the page on this depressive chapter of my life and move forward. It&amp;rsquo;s ironic that I&amp;rsquo;m looking to something from my past, music, in order to move forward. But we live in ironic times!&lt;/p&gt;
 </content>
   </entry>
 </feed>
