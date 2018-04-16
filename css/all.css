@@ -309,7 +309,11 @@ body {
     .post-heading h1 {
       margin-top: 20px; } }
 
-/* Centres tweet embeds in Chrome */
+/* Centres Instagram embeds. */
+iframe.instagram-media {
+  margin: 10px auto !important; }
+
+/* Centres tweet embeds in Chrome. */
 twitterwidget {
   margin: auto; }
 
