@@ -25,7 +25,7 @@
 
 &lt;p&gt;In a nutshell, Moya has you encapsulate your network calls into an &lt;code&gt;enum&lt;/code&gt;. Each &lt;code&gt;enum&lt;/code&gt; case represents an API call, with associated values used as parameters. The compiler will produce an error if you try to use the API call without the required parameters. Since your &lt;code&gt;enum&lt;/code&gt; has to conform to a specific protocol,the specifics of the network calls (HTTP verb, parameter encoding, path, headers) are centralized in one spot instead of strewn throughout your code.&lt;/p&gt;
 
-&lt;p&gt;Of course, you still need to actually &lt;em&gt;write&lt;/em&gt; the &lt;code&gt;enum&lt;/code&gt;s yourself. Boo. We have &lt;a href="https://github.com/Moya/Moya/issues/73"&gt;long wished for&lt;/a&gt; a way to automate this, most likely through &lt;a href="https://swagger.io"&gt;Swagger&lt;/a&gt;. It never came to fruition, though. In a sense, the practice of Moya fell short of its spirit.&lt;/p&gt;
+&lt;p&gt;Of course, you still need to actually &lt;em&gt;write&lt;/em&gt; the &lt;code&gt;enum&lt;/code&gt;s yourself. Boo. We have &lt;a href="https://github.com/Moya/Moya/issues/73"&gt;long wished for&lt;/a&gt; a way to automate this, most likely through &lt;a href="https://swagger.io"&gt;Swagger&lt;/a&gt;. It never came to fruition, though. In a sense, the &lt;em&gt;practice&lt;/em&gt; of Moya fell short of its &lt;em&gt;spirit&lt;/em&gt;.&lt;/p&gt;
 
 &lt;p&gt;Okay so a few years went by and then this cool new way to query an API came onto the scene: &lt;a href="http://graphql.org"&gt;GraphQL&lt;/a&gt;. Let&amp;rsquo;s take a look why GraphQL is so cool.&lt;/p&gt;
 
