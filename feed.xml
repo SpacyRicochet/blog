@@ -92,7 +92,7 @@
 
 &lt;p&gt;I could go on and on about Relay, about how the Relay compiler integrates well with React, about how it can use TypeScript to provide type safety based off the GraphQL schema, about how it abstracts away concepts like pagination and sorting. It&amp;rsquo;s just so exciting! But the truth is, I&amp;rsquo;m still just getting started with this stuff. I&amp;rsquo;m thrilled to be in the position where I can work with such cool technologies, and I hope to bring the best ideas back from JavaScript into the native iOS world.&lt;/p&gt;
 
-&lt;p&gt;But most of all, I feel so validated in my work on Moya. It was a pretty neat idea, but it&amp;rsquo;s grown into a popular library and vibrant community. Relay has reaffirmed my &lt;a href="http://localhost:4567/blog/coding-interview-take-home-challenges/"&gt;belief&lt;/a&gt; that we programmers share more in common than we have differences. Moya and Relay (and others, like &lt;a href="https://www.apollographql.com"&gt;Apollo&lt;/a&gt;!) all approach the problem differently, and I want to celebrate what makes each different while acknowledging what makes them the same.&lt;/p&gt;
+&lt;p&gt;But most of all, I feel so validated in my work on Moya. It was a pretty neat idea, but it&amp;rsquo;s grown into a popular library and vibrant community. Relay has reaffirmed my &lt;a href="https://ashfurrow.com/blog/coding-interview-take-home-challenges/"&gt;belief&lt;/a&gt; that we programmers share more in common than we have differences. Moya and Relay (and others, like &lt;a href="https://www.apollographql.com"&gt;Apollo&lt;/a&gt;!) all approach the problem differently, and I want to celebrate what makes each different while acknowledging what makes them the same.&lt;/p&gt;
 </content>
   </entry>
   <entry>
