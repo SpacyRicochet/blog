@@ -6,6 +6,54 @@
     <description>Learning and teaching about interesting topics in iOS Development. Sometimes I diverge to talk about design, photography, or what-have-you.</description>
     <link>https://ashfurrow.com/</link>
     <item>
+      <title>Electrodynamics</title>
+      <link>https://ashfurrow.com/blog/electrodynamics/</link>
+      <description>&lt;p&gt;Okay so I&amp;rsquo;ve got a lot of thoughts on &lt;a href="https://electronjs.org"&gt;Electron&lt;/a&gt; bouncing around my brain and I honestly can&amp;rsquo;t take it anymore. So this post is more for me, as usual.&lt;/p&gt;
+
+&lt;p&gt;Oh and one important thing to note: I&amp;rsquo;m not interested in discussing Electron itself. If you think it sucks, past experience has taught me that I&amp;rsquo;m very unlikely to change your mind. This post is about the discourse surrounding Electron and, more generally, the discourse in the Apple developer community. And I&amp;rsquo;m thinking about this from a big-picture perspective, not specific tweets or people. I don&amp;rsquo;t know if it&amp;rsquo;s getting more experienced, or getting older, or &lt;a href="https://ashfurrow.com/blog/perspective-of-the-polyglot/"&gt;getting outside the iOS ecosystem&lt;/a&gt;, but lately I find myself really bored by &amp;ldquo;specifics.&amp;rdquo; I&amp;rsquo;m much more keen on looking at issues as a whole piece, rather than component parts.&lt;/p&gt;
+
+&lt;p&gt;Okay so let&amp;rsquo;s dig into this.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;
+
+&lt;p&gt;Some people dislike Electron. They seem to resent it, in fact. Generally, people discussing Electron seem to fall into one of a few camps:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;They dislike Electron for &lt;em&gt;whatever&lt;/em&gt; reason.&lt;/li&gt;
+&lt;li&gt;They think Electron has a place, sometimes, in software development.&lt;/li&gt;
+&lt;li&gt;They don&amp;rsquo;t care about Electron and just want everyone to shut up.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;I obviously fall in the middle ground. I&amp;rsquo;ve never built an Electron app but I understand the technology involved and I appreciate its appeal. If I were building a Mac app for whatever reason, I&amp;rsquo;d look into building it with Electron (I have built Mac apps and have no desire to use AppKit again).&lt;/p&gt;
+
+&lt;p&gt;The people in the third bucket are my favourite. I sympathize with them because I too want everyone to just shut up. But here I am writing a blog post, so.&lt;/p&gt;
+
+&lt;p&gt;It&amp;rsquo;s the people who really dislike Electron that make the most noise. Different folks have their own reasons for disliking it, which is fine. Folks are welcome to their opinions of course. However, I am a bit embarrassed by the fervour with which members of our community are expressing their outright &lt;em&gt;disdain&lt;/em&gt; for Electron.&lt;/p&gt;
+
+&lt;p&gt;It&amp;rsquo;s tempting for me to refute the arguments with counter examples, but I really want to emphasize that the individual points people have about Electron are &lt;em&gt;not&lt;/em&gt; what I&amp;rsquo;m talking about right now. It&amp;rsquo;s the &lt;em&gt;tone&lt;/em&gt; of the conversation that I find distasteful. People are complaining – loudly – about a technology they&amp;rsquo;ll never use to build apps, as though &lt;em&gt;no one&lt;/em&gt; should use that technology.&lt;/p&gt;
+
+&lt;p&gt;&lt;blockquote class="twitter-tweet" data-lang="en"&gt;&lt;p lang="en" dir="ltr"&gt;Also, let&amp;rsquo;s be kind even when nominally criticizing tech—people invest a lot of themselves in the tools they use every day, and it&amp;rsquo;s a short trip from &amp;ldquo;X is bad&amp;rdquo; to &amp;ldquo;choosing X is bad&amp;rdquo; to &amp;ldquo;people who choose X are bad&amp;rdquo;&lt;/p&gt;&amp;mdash; Nate Cook 🌱 (@nnnnnnnn) &lt;a href="https://twitter.com/nnnnnnnn/status/988974021453676550?ref_src=twsrc%5Etfw"&gt;April 25, 2018&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src="https://platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt; &lt;/p&gt;
+
+&lt;p&gt;I&amp;rsquo;m sure there are outsiders looking in on the Apple developer community right now. I wonder what they think of how we&amp;rsquo;re behaving.&lt;/p&gt;
+
+&lt;p&gt;&lt;blockquote class="twitter-tweet" data-conversation="none" data-lang="en"&gt;&lt;p lang="en" dir="ltr"&gt;Instead of yelling at companies, teams, and developers about the choices they made about their own work, why not take a moment and consider how we got here. &lt;br&gt;&lt;br&gt;And why are you so mad about the decisions of other developer teams. What business is it of yours?&lt;/p&gt;&amp;mdash; Jon Maddox (@maddox) &lt;a href="https://twitter.com/maddox/status/988925582665768961?ref_src=twsrc%5Etfw"&gt;April 24, 2018&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src="https://platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt; &lt;/p&gt;
+
+&lt;p&gt;Finally, a note about Slack. Slack is an Electron app, probably the most popular Electron app. And Slack has bugs. It has memory leaks. But I &lt;a href="https://twitter.com/ashfurrow/status/989100844674158592"&gt;question&lt;/a&gt; the intellectual rigour of those who would infer or imply that Slack&amp;rsquo;s bugs are the result of being built in Electron. I mean, come on. Lots of software has memory problems. Besides, there are Electron apps &lt;em&gt;without&lt;/em&gt; memory issues. &lt;a href="https://code.visualstudio.com"&gt;Visual Studio Code&lt;/a&gt; is a shining example of an Electron app, a counterexample to anyone who tries to argue that Electron apps are necessarily poor user experiences. Frankly, blaming Electron for Slack&amp;rsquo;s bugs let&amp;rsquo;s Slack off the hook.&lt;/p&gt;
+
+&lt;p&gt;I&amp;rsquo;m just so very tired of this conversation. Regularly, someone will reignite the discussion. But every time, people miss out on the bigger picture: whether or not you think developers &lt;em&gt;should&lt;/em&gt; use Electron, they &lt;em&gt;are&lt;/em&gt; using it. So ask yourself: why? Put yourself in their shoes, assume positive intent, try to understand what they&amp;rsquo;re thinking, and please please please stay nonjudgemental. A few tips: &lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Don&amp;rsquo;t remove their agency – &amp;ldquo;well Electron only makes sense for businesses.&amp;rdquo; That dismissed entire groups of developers who &lt;em&gt;want&lt;/em&gt; to build Electron apps. &lt;/li&gt;
+&lt;li&gt;Don&amp;rsquo;t dismiss their technical decisions – &amp;ldquo;well they should just learn AppKit.&amp;rdquo; The fact is, they aren&amp;rsquo;t learning AppKit. Asking &amp;ldquo;why not?&amp;rdquo; is a much more interesting question than labelling them as lazy.&lt;/li&gt;
+&lt;li&gt;Don&amp;rsquo;t be defensive – &amp;ldquo;well if Electron replaces native apps then what will happen to me?&amp;rdquo; That&amp;rsquo;s jumping to a conclusion. No one is arguing that Electron will or should replace native apps.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Electron is just another tool; the more tools you have, the more types of problems you can solve. I keep reiterating this point because it&amp;rsquo;s so important: software developers of different stripes have more in common than they have differences. We have so much to learn from one another, but we can&amp;rsquo;t if we keep focusing on our differences.&lt;/p&gt;
+</description>
+      <pubDate>Wed, 25 Apr 2018 17:24:57 +0000</pubDate>
+      <guid>https://ashfurrow.com/blog/electrodynamics/</guid>
+    </item>
+    <item>
       <title>The Spirit of Moya</title>
       <link>https://ashfurrow.com/blog/the-spirit-of-moya/</link>
       <description>&lt;p&gt;When Swift was released in 2014, I created one of the very first open source Swift libraries: &lt;a href="https://github.com/Moya/Moya"&gt;Moya&lt;/a&gt;. Moya became a fairly popular iOS project, driven by a motivated and kind community, and by its central goal: use Swift features to provide compile-time assurances to network requests.&lt;/p&gt;
@@ -246,24 +294,6 @@
 </description>
       <pubDate>Thu, 29 Mar 2018 16:03:28 +0000</pubDate>
       <guid>https://ashfurrow.com/blog/react-native-starter-resources/</guid>
-    </item>
-    <item>
-      <title>Coming to Terms</title>
-      <link>https://ashfurrow.com/blog/coming-to-terms/</link>
-      <description>&lt;p&gt;It&amp;rsquo;s been almost a month since &lt;a href="https://ashfurrow.com/blog/mood-improvements/"&gt;I began cognitive behavioural therapy (CBT)&lt;/a&gt; and it&amp;rsquo;s going quite well. CBT suits me quite well: it is about curiosity. Investigating my own mood. Developing noticing skills. Identifying automatic thoughts. Categorizing them. Staying non-judgemental.&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;
-
-&lt;p&gt;All that fits with my whole &lt;em&gt;*waves hands*&lt;/em&gt; you know, &lt;a href="https://ashfurrow.com/blog/building-compassionate-software/"&gt;my whole thing&lt;/a&gt;. Being curious. Not judging, just observing. And part of that observation is coming to terms with just how fucked up depression has made me.&lt;/p&gt;
-
-&lt;p&gt;I thought that feeling totally okay was within reach, that I just needed a little nudge, but that&amp;rsquo;s not the case. Only after the past month of recording my thoughts, feelings, and behaviours when depressions strikes have I noticed patterns and trends throughout all aspects of my life.&lt;/p&gt;
-
-&lt;p&gt;One area I was really surprised by depressions influence over was work at Artsy. I won&amp;rsquo;t go into details, but depression has severely tempered my enthusiasm for working. I &lt;em&gt;love&lt;/em&gt; my job and I&amp;rsquo;m frankly pissed off that depression has degraded how I enjoy my work. It was shocking to realize how extensively depression had affected me at work. But now that I&amp;rsquo;m aware of it, I&amp;rsquo;m already a lot closer to regaining my enthusiasm.&lt;/p&gt;
-
-&lt;p&gt;I&amp;rsquo;m still building a complete picture of how (and how extensively) depression has warped my day-to-day experiences, but I have a renewed sense of hope that things will get better. More than just hope, I now have a strong desire to improve my mood. Depression sucked a lot of joy out of my twenties and I won&amp;rsquo;t let it continue to rob me of the happiness I deserve.&lt;/p&gt;
-</description>
-      <pubDate>Sat, 24 Mar 2018 14:20:31 +0000</pubDate>
-      <guid>https://ashfurrow.com/blog/coming-to-terms/</guid>
     </item>
   </channel>
 </rss>
