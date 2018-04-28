@@ -4,10 +4,56 @@
   <id>https://ashfurrow.com/blog</id>
   <link href="https://ashfurrow.com/"/>
   <link href="https://ashfurrow.com/feed.xml" rel="self"/>
-  <updated>2018-04-25T17:24:57+00:00</updated>
+  <updated>2018-04-28T15:35:37+00:00</updated>
   <author>
     <name>Ash Furrow</name>
   </author>
+  <entry>
+    <title>Hiring Juniors</title>
+    <link rel="alternate" href="https://ashfurrow.com/blog/hiring-juniors/"/>
+    <id>https://ashfurrow.com/blog/hiring-juniors/</id>
+    <published>2018-04-28T15:35:37+00:00</published>
+    <updated>2018-04-28T15:35:37+00:00</updated>
+    <author>
+      <name>Ash Furrow</name>
+    </author>
+    <content type="html">&lt;p&gt;Okay let&amp;rsquo;s dig into this.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;
+
+&lt;p&gt;I tweeted this earlier this week, to some fanfare and a little pushback:&lt;/p&gt;
+
+&lt;p&gt;&lt;blockquote class="twitter-tweet" data-lang="en"&gt;&lt;p lang="ja" dir="ltr"&gt;sorry, we&amp;rsquo;re looking for someone &lt;br&gt; ○ &lt;br&gt;く|)へ&lt;br&gt; 〉 &lt;br&gt; ￣￣┗┓ with more experience&lt;br&gt; 　 　 ┗┓　 ヾ○ｼ&lt;br&gt; 　　 ┗┓ ヘ/ 　 　 &lt;br&gt; 　 ┗┓ノ &lt;br&gt;　 　 　 　 　 ┗┓&lt;/p&gt;&amp;mdash; Ash Furrow (or is it?) (it is.) (@ashfurrow) &lt;a href="https://twitter.com/ashfurrow/status/988410309319843849?ref_src=twsrc%5Etfw"&gt;April 23, 2018&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src="https://platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt; &lt;/p&gt;
+
+&lt;p&gt;I should have expected the pushback; I followed up shortly afterward&amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;&lt;blockquote class="twitter-tweet" data-conversation="none" data-lang="en"&gt;&lt;p lang="en" dir="ltr"&gt;I am reminded of this other time I complained about companies not hiring juniors. Hmm. When will I learn.&lt;a href="https://t.co/I0Z25o4NSM"&gt;https://t.co/I0Z25o4NSM&lt;/a&gt;&lt;/p&gt;&amp;mdash; Ash Furrow (or is it?) (it is.) (@ashfurrow) &lt;a href="https://twitter.com/ashfurrow/status/988454390469193728?ref_src=twsrc%5Etfw"&gt;April 23, 2018&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src="https://platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt; &lt;/p&gt;
+
+&lt;p&gt;This blog post isn&amp;rsquo;t really about fixing the problem that, at least in New York, it is really really hard to get your first job. Instead, it&amp;rsquo;s a description of my understanding of the problem and how it&amp;rsquo;s evolved.&lt;/p&gt;
+
+&lt;p&gt;So I know a lot of juniors. I&amp;rsquo;ve been running a &lt;a href="https://peerlab.community"&gt;peer lab&lt;/a&gt; for three years and we welcome people from all experience levels, and I help with &lt;a href="https://www.c4q.nyc"&gt;Coalition for Queens&lt;/a&gt;. I know a lot of people who are looking for their first jobs and are having really difficult times. I&amp;rsquo;m close to people, I&amp;rsquo;m close to their pain and frustration. And that pain and frustration was the motivation for my tweet, not any sort of malice towards hiring managers.&lt;/p&gt;
+
+&lt;p&gt;And before we go any further, I have to point out that there is a huge power imbalance between a company trying to hire someone and someone trying to get hired. The company has &lt;em&gt;most&lt;/em&gt; of the power in this relationship. The worst case for the company is that they waste a bit of time interviewing someone and it doesn&amp;rsquo;t work out, and they need to keep looking. Not a huge deal. The worst case for the applicant can be that they don&amp;rsquo;t get the job, so maybe they can&amp;rsquo;t make their rent, maybe they can&amp;rsquo;t feed their family, etc. So from my perspective, I naturally empathize more with the individual than the company.&lt;/p&gt;
+
+&lt;p&gt;This is not to say companies are bad, or have bad intentions. I&amp;rsquo;m only pointing out that one party of this relationship has the power. That imbalance needs to inform any discussion around hiring practices in our industry.&lt;/p&gt;
+
+&lt;p&gt;And not all companies are even in a position to hire juniors. That sucks, but that&amp;rsquo;s the reality of the economic world we live in.&lt;/p&gt;
+
+&lt;p&gt;There are lots of things junior developers can do to distinguish themselves. In the past, I&amp;rsquo;ve told iOS juniors to focus on getting their first app into the App Store, since that shows employers that you are capable of nurturing and building an idea into fully shipped software. But I know lots of juniors who have done this and are struggling. Having an app in the store isn&amp;rsquo;t the distinguisher that it used to be. They need something new, to stand out. I haven&amp;rsquo;t had a satisfying answer, but based on feedback I&amp;rsquo;ve gotten from hiring managers, I think open source contributions might help.&lt;/p&gt;
+
+&lt;p&gt;(Note that not everyone looking for their first job is even capable of making open source contributions. We all have different lives, and contributing to open source is just intrinsically easier for some groups of people. So &amp;ldquo;make some OSS contributions&amp;rdquo; isn&amp;rsquo;t a comprehensive solution to this very broad problem.)&lt;/p&gt;
+
+&lt;p&gt;Making open source contributions shows employers that you&amp;rsquo;re able to contribute to a larger goal through collaborating with other people. That&amp;rsquo;s really important. Building software in a company is never done in isolation; the software always serves the needs of the business, which means you&amp;rsquo;ll be interacting with business people at the very least. Probably designers, product managers, and other engineers, too. OSS contributions confer skills that will be helpful in that sort of collaborative business environment.&lt;/p&gt;
+
+&lt;p&gt;So look at the open source libraries you use. Or at least the one&amp;rsquo;s your heard of. Look at &lt;a href="https://github.com/trending/swift?since=daily"&gt;Trending Repos on GitHub&lt;/a&gt;, see what looks cool, and look for issues labeled &amp;ldquo;good first step&amp;rdquo; or &amp;ldquo;you can do this&amp;rdquo; – lots of projects set aside introductory issues for newcomers, and those should be your goal. Hopefully the project has some setup instructions for contributing, checkout out their contributing guidelines for more info.&lt;/p&gt;
+
+&lt;p&gt;There is also a disconnect between acquiring &lt;em&gt;skills&lt;/em&gt; and acquiring &lt;em&gt;experience&lt;/em&gt;. I don&amp;rsquo;t have a good answer about what balance to strike, but it seems like employers are looking for a mix of both. A lot of juniors I talk to ask me &amp;ldquo;which framework should I learn next?&amp;rdquo; And the answer might be: none of them. If you&amp;rsquo;ve learned a few frameworks on iOS – UIKit, CoreLocation, MapKit – maybe it&amp;rsquo;s time to shift from honing skills to acquiring experience. Building your own app and helping out with open source can help, too. &lt;/p&gt;
+
+&lt;p&gt;Part of the problem, I think, is that companies are unwilling to take risks. This is probably my biggest frustration, actually. See, hiring any engineer is a risk, and hiring an engineer without a lot of experience &lt;em&gt;does&lt;/em&gt; increase that risk. Maybe they&amp;rsquo;re overestimating that increase, or maybe they really are just that risk adverse. My point is, it seems like companies would rather hire no one than they would hire someone who they were only 95% sure would be a good fit. I think there is room for short-term contracts to evaluate engineers before hiring them full time, or other ideas like that. And again with business realities, companies are operating as they are meant to in our capitalist society: to avoid risk and maximize returns. I don&amp;rsquo;t like that, but it&amp;rsquo;s the reality we live it. Again, I don&amp;rsquo;t have the answers, I&amp;rsquo;m still wrapping my head around this situation.&lt;/p&gt;
+
+&lt;p&gt;If you&amp;rsquo;re looking for your first iOS job, take a look at &lt;a href="http://artsy.github.io/blog/2016/01/30/iOS-Junior-Interviews/"&gt;Orta&amp;rsquo;s blog post&lt;/a&gt;. Try to stay positive, stay focused, and be patient. I wish things were better, that our industry was more inclusive, and I&amp;rsquo;m doing what I can to help. If you&amp;rsquo;re in a position to help move the needle on this, even a little bit, I encourage you to help as well.&lt;/p&gt;
+</content>
+  </entry>
   <entry>
     <title>Electrodynamics</title>
     <link rel="alternate" href="https://ashfurrow.com/blog/electrodynamics/"/>
@@ -290,36 +336,6 @@
 &lt;p&gt;The barriers between programming languages, between app frameworks, and between developer communities – they are all artificial. All of them. Any two given programmers, no matter their backgrounds, have far more in common than they have differences.&lt;/p&gt;
 
 &lt;p&gt;We need to see &lt;em&gt;all&lt;/em&gt; developers as peers. To learn from one another. And to celebrate what makes programmers different instead of using those differences to divide us.&lt;/p&gt;
-</content>
-  </entry>
-  <entry>
-    <title>React Native Starter Resources for Native Developers</title>
-    <link rel="alternate" href="https://ashfurrow.com/blog/react-native-starter-resources/"/>
-    <id>https://ashfurrow.com/blog/react-native-starter-resources/</id>
-    <published>2018-03-29T16:03:28+00:00</published>
-    <updated>2018-03-29T16:03:28+00:00</updated>
-    <author>
-      <name>Ash Furrow</name>
-    </author>
-    <content type="html">&lt;p&gt;I was asked online for a list of resources for iOS developers looking to dip their toes into React Native. What a great question!&lt;/p&gt;
-
-&lt;p&gt;React Native is a framework for building native apps (iOS and Android) on top of React, which is a JavaScript framework for writing user interfaces. There are many benefits (and drawbacks, of course) to using React Native. &lt;strong&gt;Importantly&lt;/strong&gt;: React Native is just a tool. It&amp;rsquo;s not a replacement to Swift or Objective-C; it&amp;rsquo;s just a tool that you can add to your toolbox. The more tools you have, the more types of problems you can solve!&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;
-
-&lt;hr&gt;
-
-&lt;p&gt;The &lt;a href="https://facebook.github.io/react-native/docs/tutorial.html"&gt;official React Native guide&lt;/a&gt; is a great place to start, and it includes an in-browser simulator for you to try out. The &lt;a href="https://reactjs.org"&gt;official React docs&lt;/a&gt; are also useful but are targeted for web developers. Still, the technology is incredibly fascinating. If you&amp;rsquo;re clever enough to write Swift, you&amp;rsquo;re clever enough to learn a bit of web tech, and I encourage you to skim over the docs.&lt;/p&gt;
-
-&lt;p&gt;Predictably, the &lt;a href="https://www.raywenderlich.com/165140/react-native-tutorial-building-ios-android-apps-javascript"&gt;Ray Wenderlich React Native tutorial&lt;/a&gt; is excellent and in-depth. It takes you through building a full app, so it&amp;rsquo;s a great end-to-end resource but might be overwhelming when your first starting out.&lt;/p&gt;
-
-&lt;p&gt;You should obviously check out the &lt;a href="http://artsy.github.io/blog/categories/reactnative/"&gt;Artsy Engineer Blog&lt;/a&gt;. Most React Native tutorials and resources you&amp;rsquo;ll find online are targeting web developers who are already familiar with React; iOS developers should read Orta&amp;rsquo;s post on &lt;a href="http://artsy.github.io/blog/2017/07/06/React-Native-for-iOS-devs/"&gt;Intro to React Native for iOS Developers&lt;/a&gt; for a native perspective.&lt;/p&gt;
-
-&lt;p&gt;Naturally, Artsy&amp;rsquo;s React Native codebase is open source. You can &lt;a href="https://github.com/artsy/emission/"&gt;download the code&lt;/a&gt; and try it out for yourself! The setup instructions are very detailed, specifically to help unfamiliar developers try it out. The readme also has an extensive list of resources. One note about our React Native app: it&amp;rsquo;s written in &lt;a href="http://www.typescriptlang.org"&gt;TypeScript&lt;/a&gt;, not JavaScript. TypeScript is &lt;strong&gt;definitely&lt;/strong&gt; something you&amp;rsquo;ll want to check out if you&amp;rsquo;re coming from a Swift background. I would not write React Native without TypeScript. The &lt;a href="https://github.com/Microsoft/TypeScript-React-Native-Starter"&gt;docs&lt;/a&gt; for how to do this are a bit out of date, but I&amp;rsquo;ve &lt;a href="https://github.com/Microsoft/TypeScript-React-Native-Starter/pull/35"&gt;got an open pull request&lt;/a&gt; to update it (I would &lt;a href="https://github.com/ashfurrow/TypeScript-React-Native-Starter/blob/dbf315587d8a3ccb6f1c2586e63f2e775e1487f2/README.md"&gt;read the proposed updated docs here&lt;/a&gt;).&lt;/p&gt;
-
-&lt;p&gt;One more resource I found quite helpful, but assumes a bit of a web developer-y background, is &lt;a href="https://egghead.io"&gt;egghead.io&lt;/a&gt;. It contains excellent, short video screencasts explaining single topics at a time. It&amp;rsquo;s a paid resource; if you can, ask your work to pay for it.&lt;/p&gt;
-
-&lt;p&gt;So that&amp;rsquo;s it! Hopefully you&amp;rsquo;ll find these useful. One final note: it&amp;rsquo;s easy to get frustrated and discouraged. Especially if you&amp;rsquo;re trying this by yourself. But try not to give up – this stuff is new, and new stuff is always difficult. Try not to worry about understanding the full stack. There&amp;rsquo;s going to be a lot of communal knowledge that &amp;ldquo;everybody knows&amp;rdquo; but no one specifically teaches. It sucks. The best suggestions I can give you is to find someone to learn this stuff with, together. Don&amp;rsquo;t give up, you can do this.&lt;/p&gt;
 </content>
   </entry>
 </feed>
