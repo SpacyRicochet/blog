@@ -6,6 +6,109 @@
     <description>Learning and teaching about interesting topics in iOS Development. Sometimes I diverge to talk about design, photography, or what-have-you.</description>
     <link>https://ashfurrow.com/</link>
     <item>
+      <title>JavaScript is Good, Actually</title>
+      <link>https://ashfurrow.com/blog/javascript-is-good-actually/</link>
+      <description>&lt;p&gt;The subtext of many discussions around building software in Electron and React/Native involve this assumption that &lt;em&gt;JavaScript is bad&lt;/em&gt;. There is a kind of unspoken understanding that JavaScript developers are &lt;em&gt;stuck&lt;/em&gt; writing it, that either:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;given the choice, they would move to a &amp;ldquo;better&amp;rdquo; language, or&lt;/li&gt;
+&lt;li&gt;they have a kind of Stockholm syndrome and like JavaScript.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;That&amp;rsquo;s not true. This framing discounts a tonne of developers – thousands and thousands of us – that &lt;em&gt;enjoy&lt;/em&gt; writing JavaScript. Not because it just happens to be popular or that we are forced to, either. Language like this robs JavaScript developers of our agency, treating us/our decisions/our preferences as invalid or even accidental.&lt;/p&gt;
+
+&lt;p&gt;The fact is, we enjoy writing JavaScript because JavaScript is a good language. I&amp;rsquo;ll explain later.&lt;/p&gt;
+
+&lt;p&gt;Oh wait, I&amp;rsquo;ll explain now.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;
+
+&lt;h2 id="the-syntax"&gt;The Syntax&lt;/h2&gt;
+
+&lt;p&gt;JavaScript syntax is a joy to use. It&amp;rsquo;s clear, concise, and tailored to the kinds of tasks that JavaScript developers tend to write code for. Here is an example, &lt;a href="https://github.com/artsy/emission/blob/365d34cba3bf96c74c6ae7f2615f37c82c669920/src/lib/Components/Consignments/Screens/Overview.tsx#L135-L150"&gt;taken from Artsy&amp;rsquo;s React Native app&lt;/a&gt;:&lt;/p&gt;
+
+
+&lt;div class="highlight"&gt;&lt;pre class="highlight typescript"&gt;&lt;code&gt;&lt;span class="nx"&gt;submitFinalSubmission&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="k"&gt;async&lt;/span&gt; &lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="o"&gt;=&amp;gt;&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+  &lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;showConfirmationScreen&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+
+  &lt;span class="kd"&gt;const&lt;/span&gt; &lt;span class="nx"&gt;submission&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;state&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="nx"&gt;ConsignmentSetup&lt;/span&gt;
+  &lt;span class="kd"&gt;let&lt;/span&gt; &lt;span class="nx"&gt;hasSubmittedSuccessfully&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="kc"&gt;true&lt;/span&gt;
+  &lt;span class="k"&gt;try&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="kr"&gt;await&lt;/span&gt; &lt;span class="nx"&gt;updateSubmission&lt;/span&gt;&lt;span class="p"&gt;({&lt;/span&gt; &lt;span class="p"&gt;...&lt;/span&gt;&lt;span class="nx"&gt;submission&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="na"&gt;state&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s2"&gt;"SUBMITTED"&lt;/span&gt; &lt;span class="p"&gt;},&lt;/span&gt; &lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;state&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;submission_id&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="kr"&gt;await&lt;/span&gt; &lt;span class="nx"&gt;AsyncStorage&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;removeItem&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;consignmentsStateKey&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;submissionDraftSubmitted&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+  &lt;span class="p"&gt;}&lt;/span&gt; &lt;span class="k"&gt;catch&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;error&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="nx"&gt;console&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;error&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"Overview final submission: "&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="nx"&gt;error&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="nx"&gt;hasSubmittedSuccessfully&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="kc"&gt;false&lt;/span&gt;
+  &lt;span class="p"&gt;}&lt;/span&gt;
+
+  &lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;setState&lt;/span&gt;&lt;span class="p"&gt;({&lt;/span&gt; &lt;span class="nx"&gt;hasSubmittedSuccessfully&lt;/span&gt; &lt;span class="p"&gt;})&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;If you&amp;rsquo;ve never worked with modern JavaScript before, it might look a little weird. But I would bet that you understand the &lt;em&gt;gist&lt;/em&gt; of what this code is and does. And that&amp;rsquo;s pretty important, I think.&lt;/p&gt;
+
+&lt;p&gt;I really like modern JavaScript syntax. Check out the &lt;a href="https://github.com/DrkSephy/es6-cheatsheet"&gt;ES6 Cheatsheet&lt;/a&gt; for a bunch of examples of how modern syntax makes JavaScript really nice to code in. Here is another great article describing &lt;a href="https://medium.com/the-node-js-collection/modern-javascript-explained-for-dinosaurs-f695e9747b70"&gt;modern syntax&lt;/a&gt;, aimed at folks more familiar with older JavaScript. &lt;/p&gt;
+
+&lt;p&gt;I&amp;rsquo;m not going into more detail because syntax is&amp;hellip; well it&amp;rsquo;s not &lt;em&gt;that&lt;/em&gt; important to a language. Syntax is (I&amp;rsquo;m waving my hand dismissively here) just syntax. What matters more is the context in which syntax is used. Modern JavaScript syntax is very effective and suited to the kinds of problems that JavaScript developers solve. Don&amp;rsquo;t even get me started on how cool &lt;a href="https://reactjs.org/docs/introducing-jsx.html"&gt;JSX&lt;/a&gt; is.&lt;/p&gt;
+
+&lt;p&gt;You may have noticed that the code above isn&amp;rsquo;t even JavaScript, it&amp;rsquo;s &lt;a href="https://www.typescriptlang.org"&gt;TypeScript&lt;/a&gt;, which brings me to my next point.&lt;/p&gt;
+
+&lt;h2 id="the-toolchains"&gt;The Toolchains&lt;/h2&gt;
+
+&lt;p&gt;Okay so one of the key parts of why JavaScript is great is the toolchains that surround it. Tools like TypeScript and &lt;a href="https://flow.org"&gt;Flow&lt;/a&gt; bring type safety to the language. Editors like &lt;a href="https://code.visualstudio.com"&gt;Visual Studio Code&lt;/a&gt; bring IDE-level features like autocomplete, inline documentation, an extension API, and more. Tools like &lt;a href="https://prettier.io"&gt;Prettier&lt;/a&gt;, &lt;a href="https://eslint.org"&gt;ESLint&lt;/a&gt;, and &lt;a href="https://facebook.github.io/jest/"&gt;Jest&lt;/a&gt; exist to make writing code easier and faster.&lt;/p&gt;
+
+&lt;p&gt;It&amp;rsquo;s really difficult for me to describe just how foundational a paradigm shift I experienced when I began writing in JavaScript. My entire perspective on how code should be written changed. So it&amp;rsquo;s hard to describe in words how effective and how powerful these toolchains are. So let&amp;rsquo;s take a look at one small example.&lt;/p&gt;
+
+&lt;p&gt;One argument against JavaScript that exemplifies how developers who are unfamiliar with JavaScript complain about problems that are obviated by toolchains is the &lt;code&gt;==&lt;/code&gt; operator. Ah yes, the humble equality check. Because of early design choices – I&amp;rsquo;d call them mistakes but I don&amp;rsquo;t have the full context – equality in JavaScript is a bit bizarre. &lt;/p&gt;
+
+&lt;p&gt;&lt;blockquote class="twitter-tweet" data-lang="en"&gt;&lt;p lang="en" dir="ltr"&gt;Isn’t this diagram from that one Nicolas Cage movie where he’s a JS developer looking for a lost treasure? &lt;a href="https://t.co/oK7NETXW5A"&gt;pic.twitter.com/oK7NETXW5A&lt;/a&gt;&lt;/p&gt;&amp;mdash; Aaron Patterson (@tenderlove) &lt;a href="https://twitter.com/tenderlove/status/992755305426685952?ref_src=twsrc%5Etfw"&gt;May 5, 2018&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src="https://platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;(Note: Aaron is really really funny and you should give him a follow. He&amp;rsquo;s not the kind of developer to make facile complaints against JavaScript, I really enjoyed his tweet.)&lt;/p&gt;
+
+&lt;p&gt;Since JavaScript is used all over the internet, you can&amp;rsquo;t really just &lt;em&gt;change&lt;/em&gt; the semantics around equality without breaking everything. JavaScript has harder constraints around backwards compatibility than many other popular languages; constraints like this are as much an opportunity as they are a liability. To wit: JavaScript introduced &lt;code&gt;===&lt;/code&gt; to solve this problem, which is just &lt;code&gt;==&lt;/code&gt; but it works as you expect. &lt;/p&gt;
+
+&lt;p&gt;Using &lt;code&gt;==&lt;/code&gt; in a modern JavaScript codebase is pretty rare. And the toolchains are aware of this context, so you get warnings and errors when you use it by accident. ESLint does this, for example. Tool builders in the JavaScript community are aware of the language&amp;rsquo;s peculiarities, and newcomers to JavaScript are supported by the tools, to avoid pitfalls. It isn&amp;rsquo;t a matter of shooing away the problem and expecting developers to just learn the quirks – it&amp;rsquo;s a matter of the tooling helping guide developers to best practices.&lt;/p&gt;
+
+&lt;p&gt;It&amp;rsquo;s as though the tooling community looked at JavaScript and – in a very non-judgemental way – said &amp;ldquo;isn&amp;rsquo;t that interesting?&amp;rdquo; There&amp;rsquo;s no attachment to the way things should be, there&amp;rsquo;s no lamenting about how things could have been better. Things are just&amp;hellip; interesting. After understanding that context, without judging it, tool builders get to work.&lt;/p&gt;
+
+&lt;h2 id="the-community"&gt;The Community&lt;/h2&gt;
+
+&lt;p&gt;So tooling. JavaScript developers contribute back to their own tooling in a way that (and I can &lt;em&gt;only&lt;/em&gt; speak from my experience) iOS developers don&amp;rsquo;t. I&amp;rsquo;m not judging in any way, I&amp;rsquo;m just observing. As much as iOS developers can – &lt;a href="https://www.youtube.com/watch?v=flSMEw_Hxik"&gt;and should&lt;/a&gt; – fix their own problems and improve their own tools, we don&amp;rsquo;t tend to.&lt;/p&gt;
+
+&lt;p&gt;A big part of that is that the tools iOS developers use are &lt;a href="http://isxcodeopensourceyet.github.io"&gt;closed source&lt;/a&gt;, so they can&amp;rsquo;t &lt;em&gt;be&lt;/em&gt; contributed to. But there are plenty of other tools – like &lt;a href="https://github.com/realm/jazzy"&gt;Jazzy&lt;/a&gt;, &lt;a href="https://github.com/CocoaPods/CocoaPods"&gt;CocoaPods&lt;/a&gt;, and &lt;a href="https://github.com/krzysztofzablocki/Sourcery"&gt;Sourcery&lt;/a&gt; – that &lt;em&gt;are&lt;/em&gt; open source and they don&amp;rsquo;t enjoy the same level of community contributions as tools in the JavaScript world. iOS developers happily contribute to libraries and frameworks they use to write code, but they contribute to &lt;em&gt;tools&lt;/em&gt; less frequently.&lt;/p&gt;
+
+&lt;p&gt;There&amp;rsquo;s an argument to be made that because most of the tools that JavaScript developers use are written &lt;em&gt;in&lt;/em&gt; JavaScript, that developers tend to contribute back more. I&amp;rsquo;m not really going to make the argument because it makes a bunch of assumptions around developer motivation. And I&amp;rsquo;m not trying to judge the iOS developer community – I&amp;rsquo;m only saying that the JavaScript community is engaged in participatory tool-building in a way that the iOS community is not. I find it genuinely fascinating.&lt;/p&gt;
+
+&lt;p&gt;Let&amp;rsquo;s see what tool building in the JavaScript world can look like in practice:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Facebook builds a &lt;a href="https://github.com/graphql/graphql-js"&gt;GraphQL server in Node.js&lt;/a&gt; and open sources it. The community helps improve it.&lt;/li&gt;
+&lt;li&gt;Facebook also builds &lt;a href="https://github.com/graphql/graphiql"&gt;GraphiQL&lt;/a&gt;, a small, in-browser IDE for debugging GraphQL queries on your server. The community helps here, too; the IDE has over sixty contributors.&lt;/li&gt;
+&lt;li&gt;Someone embeds GraphiQL &lt;a href="https://github.com/skevy/graphiql-app"&gt;into an Electron app&lt;/a&gt;, which can be pointed to &lt;em&gt;any&lt;/em&gt; GraphQL server. You can use GraphiQL to explore another developer&amp;rsquo;s API, cool!&lt;/li&gt;
+&lt;li&gt;Someone else embeds GraphiQL into a &lt;a href="https://www.graphql.college/practice-graphql/"&gt;JSON-to-GraphQL playground generator&lt;/a&gt;. It&amp;rsquo;s a small-but-important part of a larger educational app to teach people about GraphQL and it accompanies and open source book about GraphQL.&lt;/li&gt;
+&lt;li&gt;Someone else further remixes GraphiQL into &lt;a href="https://github.com/graphcool/graphql-playground"&gt;GraphQL Playground&lt;/a&gt;, a more powerful and feature-rich IDE than GraphQL alone.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;This is just a small example of how tools built and released into the OSS community proliferate and are composed into other, even more powerful tools. Here is a case where Facebook, a large company that makes developer tools, builds something. Then they release it and developers remix that thing for their own needs, helping the entire community in the process.&lt;/p&gt;
+
+&lt;p&gt;Tool building in JavaScript operates in an entirely different way than in iOS. Than in any community I&amp;rsquo;ve been a part of, actually. To be absolutely clear: this isn&amp;rsquo;t a complaint against the iOS developer community; this is a strong endorsement of the JavaScript developer community.&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;p&gt;People who enjoy hating JavaScript tend to point to oddities in the language or quirks of its syntax/inheritance model. That kind of stuff. They&amp;rsquo;ll say things like &amp;ldquo;well JavaScript was broken from the beginning&amp;rdquo; or point to the (very funny, I laugh every time!) &lt;a href="https://www.destroyallsoftware.com/talks/wat"&gt;Wat&lt;/a&gt; video. Those arguments can sound convincing, especially if you&amp;rsquo;ve never really worked in a production JavaScript environment.&lt;/p&gt;
+
+&lt;p&gt;But here&amp;rsquo;s the thing: every language is weird. And every language makes regrettable design choices early on that it has to reckon with. How and when these mistakes are dealt with is a part of the language, too. Just because you disagree with the decisions doesn&amp;rsquo;t make the language &lt;em&gt;bad&lt;/em&gt;. These choices by the language authors are also informed by the community, the environments the language is used in, and the constraints it has to operate under. That&amp;rsquo;s a lot of context, and it&amp;rsquo;s hard for outsiders to have a clear picture of why certain decisions were made.&lt;/p&gt;
+
+&lt;p&gt;&lt;blockquote class="twitter-tweet" data-conversation="none" data-lang="en"&gt;&lt;p lang="en" dir="ltr"&gt;iOS developers, myself included, are realizing that modern JavaScript is actually a pretty great language, with a &lt;em&gt;really&lt;/em&gt; nice ecosystem.&lt;/p&gt;&amp;mdash; Ash &amp;ldquo;You Should Write a Blog Post&amp;rdquo; Furrow (@ashfurrow) &lt;a href="https://twitter.com/ashfurrow/status/991723030702379009?ref_src=twsrc%5Etfw"&gt;May 2, 2018&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src="https://platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Tout comprendre c&amp;#39;est tout pardonner&lt;/em&gt;. I understand JavaScript, so I forgive it. And in doing so, I give myself permission to &lt;em&gt;enjoy&lt;/em&gt; it. I hope you give it a shot.&lt;/p&gt;
+</description>
+      <pubDate>Sat, 05 May 2018 13:53:45 +0000</pubDate>
+      <guid>https://ashfurrow.com/blog/javascript-is-good-actually/</guid>
+    </item>
+    <item>
       <title>Hiring Juniors</title>
       <link>https://ashfurrow.com/blog/hiring-juniors/</link>
       <description>&lt;p&gt;Okay let&amp;rsquo;s dig into this.&lt;/p&gt;
@@ -275,41 +378,6 @@
 </description>
       <pubDate>Sat, 14 Apr 2018 15:28:26 +0000</pubDate>
       <guid>https://ashfurrow.com/blog/removing-google-analytics/</guid>
-    </item>
-    <item>
-      <title>Coding Interview Take-Home Challenges</title>
-      <link>https://ashfurrow.com/blog/coding-interview-take-home-challenges/</link>
-      <description>&lt;p&gt;One of the junior developers I&amp;rsquo;m mentoring is applying for their first iOS developer job (if you&amp;rsquo;re looking for devs in NYC and are open to junior folks, &lt;a href="mailto:ash@ashfurrow.com"&gt;hit me up&lt;/a&gt;!) and after an initial interview at this one place, they got a take-home coding challenge. Nice! I like these types of challenges quite a lot – it&amp;rsquo;s how Artsy interviewed me four years ago, actually.&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;blockquote class="twitter-tweet" data-lang="en"&gt;&lt;p lang="en" dir="ltr"&gt;Artsy is reviewing its engineering hiring practices and I&amp;rsquo;m reminded of the take-home challenge I got when I interviewed 4 years ago:&lt;br&gt;&lt;br&gt;&amp;ldquo;Here&amp;rsquo;s an ObjC class we want to open source. Create a repo, basic tests, CI, and a good readme.&amp;rdquo;&lt;br&gt;&lt;br&gt;It&amp;rsquo;s still up: &lt;a href="https://t.co/bsQKgAXSoO"&gt;https://t.co/bsQKgAXSoO&lt;/a&gt;&lt;/p&gt;&amp;mdash; Ash Furrow (or is it?) (it is.) (@ashfurrow) &lt;a href="https://twitter.com/ashfurrow/status/979355315085955072?ref_src=twsrc%5Etfw"&gt;March 29, 2018&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src="https://platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt; &lt;/p&gt;
-
-&lt;p&gt;Take-home challenges are better than evaluating coding skills during an interview because they more accurately reflect the environment a coder will be working in. In my opinion, the only valid in-person coding challenges are ones where the interviewer pairs with the candidate and they work together. But I digress.&lt;/p&gt;
-
-&lt;p&gt;The developer I&amp;rsquo;m mentoring got one of these challenges and it was about as good a challenge as you could get. It had:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Clear instructions.&lt;/li&gt;
-&lt;li&gt;A scaffold of empty function bodies where to put code.&lt;/li&gt;
-&lt;li&gt;A suite of unit tests to verify your code is correct.&lt;/li&gt;
-&lt;li&gt;A Makefile to set up dependencies and run tests.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;There was just one problem: the developer was interviewing for an iOS developer role, but the coding challenge offered a choice only between Ruby and JavaScript.&lt;/p&gt;
-
-&lt;p&gt;At first, I was a really surprised. Indignant, even. But I took a look, and the challenge was really focused on language-agnostic concepts. Manipulating data models, codifying business logic, that kind of stuff. Nothing specific to Rails or React at all! I pointed the developer in the direction of &lt;a href="https://code.visualstudio.com"&gt;Visual Studio Code&lt;/a&gt; to use as a text editor and told them that they have my confidence. And indeed, they managed to complete the challenge in no time at all. (They picked JavaScript, by the way, which fits their Swift experience more than Ruby, in my opinion.)&lt;/p&gt;
-
-&lt;p&gt;You might be angry that a candidate for an iOS developer role was asked to code in a different language. &amp;ldquo;Where is the Swift coding challenge?&amp;rdquo; you might think. And I&amp;rsquo;d understand those feelings. But developers solve problems, and sometimes those problems cross the barrier between languages and frameworks. I would argue that this is a perfect valid take-home challenge because it reflects a real-world development task, just as giving a Swift coding challenge might be a valid take-home challenge for a JavaScript candidate.&lt;/p&gt;
-
-&lt;p&gt;&lt;blockquote class="twitter-tweet" data-conversation="none" data-lang="en"&gt;&lt;p lang="en" dir="ltr"&gt;Coding interviews should reflect the day-to-day work you&amp;rsquo;ll actually be doing (see: &lt;a href="https://t.co/m90S1TR1yS"&gt;https://t.co/m90S1TR1yS&lt;/a&gt; ). In hindsight, &amp;ldquo;open source this code&amp;rdquo; was a really apt test for my role here.&lt;/p&gt;&amp;mdash; Ash Furrow (or is it?) (it is.) (@ashfurrow) &lt;a href="https://twitter.com/ashfurrow/status/979355702639710209?ref_src=twsrc%5Etfw"&gt;March 29, 2018&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src="https://platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt; &lt;/p&gt;
-
-&lt;p&gt;The barriers between programming languages, between app frameworks, and between developer communities – they are all artificial. All of them. Any two given programmers, no matter their backgrounds, have far more in common than they have differences.&lt;/p&gt;
-
-&lt;p&gt;We need to see &lt;em&gt;all&lt;/em&gt; developers as peers. To learn from one another. And to celebrate what makes programmers different instead of using those differences to divide us.&lt;/p&gt;
-</description>
-      <pubDate>Thu, 29 Mar 2018 20:24:22 +0000</pubDate>
-      <guid>https://ashfurrow.com/blog/coding-interview-take-home-challenges/</guid>
     </item>
   </channel>
 </rss>
