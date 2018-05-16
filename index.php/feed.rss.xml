@@ -147,7 +147,7 @@
 &lt;li&gt;Facebook also builds &lt;a href="https://github.com/graphql/graphiql"&gt;GraphiQL&lt;/a&gt;, a small, in-browser IDE for debugging GraphQL queries on your server. The community helps here, too; the IDE has over sixty contributors.&lt;/li&gt;
 &lt;li&gt;Someone embeds GraphiQL &lt;a href="https://github.com/skevy/graphiql-app"&gt;into an Electron app&lt;/a&gt;, which can be pointed to &lt;em&gt;any&lt;/em&gt; GraphQL server. You can use GraphiQL to explore another developer&amp;rsquo;s API, cool!&lt;/li&gt;
 &lt;li&gt;Someone else embeds GraphiQL into a &lt;a href="https://www.graphql.college/practice-graphql/"&gt;JSON-to-GraphQL playground generator&lt;/a&gt;. It&amp;rsquo;s a small-but-important part of a larger educational app to teach people about GraphQL and it accompanies an open source book about GraphQL.&lt;/li&gt;
-&lt;li&gt;Someone else further remixes GraphiQL into &lt;a href="https://github.com/graphcool/graphql-playground"&gt;GraphQL Playground&lt;/a&gt;, a more powerful and feature-rich IDE than GraphQL alone.&lt;/li&gt;
+&lt;li&gt;Someone else further remixes GraphiQL into &lt;a href="https://github.com/graphcool/graphql-playground"&gt;GraphQL Playground&lt;/a&gt;, a more powerful and feature-rich IDE than GraphiQL alone.&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;This is just a small example of how tools built and released into the OSS community proliferate and are composed into other, even more powerful tools. Here is a case where Facebook, a large company that makes developer tools, builds something. Then they release it and developers remix that thing for their own needs, helping the entire community in the process.&lt;/p&gt;
