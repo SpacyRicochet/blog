@@ -6,6 +6,96 @@
     <description>Learning and teaching about interesting topics in iOS Development. Sometimes I diverge to talk about design, photography, or what-have-you.</description>
     <link>https://ashfurrow.com/</link>
     <item>
+      <title>Abstraction Ad Nauseam</title>
+      <link>https://ashfurrow.com/blog/abstraction-ad-nauseam/</link>
+      <description>&lt;p&gt;Okay so tell me if you&amp;rsquo;ve heard &lt;em&gt;this&lt;/em&gt; before:&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;
+
+
+
+&lt;blockquote&gt;
+&lt;p&gt;You can&amp;rsquo;t use X abstraction, you need to understand/use/think in terms of Y technology that X sits on top of.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+
+
+&lt;p&gt;Okay so that&amp;rsquo;s pretty vague, right? So let&amp;rsquo;s see some examples that help illustrate how widely used this kind of thinking is.&lt;/p&gt;
+
+
+
+&lt;blockquote&gt;
+&lt;p&gt;You shouldn&amp;rsquo;t use open source libraries because you really should know how every line of code in your app works.&lt;/p&gt;
+
+&lt;p&gt;No one should learn ActiveRecord before learning SQL and understanding relational algebra.&lt;/p&gt;
+
+&lt;p&gt;Manual memory management is the only way to get really memory-efficient code. Garbage collectors and static automation just makes coders lazy.&lt;/p&gt;
+
+&lt;p&gt;Babel is fine and everything, but if you don&amp;rsquo;t understand the actual JavaScript that gets run in the browser, then you&amp;rsquo;re not really a web developer.&lt;/p&gt;
+
+&lt;p&gt;React Native is fine and everything, but if you want to write great apps, then you need to write them in native code.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+
+
+&lt;p&gt;(And let&amp;rsquo;s keep in mind that I&amp;rsquo;m not trying to dismiss these individual concerns, which are valid perspectives that people do hold. I mean, I kind of agree with them a little bit – or at least I see where they&amp;rsquo;re coming from.)&lt;/p&gt;
+
+&lt;p&gt;I&amp;rsquo;m not dismissing these ideas; I&amp;rsquo;m trying to say that &lt;em&gt;in aggregate&lt;/em&gt;, there&amp;rsquo;s a kind of pattern and &lt;em&gt;that&amp;rsquo;s&lt;/em&gt; what I&amp;rsquo;m  talking about. There&amp;rsquo;s a perspective that&amp;rsquo;s shared among these attitudes, and that perspective is: &amp;ldquo;&lt;strong&gt;other people should work at the level of abstraction that &lt;em&gt;I&lt;/em&gt; want to work in&lt;/strong&gt;.&amp;rdquo;&lt;/p&gt;
+
+&lt;p&gt;Okay, take a deep breath in. And out. Nice, let&amp;rsquo;s talking about Math.&lt;/p&gt;
+
+&lt;h2 id="theres-always-someone-lower-stack-than-you"&gt;There&amp;rsquo;s Always Someone Lower-Stack Than You&lt;/h2&gt;
+
+&lt;p&gt;Here&amp;rsquo;s why this line of thinking makes no logical sense even though we all have these kinds of thoughts. Let&amp;rsquo;s look at an example: sure someone might enjoy working at abstraction level Y and think others ought to work there to, but there&amp;rsquo;s someone thinking &amp;ldquo;hey, Y is actually built on top of Z.&amp;rdquo; And then there are probably discussions about whether Y is even an appropriate abstraction or if Z is better. My god, it just never ends!&lt;/p&gt;
+
+&lt;p&gt;Or does it?&lt;/p&gt;
+
+&lt;p&gt;It does actually end! It ends with &lt;a href="https://en.wikipedia.org/wiki/Zermelo–Fraenkel_set_theory"&gt;ZF Set Theory&lt;/a&gt;, the axioms of Mathematics from which every field in technology ultimately derive. These are &lt;em&gt;very&lt;/em&gt; abstract concepts, even though all higher levels of abstraction derive from them. Neat.&lt;/p&gt;
+
+&lt;p&gt;There&amp;rsquo;s nothing under ZF Set Theory except for&amp;hellip; philosophy I guess? I mean, these are &lt;em&gt;the&lt;/em&gt; most foundational building blocks of something as foundational as &lt;em&gt;Math&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Let&amp;rsquo;s see a very broad-strokes example, skipping over many many intermediate levels of abstraction:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Code in compiled languages are built on top of assembly code.&lt;/li&gt;
+&lt;li&gt;Assembly is built on top of zeroes and ones encoded in logic gates.&lt;/li&gt;
+&lt;li&gt;Gates are etched into silicon using engineering and physics.&lt;/li&gt;
+&lt;li&gt;Physics is built on top of Algebra.&lt;/li&gt;
+&lt;li&gt;Algebra is built on top of ZF Set Theory.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;You can do this with basically everything: start with a field of technology, pick one of its foundations, repeat, and you&amp;rsquo;ll eventually end up at the same place. So cool! &lt;/p&gt;
+
+&lt;p&gt;Wait&amp;hellip; I guess &lt;em&gt;technically&lt;/em&gt; there&amp;rsquo;s not &amp;ldquo;always&amp;rdquo; someone lower-stack than you if your field is philosophy. Damn, the Arts majors were right all along! It&amp;rsquo;s the contemplation of the &lt;em&gt;self&lt;/em&gt;, not the contemplation of &lt;code&gt;self&lt;/code&gt;!&lt;/p&gt;
+
+&lt;p&gt;Okay so we&amp;rsquo;ve established that there&amp;rsquo;s (almost) always someone lower-level than you, and their perspectives &lt;em&gt;also&lt;/em&gt; make sense, we can kind of zoom in and see how this is true in both broad strokes and true in specific instances. It&amp;rsquo;s the idea that people &lt;em&gt;should&lt;/em&gt; work in &lt;em&gt;your&lt;/em&gt; preferred level of abstraction, wherever that preference falls along a spectrum of levels of abstraction. Whatever level you prefer, there&amp;rsquo;s something lower-stack, and inductively, each perspective along this spectrum is arguable and makes sense to &lt;em&gt;someone&lt;/em&gt;. So you have to admit that the chances that &lt;em&gt;any given perspective&lt;/em&gt; along this entire spectrum is somehow preferential to the rest is highly unlikely, right? Right???&lt;/p&gt;
+
+&lt;p&gt;So what, is this another one of my grand-equivocating &amp;ldquo;we&amp;rsquo;re all the same so we should respect and learn from each other blah blah blah&amp;rdquo; blog posts? Well, yeah, it is, but it&amp;rsquo;s more specific than that this time.&lt;/p&gt;
+
+&lt;p&gt;Why does anything that I just said matter? It&amp;rsquo;s because&amp;hellip;&lt;/p&gt;
+
+&lt;h2 id="abstractions-are-really-useful"&gt;Abstractions Are Really Useful&lt;/h2&gt;
+
+&lt;p&gt;Okay so we&amp;rsquo;ve got abstractions which, as concepts, are derived from other, lower abstractions. An abstraction is really a perspective, a way to think about something. Abstractions are really useful because they help us think about things; different kinds of problems lend themselves to being solved using certain perspectives. It would be silly to think about the quantum physics of the electrons being pushed through your CPU if the problem you&amp;rsquo;re trying to solve is &amp;ldquo;I need a website for my band.&amp;rdquo;&lt;/p&gt;
+
+&lt;p&gt;Abstractions are really useful, and when we build software, we actually switch between abstractions a lot. Sometimes it&amp;rsquo;s helpful to think about view controllers, sometimes it&amp;rsquo;s helpful to think in terms of specific lines of code within them.&lt;/p&gt;
+
+&lt;p&gt;I guess what this attitude I&amp;rsquo;m describing comes down to is a disagreement about which abstraction levels are &amp;ldquo;better&amp;rdquo;, which is a question that&amp;rsquo;s also reducible to Philosophy. Damn you again, Arts students!&lt;/p&gt;
+
+&lt;p&gt;So abstractions are useful, and we all jump between levels of abstraction all the time, and maybe we &lt;em&gt;should&lt;/em&gt; be curious about what our abstractions are built on, and &lt;em&gt;yeah okay I guess&lt;/em&gt; we should accept that some people are going to want to work at higher levels of abstraction.&lt;/p&gt;
+
+&lt;p&gt;And it&amp;rsquo;s not just when we&amp;rsquo;re working; it&amp;rsquo;s when we&amp;rsquo;re &lt;em&gt;learning&lt;/em&gt;, too. Take for example the argument that Rails developers should learn SQL before using ActiveRecord. Learning useful applications of a tool is usually easier than learning its building blocks, and &amp;ldquo;usefulness&amp;rdquo; is strong motivation to keep learning. You can always come back later and learn more. Often, programming leads back to subjects we originally skimmed over anyway – you&amp;rsquo;ll hit some limitation or bug that requires SQL instead of ActiveRecord and you fill in the gaps of your understanding when you need to.&lt;/p&gt;
+
+&lt;p&gt;That&amp;rsquo;s the blog post. People have different perspectives and they&amp;rsquo;re valid and also different abstractions are useful so learn a bunch, but don&amp;rsquo;t worry about it too much and definitely don&amp;rsquo;t feel obligated when someone tells you &amp;ldquo;well actually, &lt;em&gt;real&lt;/em&gt; programmers program in &lt;em&gt;my favourite thing&lt;/em&gt;.&amp;rdquo; &lt;/p&gt;
+
+&lt;p&gt;Let&amp;rsquo;s try to go easy on complaining when other people like different abstraction levels than the ones we like. And when we disagree with someone about something technical, we can save a lot of back-and-forth by asking ourselves &amp;ldquo;are we talking in the same abstraction level?&amp;rdquo; &lt;/p&gt;
+
+&lt;p&gt;You&amp;rsquo;ll figure this out, we all will. Just remember: expertise is only just informed opinion (and a little ZF Set Theory, I guess).&lt;/p&gt;
+</description>
+      <pubDate>Tue, 22 May 2018 01:31:50 +0000</pubDate>
+      <guid>https://ashfurrow.com/blog/abstraction-ad-nauseam/</guid>
+    </item>
+    <item>
       <title>Freedom Interview</title>
       <link>https://ashfurrow.com/blog/freedom-interview/</link>
       <description>&lt;p&gt;I was was &lt;a href="https://freedom.to/blog/ios-developer-ash-furrow-on-fighting-distraction-and-forgetting-fomo/"&gt;interviewed on the Freedom blog&lt;/a&gt; about fighting distraction and fear-of-missing-out. Check it out!&lt;/p&gt;
@@ -256,89 +346,6 @@
 </description>
       <pubDate>Wed, 25 Apr 2018 17:24:57 +0000</pubDate>
       <guid>https://ashfurrow.com/blog/electrodynamics/</guid>
-    </item>
-    <item>
-      <title>The Spirit of Moya</title>
-      <link>https://ashfurrow.com/blog/the-spirit-of-moya/</link>
-      <description>&lt;p&gt;When Swift was released in 2014, I created one of the very first open source Swift libraries: &lt;a href="https://github.com/Moya/Moya"&gt;Moya&lt;/a&gt;. Moya became a fairly popular iOS project, driven by a motivated and kind community, and by its central goal: use Swift features to provide compile-time assurances to network requests.&lt;/p&gt;
-
-&lt;p&gt;What a compelling idea! I would say that using computers (compilers, in this case) to automate the difficult and error-prone parts of network calls is the &lt;em&gt;spirit&lt;/em&gt; of Moya.&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;
-
-&lt;p&gt;In a nutshell, Moya has you encapsulate your network calls into an &lt;code&gt;enum&lt;/code&gt;. Each &lt;code&gt;enum&lt;/code&gt; case represents an API call, with associated values used as parameters. The compiler will produce an error if you try to use the API call without the required parameters. Since your &lt;code&gt;enum&lt;/code&gt; has to conform to a specific protocol,the specifics of the network calls (HTTP verb, parameter encoding, path, headers) are centralized in one spot instead of strewn throughout your code.&lt;/p&gt;
-
-&lt;p&gt;Of course, you still need to actually &lt;em&gt;write&lt;/em&gt; the &lt;code&gt;enum&lt;/code&gt;s yourself. Boo. We have &lt;a href="https://github.com/Moya/Moya/issues/73"&gt;long wished for&lt;/a&gt; a way to automate this, most likely through &lt;a href="https://swagger.io"&gt;Swagger&lt;/a&gt;. It never came to fruition, though. In a sense, the &lt;em&gt;practice&lt;/em&gt; of Moya fell short of its &lt;em&gt;spirit&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;Okay so a few years went by and then this cool new way to query an API came onto the scene: &lt;a href="http://graphql.org"&gt;GraphQL&lt;/a&gt;. Let&amp;rsquo;s take a look why GraphQL is so cool.&lt;/p&gt;
-
-&lt;p&gt;Typical APIs are built on &lt;a href="https://en.wikipedia.org/wiki/Representational_state_transfer"&gt;REST&lt;/a&gt;, which uses HTTP verbs connected to specific URLs to encode state transfer. Creating a user? That would be a &lt;code&gt;POST&lt;/code&gt; to the &lt;code&gt;/api/users&lt;/code&gt; endpoint, for example. REST has its problems, though. In the context of mobile apps, the biggest problem with REST is the number of round trips to the server it can take to render a view. Let&amp;rsquo;s look at an example from the Artsy app.&lt;/p&gt;
-
-
-
-&lt;p&gt;&lt;img src="https://ashfurrow.com/img/blog/the-spirit-of-moya/artsy.png" alt="A screenshot of the Artsy iOS app" /&gt;&lt;/p&gt;
-
-
-
-&lt;p&gt;Okay so let&amp;rsquo;s examine this from an API perspective. The screenshot shows an art auction, a bid registration button, and a list of lots in the auction. So that&amp;rsquo;s three requests so far: &lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Fetch the sale model.&lt;/li&gt;
-&lt;li&gt;Fetch the logged-in user&amp;rsquo;s registration status.&lt;/li&gt;
-&lt;li&gt;Fetch the list of lots in the auction.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;As this view became more complex, we have added more network calls. Now, when I&amp;rsquo;m sitting in my fancy New York City office on fancy 5.8GHz wifi, these requests are all really fast. But if someone is on a less-than-great cellular network, they&amp;rsquo;re going to be waiting a long time for those network requests to return. And on top of that, the responses are going to contain a &lt;em&gt;lot&lt;/em&gt; of information that our view just isn&amp;rsquo;t going to render.&lt;/p&gt;
-
-&lt;p&gt;So we have a lot of roundtrips and a lot of unnecessary data transfer.&lt;/p&gt;
-
-&lt;p&gt;GraphQL solves both of these problems. It provides a way to coalesce many network calls into &lt;em&gt;one&lt;/em&gt; single request and also lets the client specify exactly what information it needs back. Let&amp;rsquo;s take a look at what that request could look like for the view above:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre class="highlight javascript"&gt;&lt;code&gt;&lt;span class="p"&gt;{&lt;/span&gt;
-  &lt;span class="nx"&gt;sale&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;id&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s2"&gt;"some-sale-id"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-    &lt;span class="nx"&gt;name&lt;/span&gt;
-    &lt;span class="nx"&gt;end_at&lt;/span&gt;
-    &lt;span class="cm"&gt;/* etc */&lt;/span&gt;
-    &lt;span class="nx"&gt;sale_artworks&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-      &lt;span class="nx"&gt;lot_number&lt;/span&gt;
-      &lt;span class="nx"&gt;artwork&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-        &lt;span class="nx"&gt;title&lt;/span&gt;
-        &lt;span class="cm"&gt;/* etc */&lt;/span&gt;
-      &lt;span class="p"&gt;}&lt;/span&gt;
-      &lt;span class="cm"&gt;/* etc */&lt;/span&gt;
-    &lt;span class="p"&gt;}&lt;/span&gt;
-  &lt;span class="p"&gt;}&lt;/span&gt;
-  &lt;span class="nx"&gt;me&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-    &lt;span class="nx"&gt;sale_registrations&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;ids&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;"some-sale-id"&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-      &lt;span class="nx"&gt;is_registered&lt;/span&gt;
-      &lt;span class="nx"&gt;bidder&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-        &lt;span class="nx"&gt;qualified_for_bidding&lt;/span&gt;
-      &lt;span class="p"&gt;}&lt;/span&gt;
-    &lt;span class="p"&gt;}&lt;/span&gt;
-  &lt;span class="p"&gt;}&lt;/span&gt;
-&lt;span class="p"&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Cool! And because the GraphQL server supplies a schema of available fields and queries, we get some really nice tooling on top of this. Here&amp;rsquo;s what it looks like when I hit Artsy&amp;rsquo;s GraphQL server (&lt;a href="https://github.com/artsy/metaphysics"&gt;which is open source&lt;/a&gt;) with that query in a GraphQL IDE called &lt;a href="https://github.com/graphql/graphiql"&gt;GraphiQL&lt;/a&gt;:&lt;/p&gt;
-
-
-
-&lt;p&gt;&lt;img src="https://ashfurrow.com/img/blog/the-spirit-of-moya/graphiql.png" alt="A screenshot of an Artsy GraphQL request" /&gt;&lt;/p&gt;
-
-
-
-&lt;p&gt;Wow! Autocomplete for our network requests. Errors when a request doesn&amp;rsquo;t adhere to the schema. Inline documentation. Types! This is really great!&lt;/p&gt;
-
-&lt;p&gt;So fine, GraphQL is awesome, but what does this have to do with Moya?&lt;/p&gt;
-
-&lt;p&gt;Recall that we wanted Moya to automate the work of creating those &lt;code&gt;enum&lt;/code&gt;s. Because a GraphQL server&amp;rsquo;s schema is accessible programmatically, we can built all kinds of tooling around it. And that leads us to &lt;a href="https://facebook.github.io/relay/"&gt;Relay&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Relay is what sold me on React Native development. It was that revolutionary of an idea. And Relay shares its spirit with Moya: to automate the difficult and error-prone parts of network calls. Relay asks view components in a React/Native app to provide &lt;em&gt;fragments&lt;/em&gt; of data that it needs. Each component on the screen tells Relay what data it needs from the GraphQL schema in order to render itself. Relay coalesces these fragments at runtime into a single GraphQL query, requesting &lt;em&gt;only&lt;/em&gt; the data that the component needs, and aggressively caching everything. It is this mobile app developer&amp;rsquo;s dream come true.&lt;/p&gt;
-
-&lt;p&gt;I could go on and on about Relay, about how the Relay compiler integrates well with React, about how it can use TypeScript to provide type safety based off the GraphQL schema, about how it abstracts away concepts like pagination and sorting. It&amp;rsquo;s just so exciting! But the truth is, I&amp;rsquo;m still just getting started with this stuff. I&amp;rsquo;m thrilled to be in the position where I can work with such cool technologies, and I hope to bring the best ideas back from JavaScript into the native iOS world.&lt;/p&gt;
-
-&lt;p&gt;But most of all, I feel so validated in my work on Moya. It was a pretty neat idea, but it&amp;rsquo;s grown into a popular library and vibrant community. Relay has reaffirmed my &lt;a href="https://ashfurrow.com/blog/coding-interview-take-home-challenges/"&gt;belief&lt;/a&gt; that we programmers share more in common than we have differences. Moya and Relay (and others, like &lt;a href="https://www.apollographql.com"&gt;Apollo&lt;/a&gt;!) all approach the problem differently, and I want to celebrate what makes each different while acknowledging what makes them the same.&lt;/p&gt;
-</description>
-      <pubDate>Sat, 21 Apr 2018 14:38:49 +0000</pubDate>
-      <guid>https://ashfurrow.com/blog/the-spirit-of-moya/</guid>
     </item>
   </channel>
 </rss>
