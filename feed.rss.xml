@@ -28,7 +28,7 @@
 
 &lt;p&gt;So that&amp;rsquo;s cool! Let&amp;rsquo;s contextualize things a bit. The spike in April came in light of the Cambridge Analytica and Facebook controversy. People were angry about Facebook and surveillance capitalism, and they took to Mastodon for an alternative social network. Cool! I was curious to see if that surge of popularity would last, and it &lt;em&gt;seems&lt;/em&gt; to have, so far anyway.&lt;/p&gt;
 
-&lt;p&gt;The Fediverse was also recently hit my a wave of spam accounts, which &lt;em&gt;could&lt;/em&gt; be inflating login counts slightly, but it&amp;rsquo;s hard to say.&lt;/p&gt;
+&lt;p&gt;The Fediverse was also recently hit by a wave of spam accounts, which &lt;em&gt;could&lt;/em&gt; be inflating login counts slightly, but it&amp;rsquo;s hard to say.&lt;/p&gt;
 
 &lt;p&gt;All in all, I&amp;rsquo;m pretty happy with things. Aside from the &lt;a href="https://github.com/tootsuite/mastodon/issues/6734"&gt;occasional problem&lt;/a&gt; or &lt;a href="https://gist.github.com/ashfurrow/abd1418399883b2bdfdd9a1f6120f139"&gt;misconfigured database backups&lt;/a&gt;, running a Mastodon instance hasn&amp;rsquo;t been particularly onerous. This is good, since I have a life and a job and running mastodon.technology can&amp;rsquo;t be like a full-time commitment for me. Having the hosting costs &lt;a href="https://www.patreon.com/ashfurrow"&gt;covered by donations&lt;/a&gt; also helps &lt;em&gt;a lot&lt;/em&gt;, since it removes the financial burden from me. Of course, there are occasional moderation duties, but for the most part users on my instance have adhered to the &lt;a href="https://mastodon.technology/about/more"&gt;Code of Conduct&lt;/a&gt;. A healthy admin support network helps, too.&lt;/p&gt;
 
