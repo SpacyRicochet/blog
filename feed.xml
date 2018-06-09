@@ -4,10 +4,46 @@
   <id>https://ashfurrow.com/blog</id>
   <link href="https://ashfurrow.com/"/>
   <link href="https://ashfurrow.com/feed.xml" rel="self"/>
-  <updated>2018-05-22T01:31:50+00:00</updated>
+  <updated>2018-06-09T14:50:30+00:00</updated>
   <author>
     <name>Ash Furrow</name>
   </author>
+  <entry>
+    <title>A Year of Mastodon User Activity</title>
+    <link rel="alternate" href="https://ashfurrow.com/blog/a-year-of-mastodon-user-activity/"/>
+    <id>https://ashfurrow.com/blog/a-year-of-mastodon-user-activity/</id>
+    <published>2018-06-09T14:50:30+00:00</published>
+    <updated>2018-06-09T14:50:30+00:00</updated>
+    <author>
+      <name>Ash Furrow</name>
+    </author>
+    <content type="html">&lt;p&gt;Oh hey, remember &lt;a href="https://joinmastodon.org"&gt;Mastodon&lt;/a&gt;? Remember how I &lt;a href="https://ashfurrow.com/blog/mastodon/"&gt;started my own Mastodon instance&lt;/a&gt;? How&amp;rsquo;s that been going, anyway? Well it&amp;rsquo;s been (over) a year so let&amp;rsquo;s check in, shall we?&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;
+
+&lt;p&gt;Things have been going well on my instance, &lt;a href="https://mastodon.technology"&gt;mastodon.technology&lt;/a&gt;. I&amp;rsquo;ve learned a tonne, I&amp;rsquo;ve contributed here and there, and I&amp;rsquo;ve gotten to know some of the other instance admins (they rock!). I&amp;rsquo;m more of a lurker on Mastodon than on Twitter, but it&amp;rsquo;s been nice.&lt;/p&gt;
+
+&lt;p&gt;Okay on to the good stuff. Mastodon added the feature of keeping track of user counts over time, but I&amp;rsquo;ve been logging in to the Rails console since I started to check how many users have logged in within one- and two-week timeframes. Not a perfect metric, but it&amp;rsquo;s interesting nonetheless. The account metrics are based on &lt;a href="https://github.com/plataformatec/devise"&gt;devise&lt;/a&gt; and I collected stats with the following two commands:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre class="highlight ruby"&gt;&lt;code&gt;&lt;span class="no"&gt;User&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;where&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'last_sign_in_at &amp;gt; ?'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;week&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;ago&lt;/span&gt;&lt;span class="p"&gt;).&lt;/span&gt;&lt;span class="nf"&gt;count&lt;/span&gt;
+&lt;span class="no"&gt;User&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;where&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'last_sign_in_at &amp;gt; ?'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;weeks&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;ago&lt;/span&gt;&lt;span class="p"&gt;).&lt;/span&gt;&lt;span class="nf"&gt;count&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;All the data is &lt;a href="https://gist.github.com/ashfurrow/1954350316c180affa879ac3e74caba9"&gt;available in plaintext&lt;/a&gt;, but here&amp;rsquo;s a pretty graph:&lt;/p&gt;
+
+
+
+&lt;p&gt;&lt;img src="https://ashfurrow.com/img/blog/a-year-of-mastodon-user-activity/graph.png" alt="Graph of Mastodon login counts over a year" /&gt;&lt;/p&gt;
+
+
+
+&lt;p&gt;So that&amp;rsquo;s cool! Let&amp;rsquo;s contextualize things a bit. The spike in April came in light of the Cambridge Analytica and Facebook controversy. People were angry about Facebook and surveillance capitalism, and they took to Mastodon for an alternative social network. Cool! I was curious to see if that surge of popularity would last, and it &lt;em&gt;seems&lt;/em&gt; to have, so far anyway.&lt;/p&gt;
+
+&lt;p&gt;The Fediverse was also recently hit my a wave of spam accounts, which &lt;em&gt;could&lt;/em&gt; be inflating login counts slightly, but it&amp;rsquo;s hard to say.&lt;/p&gt;
+
+&lt;p&gt;All in all, I&amp;rsquo;m pretty happy with things. Aside from the &lt;a href="https://github.com/tootsuite/mastodon/issues/6734"&gt;occasional problem&lt;/a&gt; or &lt;a href="https://gist.github.com/ashfurrow/abd1418399883b2bdfdd9a1f6120f139"&gt;misconfigured database backups&lt;/a&gt;, running a Mastodon instance hasn&amp;rsquo;t been particularly onerous. This is good, since I have a life and a job and running mastodon.technology can&amp;rsquo;t be like a full-time commitment for me. Having the hosting costs &lt;a href="https://www.patreon.com/ashfurrow"&gt;covered by donations&lt;/a&gt; also helps &lt;em&gt;a lot&lt;/em&gt;, since it removes the financial burden from me. Of course, there are occasional moderation duties, but for the most part users on my instance have adhered to the &lt;a href="https://mastodon.technology/about/more"&gt;Code of Conduct&lt;/a&gt;. A healthy admin support network helps, too.&lt;/p&gt;
+
+&lt;p&gt;It&amp;rsquo;s not all roses. Some instance have been lost in the past year, some intentionally, some accidentally. But we&amp;rsquo;re all figuring this out together and I&amp;rsquo;ve learned a lot running this service over the past year. Hopefully I can follow this post up in 2019 with updated stats.&lt;/p&gt;
+</content>
+  </entry>
   <entry>
     <title>Abstraction Ad Nauseam</title>
     <link rel="alternate" href="https://ashfurrow.com/blog/abstraction-ad-nauseam/"/>
@@ -320,58 +356,6 @@
 &lt;p&gt;Part of the problem, I think, is that companies are unwilling to take risks. This is probably my biggest frustration, actually. See, hiring any engineer is a risk, and hiring an engineer without a lot of experience &lt;em&gt;does&lt;/em&gt; increase that risk. Maybe they&amp;rsquo;re overestimating that increase, or maybe they really are just that risk adverse. My point is, it seems like companies would rather hire no one than they would hire someone who they were only 95% sure would be a good fit. I think there is room for short-term contracts to evaluate engineers before hiring them full time, or other ideas like that. And again with business realities, companies are operating as they are meant to in our capitalist society: to avoid risk and maximize returns. I don&amp;rsquo;t like that, but it&amp;rsquo;s the reality we live it. Again, I don&amp;rsquo;t have the answers, I&amp;rsquo;m still wrapping my head around this situation.&lt;/p&gt;
 
 &lt;p&gt;If you&amp;rsquo;re looking for your first iOS job, take a look at &lt;a href="http://artsy.github.io/blog/2016/01/30/iOS-Junior-Interviews/"&gt;Orta&amp;rsquo;s blog post&lt;/a&gt;. Try to stay positive, stay focused, and be patient. I wish things were better, that our industry was more inclusive, and I&amp;rsquo;m doing what I can to help. If you&amp;rsquo;re in a position to help move the needle on this, even a little bit, I encourage you to help as well.&lt;/p&gt;
-</content>
-  </entry>
-  <entry>
-    <title>Electrodynamics</title>
-    <link rel="alternate" href="https://ashfurrow.com/blog/electrodynamics/"/>
-    <id>https://ashfurrow.com/blog/electrodynamics/</id>
-    <published>2018-04-25T17:24:57+00:00</published>
-    <updated>2018-04-25T17:24:57+00:00</updated>
-    <author>
-      <name>Ash Furrow</name>
-    </author>
-    <content type="html">&lt;p&gt;Okay so I&amp;rsquo;ve got a lot of thoughts on &lt;a href="https://electronjs.org"&gt;Electron&lt;/a&gt; bouncing around my brain and I honestly can&amp;rsquo;t take it anymore. So this post is more for me, as usual.&lt;/p&gt;
-
-&lt;p&gt;Oh and one important thing to note: I&amp;rsquo;m not interested in discussing Electron itself. If you think it sucks, past experience has taught me that I&amp;rsquo;m very unlikely to change your mind. This post is about the discourse surrounding Electron and, more generally, the discourse in the Apple developer community. And I&amp;rsquo;m thinking about this from a big-picture perspective, not specific tweets or people. I don&amp;rsquo;t know if it&amp;rsquo;s getting more experienced, or getting older, or &lt;a href="https://ashfurrow.com/blog/perspective-of-the-polyglot/"&gt;getting outside the iOS ecosystem&lt;/a&gt;, but lately I find myself really bored by &amp;ldquo;specifics.&amp;rdquo; I&amp;rsquo;m much more keen on looking at issues as a whole piece, rather than component parts.&lt;/p&gt;
-
-&lt;p&gt;Okay so let&amp;rsquo;s dig into this.&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;
-
-&lt;p&gt;Some people dislike Electron. They seem to resent it, in fact. Generally, people discussing Electron seem to fall into one of a few camps:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;They dislike Electron for &lt;em&gt;whatever&lt;/em&gt; reason.&lt;/li&gt;
-&lt;li&gt;They think Electron has a place, sometimes, in software development.&lt;/li&gt;
-&lt;li&gt;They don&amp;rsquo;t care about Electron and just want everyone to shut up.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;I obviously fall in the middle ground. I&amp;rsquo;ve never built an Electron app but I understand the technology involved and I appreciate its appeal. If I were building a Mac app for whatever reason, I&amp;rsquo;d look into building it with Electron (I have built Mac apps and have no desire to use AppKit again).&lt;/p&gt;
-
-&lt;p&gt;The people in the third bucket are my favourite. I sympathize with them because I too want everyone to just shut up. But here I am writing a blog post, so.&lt;/p&gt;
-
-&lt;p&gt;It&amp;rsquo;s the people who really dislike Electron that make the most noise. Different folks have their own reasons for disliking it, which is fine. Folks are welcome to their opinions of course. However, I am a bit embarrassed by the fervour with which members of our community are expressing their outright &lt;em&gt;disdain&lt;/em&gt; for Electron.&lt;/p&gt;
-
-&lt;p&gt;It&amp;rsquo;s tempting for me to refute the arguments with counter examples, but I really want to emphasize that the individual points people have about Electron are &lt;em&gt;not&lt;/em&gt; what I&amp;rsquo;m talking about right now. It&amp;rsquo;s the &lt;em&gt;tone&lt;/em&gt; of the conversation that I find distasteful. People are complaining – loudly – about a technology they&amp;rsquo;ll never use to build apps, as though &lt;em&gt;no one&lt;/em&gt; should use that technology.&lt;/p&gt;
-
-&lt;p&gt;&lt;blockquote class="twitter-tweet" data-lang="en"&gt;&lt;p lang="en" dir="ltr"&gt;Also, let&amp;rsquo;s be kind even when nominally criticizing tech—people invest a lot of themselves in the tools they use every day, and it&amp;rsquo;s a short trip from &amp;ldquo;X is bad&amp;rdquo; to &amp;ldquo;choosing X is bad&amp;rdquo; to &amp;ldquo;people who choose X are bad&amp;rdquo;&lt;/p&gt;&amp;mdash; Nate Cook 🌱 (@nnnnnnnn) &lt;a href="https://twitter.com/nnnnnnnn/status/988974021453676550?ref_src=twsrc%5Etfw"&gt;April 25, 2018&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src="https://platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt; &lt;/p&gt;
-
-&lt;p&gt;I&amp;rsquo;m sure there are outsiders looking in on the Apple developer community right now. I wonder what they think of how we&amp;rsquo;re behaving.&lt;/p&gt;
-
-&lt;p&gt;&lt;blockquote class="twitter-tweet" data-conversation="none" data-lang="en"&gt;&lt;p lang="en" dir="ltr"&gt;Instead of yelling at companies, teams, and developers about the choices they made about their own work, why not take a moment and consider how we got here. &lt;br&gt;&lt;br&gt;And why are you so mad about the decisions of other developer teams. What business is it of yours?&lt;/p&gt;&amp;mdash; Jon Maddox (@maddox) &lt;a href="https://twitter.com/maddox/status/988925582665768961?ref_src=twsrc%5Etfw"&gt;April 24, 2018&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src="https://platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt; &lt;/p&gt;
-
-&lt;p&gt;Finally, a note about Slack. Slack is an Electron app, probably the most popular Electron app. And Slack has bugs. It has memory leaks. But I &lt;a href="https://twitter.com/ashfurrow/status/989100844674158592"&gt;question&lt;/a&gt; the intellectual rigour of those who would infer or imply that Slack&amp;rsquo;s bugs are the result of being built in Electron. I mean, come on. Lots of software has memory problems. Besides, there are Electron apps &lt;em&gt;without&lt;/em&gt; memory issues. &lt;a href="https://code.visualstudio.com"&gt;Visual Studio Code&lt;/a&gt; is a shining example of an Electron app, a counterexample to anyone who tries to argue that Electron apps are necessarily poor user experiences. Frankly, blaming Electron for Slack&amp;rsquo;s bugs let&amp;rsquo;s Slack off the hook.&lt;/p&gt;
-
-&lt;p&gt;I&amp;rsquo;m just so very tired of this conversation. Regularly, someone will reignite the discussion. But every time, people miss out on the bigger picture: whether or not you think developers &lt;em&gt;should&lt;/em&gt; use Electron, they &lt;em&gt;are&lt;/em&gt; using it. So ask yourself: why? Put yourself in their shoes, assume positive intent, try to understand what they&amp;rsquo;re thinking, and please please please stay nonjudgemental. A few tips: &lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Don&amp;rsquo;t remove their agency – &amp;ldquo;well Electron only makes sense for businesses.&amp;rdquo; That dismisses entire groups of developers who &lt;em&gt;want&lt;/em&gt; to build Electron apps. &lt;/li&gt;
-&lt;li&gt;Don&amp;rsquo;t dismiss their technical decisions – &amp;ldquo;well they should just learn AppKit.&amp;rdquo; The fact is, they aren&amp;rsquo;t learning AppKit. Asking &amp;ldquo;why not?&amp;rdquo; is a much more interesting question than labelling them as lazy.&lt;/li&gt;
-&lt;li&gt;Don&amp;rsquo;t be defensive – &amp;ldquo;well if Electron replaces native apps then what will happen to me?&amp;rdquo; That&amp;rsquo;s jumping to a conclusion. No one is arguing that Electron will or should replace native apps.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Electron is just another tool; the more tools you have, the more types of problems you can solve. I keep reiterating this point because it&amp;rsquo;s so important: software developers of different stripes have more in common than they have differences. We have so much to learn from one another, but we can&amp;rsquo;t if we keep focusing on our differences.&lt;/p&gt;
 </content>
   </entry>
 </feed>
