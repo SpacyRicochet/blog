@@ -6,6 +6,70 @@
     <description>Learning and teaching about interesting topics in iOS Development. Sometimes I diverge to talk about design, photography, or what-have-you.</description>
     <link>https://ashfurrow.com/</link>
     <item>
+      <title>The Case for React Native</title>
+      <link>https://ashfurrow.com/blog/the-case-for-react-native/</link>
+      <description>&lt;p&gt;It occurred to me that there is a missing piece to the conversations around React Native - the React abstraction itself! Rather than getting stuck in debates about &lt;a href="https://ashfurrow.com/blog/javascript-is-good-actually/"&gt;the quality of JavaScript&lt;/a&gt;, I&amp;rsquo;d like to talk about this aspect of the React Native choice. If you&amp;rsquo;re open-minded, if you accept that the JavaScript language is as excellent as I say it is, and if you&amp;rsquo;re curious about why some people just seem so excited to use JavaScript to write iOS apps, I would love to explain my perspective.&lt;/p&gt;
+
+&lt;p&gt;Let&amp;rsquo;s dive in.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;
+
+&lt;h2 id="react-itself-is-amazing"&gt;React Itself is Amazing&lt;/h2&gt;
+
+&lt;p&gt;Okay so in order to understand React, it helps to understand the history of why React was built. Programming user interfaces for the web browser has sucked, since forever, and over the decades different teams have tried different approaches to make it suck less. This sounds kind of crappy, and for a while it really was, but then something really curious happened: the pressure to find a better way to build web software kept building and building until it outweighed the difficulty of the constraints of web browsers. The overwhelming amount of pressure to mitigate the awfulness of web programming led to a lot of really innovative ideas. One of the most famous ones is &lt;a href="https://jquery.com"&gt;jQuery&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;jQuery made it really easy to interact with the HTML elements on the web page (called the DOM). Many cool frontend JavaScript frameworks are built atop jQuery. The only problem was that the DOM API itself – the API that jQuery sits atop – is really slow.&lt;/p&gt;
+
+&lt;p&gt;&amp;ldquo;Really slow&amp;rdquo; is a relative term, so let&amp;rsquo;s unpack what that means. Certain changes to the DOM can trigger what&amp;rsquo;s called a &lt;a href="https://developer.mozilla.org/en-US/docs/Archive/Misc_top_level/Notes_on_HTML_Reflow"&gt;reflow&lt;/a&gt; – basically, the layout of the website gets re-calculated by the browser. A reflow is a &lt;strong&gt;synchronous&lt;/strong&gt; event that can be easily triggered inadvertently by programmers, and it&amp;rsquo;s easy for web apps to have performance problems based on this bottleneck (you can &lt;a href="http://kellegous.com/j/2013/01/26/layout-performance/"&gt;read more about layout thrashing here&lt;/a&gt;). Browser makers go to great lengths to optimize their reflow algorithms, but the easiest win for web app performance is being smart about when to trigger a reflow. &lt;/p&gt;
+
+&lt;p&gt;A kind of arms race between frameworks for web performance has been going for years, and it&amp;rsquo;s been really exciting!  And that brings us to React. React solves the slow DOM API problem by abstracting away the &lt;em&gt;state&lt;/em&gt; of the application. There are lots of implementation details (like, people usually mention the &lt;a href="https://reactjs.org/docs/faq-internals.html"&gt;Virtual DOM&lt;/a&gt; when explaining React) but the most important thing is that React is &lt;em&gt;declarative&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;So what the heck is that? Well it takes a second to explain.&lt;/p&gt;
+
+&lt;p&gt;User interfaces are built in React by building and composing reusable &lt;em&gt;components&lt;/em&gt;, which are little pieces of code that turn input properties (called props) into a user interface. A React app is really just a big tree of components; each parent passes its child components the props that the child needs to render itself, and so on. This is &lt;em&gt;declarative&lt;/em&gt; because if a component is passed the same props, it will produce the same user interface every time.&lt;/p&gt;
+
+&lt;p&gt;Because of the stateless nature of the components, aggressive optimizations can be made to minimize DOM updates. And holy smokes is it ever optimized. Plus, there are some amazing tools that can be built on top of a framework that abstracts state into a plain JavaScript object that be tracked over time.&lt;/p&gt;
+
+&lt;p&gt;(Components can maintain their own internal state independent of React, but it&amp;rsquo;s totally private to that component and can only be modified through a centralized, asynchronous API.)&lt;/p&gt;
+
+&lt;p&gt;I&amp;rsquo;ve always liked (&lt;a href="https://ashfurrow.com/blog/reactivecocoa-vs-rxswift/"&gt;and advocated for&lt;/a&gt;) iOS functional reactive frameworks like &lt;a href="https://github.com/ReactiveX/RxSwift"&gt;RxSwift&lt;/a&gt;, &lt;a href="https://github.com/ReactiveCocoa/ReactiveSwift"&gt;ReactiveSwift&lt;/a&gt;, &lt;a href="https://github.com/JensRavens/Interstellar"&gt;Interstellar&lt;/a&gt;, etc on iOS. However, I&amp;rsquo;ve never felt &lt;em&gt;entirely&lt;/em&gt; satisfied by them. They are an excellent way to handle state, but they themselves operate within and are built atop a stateful abstraction layer (UIKit). Subsequently, the complexity of these frameworks is fundamentally constrained on the lower bounds in a way that React isn&amp;rsquo;t.&lt;/p&gt;
+
+&lt;p&gt;There&amp;rsquo;s just too much incidental complexity to how these frameworks need to integrate with the rest of the app. Contrast that complexity with React, where there are no observables or flat maps or signal transforms; you just write components in declarative way and you get all the benefits of reactive UIs for free.  &lt;/p&gt;
+
+&lt;p&gt;Yeah, for free.&lt;/p&gt;
+
+&lt;p&gt;It&amp;rsquo;s like a functional reactive programmer&amp;rsquo;s dream. Unidirectional data flow, asynchronous everything, everything, it&amp;rsquo;s so good. The declarative abstraction that React provides is elegant and thoughtful, and the React developers have continuously improved the API and tooling for React over the past five years.&lt;/p&gt;
+
+&lt;p&gt;If you&amp;rsquo;re keen to learn more, you should check out the &lt;a href="https://reactjs.org/tutorial/tutorial.html"&gt;React tutorial&lt;/a&gt;; it includes a great, in-depth explanation of why immutability and declarative APIs are so important. You can also read &lt;a href="https://medium.freecodecamp.org/yes-react-is-taking-over-front-end-development-the-question-is-why-40837af8ab76"&gt;more about why React is so popular here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;My point is: React is unbelievably good. But it&amp;rsquo;s not the only reason to use React Native.&lt;/p&gt;
+
+&lt;h2 id="the-javascript-ecosystem-is-also-amazing"&gt;The JavaScript Ecosystem is Also Amazing&lt;/h2&gt;
+
+&lt;p&gt;iOS developers are a smaller community than web developers, who tend to specialize more. The web has also been around longer, too, and it&amp;rsquo;s lacked any authority to direct its development. How cool is that! A whole other community of developers, evolving under totally different constraints.&lt;/p&gt;
+
+&lt;p&gt;JavaScript tools are often written &lt;em&gt;in&lt;/em&gt; JavaScript themselves, so what you get is a really low barrier to entry for people to build new tools, experiment with ideas, and of course, to make the everyday incremental improvements necessary for an ecosystem to thrive. Just like with iOS, the quality of any given OSS framework or tool is going to vary, but the sheer size of the web developer community and a more open perspective on tool building has produced a &lt;em&gt;lot&lt;/em&gt; of great tools.&lt;/p&gt;
+
+&lt;p&gt;And if you build your iOS app in React Native, you get access to that ecosystem. That means &lt;a href="https://facebook.github.io/relay/"&gt;Relay&lt;/a&gt;/&lt;a href="https://www.apollographql.com"&gt;Apollo&lt;/a&gt;, &lt;a href="https://www.styled-components.com"&gt;styled components&lt;/a&gt;, &lt;a href="https://facebook.github.io/jest/"&gt;Jest&lt;/a&gt;, &lt;a href="https://github.com/airbnb/enzyme"&gt;Enzyme&lt;/a&gt;, &lt;a href="https://prettier.io"&gt;prettier&lt;/a&gt;, &lt;a href="https://github.com/typicode/husky"&gt;Husky&lt;/a&gt;, many other great tools, and a long tail of less well-known but nonetheless very useful tools. I cannot do justice to this feeling, you just need to experience it to understand.&lt;/p&gt;
+
+&lt;p&gt;People will validly complain about JavaScript developers relying on too many dependencies. When the native iOS developers at Artsy discuss the downsides of using React Native, we will tell you first thing about the dependencies. You kind of just&amp;hellip; adjust to it.&lt;/p&gt;
+
+&lt;p&gt;There are big culture differences in OSS between the iOS and JavaScript developer communities. I think that JavaScript developers go a little too far, but I also think that iOS developers don&amp;rsquo;t go far enough. At Artsy, we see those differences on our engineering team. Sometimes, tensions surface between web and native developers contributing to the shared React Native codebase. It&amp;rsquo;s so fascinating to see how we approach the same problems from different perspectives. Each one of these tensions is an opportunity for us to learn from each other.&lt;/p&gt;
+
+&lt;p&gt;So yes, you&amp;rsquo;ll have a lot of dependencies. But you&amp;rsquo;ll also learn to see building software from a new perspective.  That learning experience alone, to me, is a worth a few hundred node modules.&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;p&gt;The thing is: this is all just what I think. Different people with different backgrounds and different priorities are going to come to different conclusions. I think that&amp;rsquo;s totally okay. There are lots of reasons not to use React Native; when my colleague Eloy &lt;a href="http://artsy.github.io/blog/2016/08/15/React-Native-at-Artsy/"&gt;describes why Artsy adopted it&lt;/a&gt;, he literally begins with a bunch of React Native downsides. We&amp;rsquo;re not hiding anything!&lt;/p&gt;
+
+&lt;p&gt;A lot (many? most?) iOS apps can be entirely described as &amp;ldquo;software that turns API calls into user interfaces, and user interactions into API calls.&amp;rdquo; That&amp;rsquo;s a problem that React is tailored to solve, and React Native adopts that solution to iOS and Android really really well.&lt;/p&gt;
+
+&lt;p&gt;React Native isn&amp;rsquo;t perfect, and it&amp;rsquo;s not suitable for every app. But nothing is! UIKit isn&amp;rsquo;t perfect for every app, either. There simply are no silver bullets in programming. React solves the problem of programming UIs to such a degree of success that, when combined with a fantastic language and a vibrant ecosystem, it makes a compelling case for use in a lot of apps.&lt;/p&gt;
+</description>
+      <pubDate>Fri, 15 Jun 2018 18:18:35 +0000</pubDate>
+      <guid>https://ashfurrow.com/blog/the-case-for-react-native/</guid>
+    </item>
+    <item>
       <title>A Year of Mastodon User Activity</title>
       <link>https://ashfurrow.com/blog/a-year-of-mastodon-user-activity/</link>
       <description>&lt;p&gt;Oh hey, remember &lt;a href="https://joinmastodon.org"&gt;Mastodon&lt;/a&gt;? Remember how I &lt;a href="https://ashfurrow.com/blog/mastodon/"&gt;started my own Mastodon instance&lt;/a&gt;? How&amp;rsquo;s that been going, anyway? Well it&amp;rsquo;s been (over) a year so let&amp;rsquo;s check in, shall we?&lt;/p&gt;
@@ -288,48 +352,6 @@
 </description>
       <pubDate>Sat, 05 May 2018 13:53:45 +0000</pubDate>
       <guid>https://ashfurrow.com/blog/javascript-is-good-actually/</guid>
-    </item>
-    <item>
-      <title>Hiring Juniors</title>
-      <link>https://ashfurrow.com/blog/hiring-juniors/</link>
-      <description>&lt;p&gt;Okay let&amp;rsquo;s dig into this.&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;
-
-&lt;p&gt;I tweeted this earlier this week, to some fanfare and a little pushback:&lt;/p&gt;
-
-&lt;p&gt;&lt;blockquote class="twitter-tweet" data-lang="en"&gt;&lt;p lang="ja" dir="ltr"&gt;sorry, we&amp;rsquo;re looking for someone &lt;br&gt; ○ &lt;br&gt;く|)へ&lt;br&gt; 〉 &lt;br&gt; ￣￣┗┓ with more experience&lt;br&gt; 　 　 ┗┓　 ヾ○ｼ&lt;br&gt; 　　 ┗┓ ヘ/ 　 　 &lt;br&gt; 　 ┗┓ノ &lt;br&gt;　 　 　 　 　 ┗┓&lt;/p&gt;&amp;mdash; Ash Furrow (or is it?) (it is.) (@ashfurrow) &lt;a href="https://twitter.com/ashfurrow/status/988410309319843849?ref_src=twsrc%5Etfw"&gt;April 23, 2018&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src="https://platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt; &lt;/p&gt;
-
-&lt;p&gt;I should have expected the pushback; I followed up shortly afterward&amp;hellip;&lt;/p&gt;
-
-&lt;p&gt;&lt;blockquote class="twitter-tweet" data-conversation="none" data-lang="en"&gt;&lt;p lang="en" dir="ltr"&gt;I am reminded of this other time I complained about companies not hiring juniors. Hmm. When will I learn.&lt;a href="https://t.co/I0Z25o4NSM"&gt;https://t.co/I0Z25o4NSM&lt;/a&gt;&lt;/p&gt;&amp;mdash; Ash Furrow (or is it?) (it is.) (@ashfurrow) &lt;a href="https://twitter.com/ashfurrow/status/988454390469193728?ref_src=twsrc%5Etfw"&gt;April 23, 2018&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src="https://platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt; &lt;/p&gt;
-
-&lt;p&gt;This blog post isn&amp;rsquo;t really about fixing the problem that, at least in New York, it is really really hard to get your first job. Instead, it&amp;rsquo;s a description of my understanding of the problem and how it&amp;rsquo;s evolved.&lt;/p&gt;
-
-&lt;p&gt;So I know a lot of juniors. I&amp;rsquo;ve been running a &lt;a href="https://peerlab.community"&gt;peer lab&lt;/a&gt; for three years and we welcome people from all experience levels, and I help with &lt;a href="https://www.c4q.nyc"&gt;Coalition for Queens&lt;/a&gt;. I know a lot of people who are looking for their first jobs and are having really difficult times. I&amp;rsquo;m close to people, I&amp;rsquo;m close to their pain and frustration. And that pain and frustration was the motivation for my tweet, not any sort of malice towards hiring managers.&lt;/p&gt;
-
-&lt;p&gt;And before we go any further, I have to point out that there is a huge power imbalance between a company trying to hire someone and someone trying to get hired. The company has &lt;em&gt;most&lt;/em&gt; of the power in this relationship. The worst case for the company is that they waste a bit of time interviewing someone and it doesn&amp;rsquo;t work out, and they need to keep looking. Not a huge deal. The worst case for the applicant can be that they don&amp;rsquo;t get the job, so maybe they can&amp;rsquo;t make their rent, maybe they can&amp;rsquo;t feed their family, etc. So from my perspective, I naturally empathize more with the individual than the company.&lt;/p&gt;
-
-&lt;p&gt;This is not to say companies are bad, or have bad intentions. I&amp;rsquo;m only pointing out that one party of this relationship has the power. That imbalance needs to inform any discussion around hiring practices in our industry.&lt;/p&gt;
-
-&lt;p&gt;And not all companies are even in a position to hire juniors. That sucks, but that&amp;rsquo;s the reality of the economic world we live in.&lt;/p&gt;
-
-&lt;p&gt;There are lots of things junior developers can do to distinguish themselves. In the past, I&amp;rsquo;ve told iOS juniors to focus on getting their first app into the App Store, since that shows employers that you are capable of nurturing and building an idea into fully shipped software. But I know lots of juniors who have done this and are struggling. Having an app in the store isn&amp;rsquo;t the distinguisher that it used to be. They need something new, to stand out. I haven&amp;rsquo;t had a satisfying answer, but based on feedback I&amp;rsquo;ve gotten from hiring managers, I think open source contributions might help.&lt;/p&gt;
-
-&lt;p&gt;(Note that not everyone looking for their first job is even capable of making open source contributions. We all have different lives, and contributing to open source is just intrinsically easier for some groups of people. So &amp;ldquo;make some OSS contributions&amp;rdquo; isn&amp;rsquo;t a comprehensive solution to this very broad problem.)&lt;/p&gt;
-
-&lt;p&gt;Making open source contributions shows employers that you&amp;rsquo;re able to contribute to a larger goal through collaborating with other people. That&amp;rsquo;s really important. Building software in a company is never done in isolation; the software always serves the needs of the business, which means you&amp;rsquo;ll be interacting with business people at the very least. Probably designers, product managers, and other engineers, too. OSS contributions confer skills that will be helpful in that sort of collaborative business environment.&lt;/p&gt;
-
-&lt;p&gt;So look at the open source libraries you use. Or at least the one&amp;rsquo;s your heard of. Look at &lt;a href="https://github.com/trending/swift?since=daily"&gt;Trending Repos on GitHub&lt;/a&gt;, see what looks cool, and look for issues labeled &amp;ldquo;good first step&amp;rdquo; or &amp;ldquo;you can do this&amp;rdquo; – lots of projects set aside introductory issues for newcomers, and those should be your goal. Hopefully the project has some setup instructions for contributing, checkout out their contributing guidelines for more info.&lt;/p&gt;
-
-&lt;p&gt;There is also a disconnect between acquiring &lt;em&gt;skills&lt;/em&gt; and acquiring &lt;em&gt;experience&lt;/em&gt;. I don&amp;rsquo;t have a good answer about what balance to strike, but it seems like employers are looking for a mix of both. A lot of juniors I talk to ask me &amp;ldquo;which framework should I learn next?&amp;rdquo; And the answer might be: none of them. If you&amp;rsquo;ve learned a few frameworks on iOS – UIKit, CoreLocation, MapKit – maybe it&amp;rsquo;s time to shift from honing skills to acquiring experience. Building your own app and helping out with open source can help, too. &lt;/p&gt;
-
-&lt;p&gt;Part of the problem, I think, is that companies are unwilling to take risks. This is probably my biggest frustration, actually. See, hiring any engineer is a risk, and hiring an engineer without a lot of experience &lt;em&gt;does&lt;/em&gt; increase that risk. Maybe they&amp;rsquo;re overestimating that increase, or maybe they really are just that risk adverse. My point is, it seems like companies would rather hire no one than they would hire someone who they were only 95% sure would be a good fit. I think there is room for short-term contracts to evaluate engineers before hiring them full time, or other ideas like that. And again with business realities, companies are operating as they are meant to in our capitalist society: to avoid risk and maximize returns. I don&amp;rsquo;t like that, but it&amp;rsquo;s the reality we live it. Again, I don&amp;rsquo;t have the answers, I&amp;rsquo;m still wrapping my head around this situation.&lt;/p&gt;
-
-&lt;p&gt;If you&amp;rsquo;re looking for your first iOS job, take a look at &lt;a href="http://artsy.github.io/blog/2016/01/30/iOS-Junior-Interviews/"&gt;Orta&amp;rsquo;s blog post&lt;/a&gt;. Try to stay positive, stay focused, and be patient. I wish things were better, that our industry was more inclusive, and I&amp;rsquo;m doing what I can to help. If you&amp;rsquo;re in a position to help move the needle on this, even a little bit, I encourage you to help as well.&lt;/p&gt;
-</description>
-      <pubDate>Sat, 28 Apr 2018 15:35:37 +0000</pubDate>
-      <guid>https://ashfurrow.com/blog/hiring-juniors/</guid>
     </item>
   </channel>
 </rss>
