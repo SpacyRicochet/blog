@@ -4,10 +4,84 @@
   <id>https://ashfurrow.com/blog</id>
   <link href="https://ashfurrow.com/"/>
   <link href="https://ashfurrow.com/feed.xml" rel="self"/>
-  <updated>2018-06-15T18:18:35+00:00</updated>
+  <updated>2018-06-23T16:42:18+00:00</updated>
   <author>
     <name>Ash Furrow</name>
   </author>
+  <entry>
+    <title>Airbnb and React Native Expectations</title>
+    <link rel="alternate" href="https://ashfurrow.com/blog/airbnb-and-react-native-expectations/"/>
+    <id>https://ashfurrow.com/blog/airbnb-and-react-native-expectations/</id>
+    <published>2018-06-23T16:42:18+00:00</published>
+    <updated>2018-06-23T16:42:18+00:00</updated>
+    <author>
+      <name>Ash Furrow</name>
+    </author>
+    <content type="html">&lt;p&gt;By now, most iOS developers have probably heard the news that &lt;a href="https://medium.com/airbnb-engineering/sunsetting-react-native-1868ba28e30a"&gt;Airbnb is moving away from React Native&lt;/a&gt;. It&amp;rsquo;s kind of weird to see the reaction online – people are acting jubilant, almost &lt;em&gt;celebrating&lt;/em&gt; the announcement. I see some iOS developers on twitter practically &lt;em&gt;rolling their eyes&lt;/em&gt; at Airbnb for even &lt;em&gt;trying&lt;/em&gt; React Native. But I&amp;rsquo;m not here to talk about insularity of the iOS developer community, I&amp;rsquo;m here to talk about Airbnb&amp;rsquo;s (quite excellent) blog posts.&lt;/p&gt;
+
+&lt;p&gt;These blog posts are excellent because Airbnb first lays out its expectations for React Native, and then explains how well the technology met (or failed to meet) those expectations. It&amp;rsquo;s a thorough, honest discussion about how large teams evaluate technologies, as well as how those team live with the consequences of their decisions.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;
+
+&lt;p&gt;So I really like these posts, but I wouldn&amp;rsquo;t say that they&amp;rsquo;re &lt;em&gt;complete&lt;/em&gt;. More on that later. First, I want to discuss Airbnb&amp;rsquo;s actual expectations. I&amp;rsquo;m going to summarize them here, but you really, really should &lt;a href="https://medium.com/airbnb-engineering/sunsetting-react-native-1868ba28e30a"&gt;read the posts yourself&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Here are Airbnb&amp;rsquo;s goals for React Native, which I&amp;rsquo;m interpreting as their expectations for the technology:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Allow us to &lt;strong&gt;move faster&lt;/strong&gt; as an organization.&lt;/li&gt;
+&lt;li&gt;Maintain the &lt;strong&gt;quality bar&lt;/strong&gt; set by native.&lt;/li&gt;
+&lt;li&gt;Write product code &lt;strong&gt;once&lt;/strong&gt; for mobile instead of &lt;strong&gt;twice&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;Improve upon the &lt;strong&gt;developer experience&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Okay, so how did those four things go? Well, I&amp;rsquo;ll summarize again:&lt;/p&gt;
+
+
+
+&lt;ol&gt;
+&lt;li&gt;&lt;em&gt;&amp;ldquo;Engineers were able to move at an unparalleled speed&amp;rdquo;&lt;/em&gt;, but also there were also technical and cultural hurdles that mitigated this success.&lt;/li&gt;
+&lt;li&gt;Again, a qualified success: &lt;em&gt;&amp;ldquo;we were able to accomplish a number of things that we weren’t sure were possible.&amp;rdquo;&lt;/em&gt; But they point to the same technical challenges and a lack of internal engineering resources that frustrated their team sometimes.&lt;/li&gt;
+&lt;li&gt;This was a failure: &lt;em&gt;&amp;ldquo;we wound up supporting code on three platforms instead of two&amp;rdquo;&lt;/em&gt;, which sounds grim. But also, &lt;em&gt;&amp;ldquo;only a small percentage of our app was React Native&amp;rdquo;&lt;/em&gt;, meaning they had a lot of overhead for not a lot benefit. I want to discuss this expectation in more detail, but more on that in a minute.&lt;/li&gt;
+&lt;li&gt;A &lt;em&gt;&amp;ldquo;mixed bag&amp;rdquo;&lt;/em&gt;, which some things being way easier and faster, while other things were worse.&lt;/li&gt;
+&lt;/ol&gt;
+
+
+
+&lt;p&gt;Okay so at first glance, this seems kind of promising, right? I mean, Airbnb says that &amp;ldquo;60% [of engineers] would describe their experience as amazing&amp;rdquo;, so a &lt;em&gt;majority&lt;/em&gt; of your team is on board. But 5% were &amp;ldquo;strongly negative&amp;rdquo;? Interesting. Very interesting. We&amp;rsquo;ll get back to this shortly, first let&amp;rsquo;s talk about that third expectation.&lt;/p&gt;
+
+&lt;p&gt;The big point everyone is talking about is number three: Airbnb expected to be able to reuse code across Android and iOS but were let down. They wanted that &amp;ldquo;write once, run everywhere&amp;rdquo; experience. And that&amp;rsquo;s the problem that I have with these posts and how they&amp;rsquo;re being discussed.&lt;/p&gt;
+
+&lt;p&gt;React Native is &lt;a href="https://code.facebook.com/posts/1014532261909640/react-native-bringing-modern-web-techniques-to-mobile/"&gt;explicitly &lt;strong&gt;not&lt;/strong&gt; &amp;ldquo;write once, run everywhere&amp;rdquo;&lt;/a&gt;, although this is a common misconception. The idea that you can write one app and deploy to Android and iOS is attractive, and solutions like &lt;a href="https://expo.io"&gt;Expo&lt;/a&gt; do exist to do that, but cross-platform code reuse is &lt;em&gt;not&lt;/em&gt; the central selling point of React Native. React Native is a &amp;ldquo;learn once, write everywhere&amp;rdquo; platform; instead of building one app for multiple platforms, the main selling point of React Native is that &lt;a href="https://ashfurrow.com/blog/the-case-for-react-native/"&gt;it lets you use React&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;And that&amp;rsquo;s it.&lt;/p&gt;
+
+&lt;p&gt;So when people frame Airbnb&amp;rsquo;s decision as a &lt;em&gt;failure&lt;/em&gt; of React Native, I wonder about how much they really understand about what React Native is &lt;em&gt;for&lt;/em&gt;. If you have an expectation that a technology can do something that it&amp;rsquo;s not designed for, and then you&amp;rsquo;re disappointed when it fails to deliver, it&amp;rsquo;s not really the technology&amp;rsquo;s fault, is it? And further, if &amp;ldquo;only a small percentage&amp;rdquo; of your app even &lt;em&gt;uses&lt;/em&gt; that technology, then you don&amp;rsquo;t get as much of the benefits.&lt;/p&gt;
+
+&lt;p&gt;I&amp;rsquo;m trying not to frame this as an Artsy-vs-Airbnb discussion, but it&amp;rsquo;s hard to avoid the comparison because Artsy has had &lt;a href="http://artsy.github.io/series/react-native-at-artsy/"&gt;such overwhelming success&lt;/a&gt; with our React Native stack. I think a big part of that comes from how we structured our React Native code: all the JavaScript is in &lt;a href="https://github.com/artsy/emission"&gt;its own repository&lt;/a&gt; and it &lt;a href="http://artsy.github.io/blog/2018/04/17/making-a-components-pod/"&gt;gets shipped as a CocoaPod&lt;/a&gt;. The &lt;a href="https://github.com/artsy/eigen"&gt;native app&lt;/a&gt; just imports that pod and instantiates view controllers from it as if they were normal view controllers (because they &lt;em&gt;are&lt;/em&gt;, their views just happen to be React Native components). Our native codebase was using React Native for a year before I even wrote &lt;em&gt;any&lt;/em&gt; JavaScript, which minimized the overhead for me, a person who was pretty unhappy that JavaScript was in Artsy&amp;rsquo;s app at all.&lt;/p&gt;
+
+&lt;p&gt;And that kind of leads me back to culture. I think these blog posts do an excellent job of describing the &lt;em&gt;technical&lt;/em&gt; parts of their experience, but they lack a detailed description of non-technical barriers to adopting React Native.&lt;/p&gt;
+
+&lt;p&gt;What kind of barriers? Well, not to bring up the insularity of the iOS developer community again, but&amp;hellip; iOS developers kind of have a reputation within the broader software industry. Charlie Cheever, &lt;a href="https://blog.expo.io/should-we-use-react-native-1465d8b607ac"&gt;writing about this topic&lt;/a&gt; from Expo&amp;rsquo;s perspective, has this to say:&lt;/p&gt;
+
+
+
+&lt;blockquote&gt;
+&lt;p&gt;[&amp;hellip;] organizations where there are people who identify themselves strongly as iOS programmers and Android programmers have a really hard time being happy with React Native. &lt;strong&gt;iOS programmers in particular are very unhappy&lt;/strong&gt; with it and generally &lt;strong&gt;regard JS as an infestation&lt;/strong&gt; of the company’s codebase, while Android programmers have more mixed feelings.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+
+
+&lt;p&gt;(Emphasis added.)&lt;/p&gt;
+
+&lt;p&gt;When I see a majority of a team describe their experience as &amp;ldquo;amazing&amp;rdquo;, and a very small (but very vocal, I&amp;rsquo;m sure) minority of the team describe it as &amp;ldquo;strongly negative&amp;rdquo;, it really makes me wonder about the internal discussions about React Native at Airbnb.&lt;/p&gt;
+
+&lt;p&gt;And I get it, I really do. &lt;em&gt;I&lt;/em&gt; thought JavaScript was an infestation, too. It &lt;a href="https://ashfurrow.com/blog/swift-vs-react-native-feels/"&gt;took a long time for me to get over it&lt;/a&gt;. I mean, if you&amp;rsquo;ve been hired to write Swift/Objective-C and all of a sudden your team asks you to use JavaScript instead, it&amp;rsquo;s natural to feel frustrated, or even angry. But you know what else? Engineers don&amp;rsquo;t just write code, they &lt;em&gt;solve problems&lt;/em&gt;. Of course engineers are going to have feelings about the tools their team use, and I think a future blog post should cover how Artsy worked to mitigate the cultural tensions between native iOS developers and our React Native choice. But I wish we&amp;rsquo;d keep our feelings in check a little bit more.&lt;/p&gt;
+
+&lt;p&gt;Airbnb&amp;rsquo;s experience has been compared, &lt;a href="https://twitter.com/spikebrehm/status/1010279535319879680"&gt;appropriately&lt;/a&gt;, to a rejected organ transplant. If your company&amp;rsquo;s culture is really, really into iOS native development, then the organ will be rejected.&lt;/p&gt;
+
+&lt;p&gt;The reasons that Airbnb chose to move away from React Native are cultural as much as they are technical, and while I understand why they didn&amp;rsquo;t publicize these tensions, it gives the impression that Airbnb&amp;rsquo;s decision was based entirely in technical merit. And that&amp;rsquo;s just not the case.&lt;/p&gt;
+</content>
+  </entry>
   <entry>
     <title>The Case for React Native</title>
     <link rel="alternate" href="https://ashfurrow.com/blog/the-case-for-react-native/"/>
@@ -271,113 +345,6 @@
 &lt;p&gt;This song really resonated with me. Because the fact is, mental illnesses don&amp;rsquo;t really &lt;em&gt;have&lt;/em&gt; resolutions. Like, you can feel better, but it&amp;rsquo;s not like a stomach flu or something that you fully recover from. It sticks with you, and it&amp;rsquo;s going to stick with me, too. But you can live with it, which is what this character in the songs does. And it&amp;rsquo;s what I&amp;rsquo;m going to do.&lt;/p&gt;
 
 &lt;p&gt;All I can say is I&amp;rsquo;m excited.&lt;/p&gt;
-</content>
-  </entry>
-  <entry>
-    <title>JavaScript is Good, Actually</title>
-    <link rel="alternate" href="https://ashfurrow.com/blog/javascript-is-good-actually/"/>
-    <id>https://ashfurrow.com/blog/javascript-is-good-actually/</id>
-    <published>2018-05-05T13:53:45+00:00</published>
-    <updated>2018-05-05T13:53:45+00:00</updated>
-    <author>
-      <name>Ash Furrow</name>
-    </author>
-    <content type="html">&lt;p&gt;The subtext of many discussions around building software in Electron and React/Native involve this assumption that &lt;em&gt;JavaScript is bad&lt;/em&gt;. There is a kind of unspoken understanding that JavaScript developers are &lt;em&gt;stuck&lt;/em&gt; writing it, that either:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;given the choice, they would move to a &amp;ldquo;better&amp;rdquo; language, or&lt;/li&gt;
-&lt;li&gt;they have a kind of Stockholm syndrome and like JavaScript.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;That&amp;rsquo;s not true. This framing discounts a tonne of developers – thousands and thousands of us – that &lt;em&gt;enjoy&lt;/em&gt; writing JavaScript. Not because it just happens to be popular or that we are forced to, either. Language like this robs JavaScript developers of our agency, treating us/our decisions/our preferences as invalid or even accidental.&lt;/p&gt;
-
-&lt;p&gt;The fact is, we enjoy writing JavaScript because JavaScript is a good language. I&amp;rsquo;ll explain later.&lt;/p&gt;
-
-&lt;p&gt;Oh wait, I&amp;rsquo;ll explain now.&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;
-
-&lt;h2 id="the-syntax"&gt;The Syntax&lt;/h2&gt;
-
-&lt;p&gt;JavaScript syntax is a joy to use. It&amp;rsquo;s clear, concise, and tailored to the kinds of tasks that JavaScript developers tend to write code for. Here is an example, &lt;a href="https://github.com/artsy/emission/blob/365d34cba3bf96c74c6ae7f2615f37c82c669920/src/lib/Components/Consignments/Screens/Overview.tsx#L135-L150"&gt;taken from Artsy&amp;rsquo;s React Native app&lt;/a&gt;:&lt;/p&gt;
-
-
-&lt;div class="highlight"&gt;&lt;pre class="highlight typescript"&gt;&lt;code&gt;&lt;span class="nx"&gt;submitFinalSubmission&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="k"&gt;async&lt;/span&gt; &lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="o"&gt;=&amp;gt;&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-  &lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;showConfirmationScreen&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
-
-  &lt;span class="kd"&gt;const&lt;/span&gt; &lt;span class="nx"&gt;submission&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;state&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="nx"&gt;ConsignmentSetup&lt;/span&gt;
-  &lt;span class="kd"&gt;let&lt;/span&gt; &lt;span class="nx"&gt;hasSubmittedSuccessfully&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="kc"&gt;true&lt;/span&gt;
-  &lt;span class="k"&gt;try&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-    &lt;span class="kr"&gt;await&lt;/span&gt; &lt;span class="nx"&gt;updateSubmission&lt;/span&gt;&lt;span class="p"&gt;({&lt;/span&gt; &lt;span class="p"&gt;...&lt;/span&gt;&lt;span class="nx"&gt;submission&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="na"&gt;state&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s2"&gt;"SUBMITTED"&lt;/span&gt; &lt;span class="p"&gt;},&lt;/span&gt; &lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;state&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;submission_id&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-    &lt;span class="kr"&gt;await&lt;/span&gt; &lt;span class="nx"&gt;AsyncStorage&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;removeItem&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;consignmentsStateKey&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-    &lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;submissionDraftSubmitted&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
-  &lt;span class="p"&gt;}&lt;/span&gt; &lt;span class="k"&gt;catch&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;error&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-    &lt;span class="nx"&gt;console&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;error&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"Overview final submission: "&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="nx"&gt;error&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-    &lt;span class="nx"&gt;hasSubmittedSuccessfully&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="kc"&gt;false&lt;/span&gt;
-  &lt;span class="p"&gt;}&lt;/span&gt;
-
-  &lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;setState&lt;/span&gt;&lt;span class="p"&gt;({&lt;/span&gt; &lt;span class="nx"&gt;hasSubmittedSuccessfully&lt;/span&gt; &lt;span class="p"&gt;})&lt;/span&gt;
-&lt;span class="p"&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;If you&amp;rsquo;ve never worked with modern JavaScript before, it might look a little weird. But I would bet that you understand the &lt;em&gt;gist&lt;/em&gt; of what this code is and does. And that&amp;rsquo;s pretty important, I think.&lt;/p&gt;
-
-&lt;p&gt;I really like modern JavaScript syntax. Check out the &lt;a href="https://github.com/DrkSephy/es6-cheatsheet"&gt;ES6 Cheatsheet&lt;/a&gt; for a bunch of examples of how modern syntax makes JavaScript really nice to code in. Here is another great article describing &lt;a href="https://medium.com/the-node-js-collection/modern-javascript-explained-for-dinosaurs-f695e9747b70"&gt;modern syntax&lt;/a&gt;, aimed at folks more familiar with older JavaScript. &lt;/p&gt;
-
-&lt;p&gt;I&amp;rsquo;m not going into more detail because syntax is&amp;hellip; well it&amp;rsquo;s not &lt;em&gt;that&lt;/em&gt; important to a language. Syntax is (I&amp;rsquo;m waving my hand dismissively here) just syntax. What matters more is the context in which syntax is used. Modern JavaScript syntax is very effective and suited to the kinds of problems that JavaScript developers solve. Don&amp;rsquo;t even get me started on how cool &lt;a href="https://reactjs.org/docs/introducing-jsx.html"&gt;JSX&lt;/a&gt; is.&lt;/p&gt;
-
-&lt;p&gt;You may have noticed that the code above isn&amp;rsquo;t even JavaScript, it&amp;rsquo;s &lt;a href="https://www.typescriptlang.org"&gt;TypeScript&lt;/a&gt;, which brings me to my next point.&lt;/p&gt;
-
-&lt;h2 id="the-toolchains"&gt;The Toolchains&lt;/h2&gt;
-
-&lt;p&gt;Okay so one of the key parts of why JavaScript is great is the toolchains that surround it. Tools like TypeScript and &lt;a href="https://flow.org"&gt;Flow&lt;/a&gt; bring type safety to the language. Editors like &lt;a href="https://code.visualstudio.com"&gt;Visual Studio Code&lt;/a&gt; bring IDE-level features like autocomplete, inline documentation, an extension API, and more. Tools like &lt;a href="https://prettier.io"&gt;Prettier&lt;/a&gt;, &lt;a href="https://eslint.org"&gt;ESLint&lt;/a&gt;, and &lt;a href="https://facebook.github.io/jest/"&gt;Jest&lt;/a&gt; exist to make writing code easier and faster.&lt;/p&gt;
-
-&lt;p&gt;It&amp;rsquo;s really difficult for me to describe just how foundational a paradigm shift I experienced when I began writing in JavaScript. My entire perspective on how code should be written changed. So it&amp;rsquo;s hard to describe in words how effective and how powerful these toolchains are. So let&amp;rsquo;s take a look at one small example.&lt;/p&gt;
-
-&lt;p&gt;One argument against JavaScript that exemplifies how developers who are unfamiliar with JavaScript complain about problems that are obviated by toolchains is the &lt;code&gt;==&lt;/code&gt; operator. Ah yes, the humble equality check. Because of early design choices – I&amp;rsquo;d call them mistakes but I don&amp;rsquo;t have the full context – equality in JavaScript is a bit bizarre. &lt;/p&gt;
-
-&lt;p&gt;&lt;blockquote class="twitter-tweet" data-lang="en"&gt;&lt;p lang="en" dir="ltr"&gt;Isn’t this diagram from that one Nicolas Cage movie where he’s a JS developer looking for a lost treasure? &lt;a href="https://t.co/oK7NETXW5A"&gt;pic.twitter.com/oK7NETXW5A&lt;/a&gt;&lt;/p&gt;&amp;mdash; Aaron Patterson (@tenderlove) &lt;a href="https://twitter.com/tenderlove/status/992755305426685952?ref_src=twsrc%5Etfw"&gt;May 5, 2018&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src="https://platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;&lt;/p&gt;
-
-&lt;p&gt;(Note: Aaron is really really funny and you should give him a follow. He&amp;rsquo;s not the kind of developer to make facile complaints against JavaScript, I really enjoyed his tweet.)&lt;/p&gt;
-
-&lt;p&gt;Since JavaScript is used all over the internet, you can&amp;rsquo;t really just &lt;em&gt;change&lt;/em&gt; the semantics around equality without breaking everything. JavaScript has harder constraints around backwards compatibility than many other popular languages; constraints like this are as much an opportunity as they are a liability. To wit: JavaScript introduced &lt;code&gt;===&lt;/code&gt; to solve this problem, which is just &lt;code&gt;==&lt;/code&gt; but it works as you expect. &lt;/p&gt;
-
-&lt;p&gt;Using &lt;code&gt;==&lt;/code&gt; in a modern JavaScript codebase is pretty rare. And the toolchains are aware of this context, so you get warnings and errors when you use it by accident. ESLint does this, for example. Tool builders in the JavaScript community are aware of the language&amp;rsquo;s peculiarities, and newcomers to JavaScript are supported by the tools, to avoid pitfalls. It isn&amp;rsquo;t a matter of shooing away the problem and expecting developers to just learn the quirks – it&amp;rsquo;s a matter of the tooling helping guide developers to best practices.&lt;/p&gt;
-
-&lt;p&gt;It&amp;rsquo;s as though the tooling community looked at JavaScript and – in a very non-judgemental way – said &amp;ldquo;isn&amp;rsquo;t that interesting?&amp;rdquo; There&amp;rsquo;s no attachment to the way things should be, there&amp;rsquo;s no lamenting about how things could have been better. Things are just&amp;hellip; interesting. After understanding that context, without judging it, tool builders get to work.&lt;/p&gt;
-
-&lt;h2 id="the-community"&gt;The Community&lt;/h2&gt;
-
-&lt;p&gt;So tooling. JavaScript developers contribute back to their own tooling in a way that (and I can &lt;em&gt;only&lt;/em&gt; speak from my experience) iOS developers don&amp;rsquo;t. I&amp;rsquo;m not judging in any way, I&amp;rsquo;m just observing. As much as iOS developers can – &lt;a href="https://www.youtube.com/watch?v=flSMEw_Hxik"&gt;and should&lt;/a&gt; – fix their own problems and improve their own tools, we don&amp;rsquo;t tend to.&lt;/p&gt;
-
-&lt;p&gt;A big part of that is that the tools iOS developers use are &lt;a href="http://isxcodeopensourceyet.github.io"&gt;closed source&lt;/a&gt;, so they can&amp;rsquo;t &lt;em&gt;be&lt;/em&gt; contributed to. But there are plenty of other tools – like &lt;a href="https://github.com/realm/jazzy"&gt;Jazzy&lt;/a&gt;, &lt;a href="https://github.com/CocoaPods/CocoaPods"&gt;CocoaPods&lt;/a&gt;, and &lt;a href="https://github.com/krzysztofzablocki/Sourcery"&gt;Sourcery&lt;/a&gt; – that &lt;em&gt;are&lt;/em&gt; open source and they don&amp;rsquo;t enjoy the same level of community contributions as tools in the JavaScript world. iOS developers happily contribute to libraries and frameworks they use to write code, but they contribute to &lt;em&gt;tools&lt;/em&gt; less frequently.&lt;/p&gt;
-
-&lt;p&gt;There&amp;rsquo;s an argument to be made that because most of the tools that JavaScript developers use are written &lt;em&gt;in&lt;/em&gt; JavaScript, that developers tend to contribute back more. I&amp;rsquo;m not really going to make the argument because it makes a bunch of assumptions around developer motivation. And I&amp;rsquo;m not trying to judge the iOS developer community – I&amp;rsquo;m only saying that the JavaScript community is engaged in participatory tool-building in a way that the iOS community is not. I find it genuinely fascinating.&lt;/p&gt;
-
-&lt;p&gt;Let&amp;rsquo;s see what tool building in the JavaScript world can look like in practice:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Facebook builds a &lt;a href="https://github.com/graphql/graphql-js"&gt;GraphQL server in Node.js&lt;/a&gt; and open sources it. The community helps improve it.&lt;/li&gt;
-&lt;li&gt;Facebook also builds &lt;a href="https://github.com/graphql/graphiql"&gt;GraphiQL&lt;/a&gt;, a small, in-browser IDE for debugging GraphQL queries on your server. The community helps here, too; the IDE has over sixty contributors.&lt;/li&gt;
-&lt;li&gt;Someone embeds GraphiQL &lt;a href="https://github.com/skevy/graphiql-app"&gt;into an Electron app&lt;/a&gt;, which can be pointed to &lt;em&gt;any&lt;/em&gt; GraphQL server. You can use GraphiQL to explore another developer&amp;rsquo;s API, cool!&lt;/li&gt;
-&lt;li&gt;Someone else embeds GraphiQL into a &lt;a href="https://www.graphql.college/practice-graphql/"&gt;JSON-to-GraphQL playground generator&lt;/a&gt;. It&amp;rsquo;s a small-but-important part of a larger educational app to teach people about GraphQL and it accompanies an open source book about GraphQL.&lt;/li&gt;
-&lt;li&gt;Someone else further remixes GraphiQL into &lt;a href="https://github.com/graphcool/graphql-playground"&gt;GraphQL Playground&lt;/a&gt;, a more powerful and feature-rich IDE than GraphiQL alone.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;This is just a small example of how tools built and released into the OSS community proliferate and are composed into other, even more powerful tools. Here is a case where Facebook, a large company that makes developer tools, builds something. Then they release it and developers remix that thing for their own needs, helping the entire community in the process.&lt;/p&gt;
-
-&lt;p&gt;Tool building in JavaScript operates in an entirely different way than in iOS. Than in any community I&amp;rsquo;ve been a part of, actually. To be absolutely clear: this isn&amp;rsquo;t a complaint against the iOS developer community; this is a strong endorsement of the JavaScript developer community.&lt;/p&gt;
-
-&lt;hr&gt;
-
-&lt;p&gt;People who enjoy hating JavaScript tend to point to oddities in the language or quirks of its syntax/inheritance model. That kind of stuff. They&amp;rsquo;ll say things like &amp;ldquo;well JavaScript was broken from the beginning&amp;rdquo; or point to the (very funny, I laugh every time!) &lt;a href="https://www.destroyallsoftware.com/talks/wat"&gt;Wat&lt;/a&gt; video. Those arguments can sound convincing, especially if you&amp;rsquo;ve never really worked in a production JavaScript environment.&lt;/p&gt;
-
-&lt;p&gt;But here&amp;rsquo;s the thing: every language is weird. And every language makes regrettable design choices early on that it has to reckon with. How and when these mistakes are dealt with is a part of the language, too. Just because you disagree with the decisions doesn&amp;rsquo;t make the language &lt;em&gt;bad&lt;/em&gt;. These choices by the language authors are also informed by the community, the environments the language is used in, and the constraints it has to operate under. That&amp;rsquo;s a lot of context, and it&amp;rsquo;s hard for outsiders to have a clear picture of why certain decisions were made.&lt;/p&gt;
-
-&lt;p&gt;&lt;blockquote class="twitter-tweet" data-conversation="none" data-lang="en"&gt;&lt;p lang="en" dir="ltr"&gt;iOS developers, myself included, are realizing that modern JavaScript is actually a pretty great language, with a &lt;em&gt;really&lt;/em&gt; nice ecosystem.&lt;/p&gt;&amp;mdash; Ash &amp;ldquo;You Should Write a Blog Post&amp;rdquo; Furrow (@ashfurrow) &lt;a href="https://twitter.com/ashfurrow/status/991723030702379009?ref_src=twsrc%5Etfw"&gt;May 2, 2018&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src="https://platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt; &lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;Tout comprendre c&amp;#39;est tout pardonner&lt;/em&gt;. I understand JavaScript, so I forgive it. And in doing so, I give myself permission to &lt;em&gt;enjoy&lt;/em&gt; it. I hope you give it a shot.&lt;/p&gt;
 </content>
   </entry>
 </feed>
