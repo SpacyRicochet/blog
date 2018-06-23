@@ -8,13 +8,13 @@
     <item>
       <title>Airbnb and React Native Expectations</title>
       <link>https://ashfurrow.com/blog/airbnb-and-react-native-expectations/</link>
-      <description>&lt;p&gt;By now, most iOS developers have probably heard the news that &lt;a href="https://medium.com/airbnb-engineering/sunsetting-react-native-1868ba28e30a"&gt;Airbnb is moving away from React Native&lt;/a&gt;. It&amp;rsquo;s kind of weird to see the reaction online – people are acting jubilant, almost &lt;em&gt;celebrating&lt;/em&gt; the announcement. I see some iOS developers on twitter practically &lt;em&gt;rolling their eyes&lt;/em&gt; at Airbnb for even &lt;em&gt;trying&lt;/em&gt; React Native. But I&amp;rsquo;m not here to talk about insularity of the iOS developer community, I&amp;rsquo;m here to talk about Airbnb&amp;rsquo;s (quite excellent) blog posts.&lt;/p&gt;
+      <description>&lt;p&gt;By now, most iOS developers have probably heard the news that &lt;a href="https://medium.com/airbnb-engineering/react-native-at-airbnb-f95aa460be1c"&gt;Airbnb is moving away from React Native&lt;/a&gt;. It&amp;rsquo;s kind of weird to see the reaction online – people are acting jubilant, almost &lt;em&gt;celebrating&lt;/em&gt; the announcement. I see some iOS developers on twitter practically &lt;em&gt;rolling their eyes&lt;/em&gt; at Airbnb for even &lt;em&gt;trying&lt;/em&gt; React Native. But I&amp;rsquo;m not here to talk about insularity of the iOS developer community, I&amp;rsquo;m here to talk about Airbnb&amp;rsquo;s (quite excellent) blog posts.&lt;/p&gt;
 
 &lt;p&gt;These blog posts are excellent because Airbnb first lays out its expectations for React Native, and then explains how well the technology met (or failed to meet) those expectations. It&amp;rsquo;s a thorough, honest discussion about how large teams evaluate technologies, as well as how those team live with the consequences of their decisions.&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;
 
-&lt;p&gt;So I really like these posts, but I wouldn&amp;rsquo;t say that they&amp;rsquo;re &lt;em&gt;complete&lt;/em&gt;. More on that later. First, I want to discuss Airbnb&amp;rsquo;s actual expectations. I&amp;rsquo;m going to summarize them here, but you really, really should &lt;a href="https://medium.com/airbnb-engineering/sunsetting-react-native-1868ba28e30a"&gt;read the posts yourself&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;So I really like these posts, but I wouldn&amp;rsquo;t say that they&amp;rsquo;re &lt;em&gt;complete&lt;/em&gt;. More on that later. First, I want to discuss Airbnb&amp;rsquo;s actual expectations. I&amp;rsquo;m going to summarize them here, but you really, really should &lt;a href="https://medium.com/airbnb-engineering/react-native-at-airbnb-f95aa460be1c"&gt;read the posts yourself&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;Here are Airbnb&amp;rsquo;s goals for React Native, which I&amp;rsquo;m interpreting as their expectations for the technology:&lt;/p&gt;
 
