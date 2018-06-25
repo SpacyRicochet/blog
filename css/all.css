@@ -555,11 +555,15 @@ iframe.twitter-tweet {
     .embed-responsive {
       margin: 2em 0; } }
 
+/* This is how the blockquote is customized */
 blockquote {
   padding: 0 1em;
   padding-left: 2em;
   margin: 2em 0;
-  font-style: none; }
+  font-style: none;
+  /* Makes bold text in blockquotes really pop */ }
+  blockquote strong, blockquote b {
+    color: #404040; }
   @media only screen and (min-width: 768px) {
     blockquote {
       padding: 0 2em;
