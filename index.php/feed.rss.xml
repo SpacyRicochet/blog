@@ -32,11 +32,13 @@
 &lt;ol&gt;
 &lt;li&gt;&lt;em&gt;&amp;ldquo;Engineers were able to move at an unparalleled speed&amp;rdquo;&lt;/em&gt;, but also there were also technical and cultural hurdles that mitigated this success.&lt;/li&gt;
 &lt;li&gt;Again, a qualified success: &lt;em&gt;&amp;ldquo;we were able to accomplish a number of things that we weren’t sure were possible.&amp;rdquo;&lt;/em&gt; But they point to the same technical challenges and a lack of internal engineering resources that frustrated their team sometimes.&lt;/li&gt;
-&lt;li&gt;This was a failure: &lt;em&gt;&amp;ldquo;we wound up supporting code on three platforms instead of two&amp;rdquo;&lt;/em&gt;, which sounds grim. But also, &lt;em&gt;&amp;ldquo;only a small percentage of our app was React Native&amp;rdquo;&lt;/em&gt;, meaning they had a lot of overhead for not a lot benefit. I want to discuss this expectation in more detail, but more on that in a minute.&lt;/li&gt;
+&lt;li&gt;This was a failure(&lt;strong&gt;*&lt;/strong&gt;): &lt;em&gt;&amp;ldquo;we wound up supporting code on three platforms instead of two&amp;rdquo;&lt;/em&gt;, which sounds grim. But also, &lt;em&gt;&amp;ldquo;only a small percentage of our app was React Native&amp;rdquo;&lt;/em&gt;, meaning they had a lot of overhead for not a lot benefit. I want to discuss this expectation in more detail, but more on that in a minute.&lt;/li&gt;
 &lt;li&gt;A &lt;em&gt;&amp;ldquo;mixed bag&amp;rdquo;&lt;/em&gt;, which some things being way easier and faster, while other things were worse.&lt;/li&gt;
 &lt;/ol&gt;
 
 
+
+&lt;p&gt;(&lt;strong&gt;*Note&lt;/strong&gt;: my characterization of #3 as a failure has been disputed; you should go read &lt;a href="https://twitter.com/intelligibabble/status/1010948686501691393"&gt;Leland Richardson&amp;rsquo;s thread&lt;/a&gt; responding to me to get a really great, nuanced clarification of Airbnb&amp;rsquo;s experience sharing code between Android and iOS.)&lt;/p&gt;
 
 &lt;p&gt;Okay so at first glance, this seems kind of promising, right? I mean, Airbnb says that &amp;ldquo;60% [of engineers] would describe their experience as amazing&amp;rdquo;, so a &lt;em&gt;majority&lt;/em&gt; of your team is on board. But 5% were &amp;ldquo;strongly negative&amp;rdquo;? Interesting. Very interesting. We&amp;rsquo;ll get back to this shortly, first let&amp;rsquo;s talk about that third expectation.&lt;/p&gt;
 
