@@ -4,10 +4,58 @@
   <id>https://ashfurrow.com/blog</id>
   <link href="https://ashfurrow.com/"/>
   <link href="https://ashfurrow.com/feed.xml" rel="self"/>
-  <updated>2018-06-23T16:42:18+00:00</updated>
+  <updated>2018-07-19T14:15:03+00:00</updated>
   <author>
     <name>Ash Furrow</name>
   </author>
+  <entry>
+    <title>Thinking Critically About Apple</title>
+    <link rel="alternate" href="https://ashfurrow.com/blog/thinking-critically-about-apple/"/>
+    <id>https://ashfurrow.com/blog/thinking-critically-about-apple/</id>
+    <published>2018-07-19T14:15:03+00:00</published>
+    <updated>2018-07-19T14:15:03+00:00</updated>
+    <author>
+      <name>Ash Furrow</name>
+    </author>
+    <content type="html">&lt;p&gt;Yesterday I tweeted a complaint I had about Apple&amp;rsquo;s iOS SDK. My complaint highlighted one instance of a larger trend in Apple&amp;rsquo;s behaviour towards their SDK design and documentation; I&amp;rsquo;m far more interested in the trend than I am in any given SDK issue.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;blockquote class="twitter-tweet" data-lang="en"&gt;&lt;p lang="en" dir="ltr"&gt;Apple&amp;rsquo;s stubborn refusal to provide a simple API to determine if you&amp;rsquo;re on an iPhone X causes developers to check for hardcoded screen dimensions, which is worse than developers making device-specific layouts. Don&amp;rsquo;t @ me.&lt;/p&gt;&amp;mdash; Ash Furrow (@ashfurrow) &lt;a href="https://twitter.com/ashfurrow/status/1019631126585978881?ref_src=twsrc%5Etfw"&gt;July 18, 2018&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src="https://platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt; &lt;/p&gt;
+
+&lt;p&gt;Despite my request to not be replied to, people did. They really seemed to want to discuss the specifics of this issue. But, to repeat myself: I don&amp;rsquo;t care about this specific complaint, I care about the larger trend.&lt;/p&gt;
+
+&lt;p&gt;So what is that trend? Well it&amp;rsquo;s complicated and it involves critical thinking; if you&amp;#39;e never thought critically about Apple before, this might seem like a really weird thing to complain about, but here&amp;rsquo;s my issue:&lt;/p&gt;
+
+&lt;p&gt;Apple designs its SDK based on how Apple wants the community to build software. However, sometimes the way Apple wants you to build things and the way you want to build things is going to differ.&lt;/p&gt;
+
+&lt;p&gt;&lt;blockquote class="twitter-tweet" data-lang="en"&gt;&lt;p lang="en" dir="ltr"&gt;I really wish &amp;ldquo;you should think critically about Apple&amp;rdquo; weren&amp;rsquo;t such a hot take in the iOS developer community, but here we are.&lt;/p&gt;&amp;mdash; Ash Furrow (@ashfurrow) &lt;a href="https://twitter.com/ashfurrow/status/1004406015956221953?ref_src=twsrc%5Etfw"&gt;June 6, 2018&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src="https://platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt; &lt;/p&gt;
+
+&lt;p&gt;This attitude Apple has (&amp;ldquo;you can either build how they want you to build, or get out&amp;rdquo;) obviously has advantages and disadvantages. I&amp;rsquo;m not saying it&amp;rsquo;s absolutely bad, I&amp;rsquo;m saying that &lt;em&gt;I&lt;/em&gt; am often frustrated by it. My complaints on twitter are not meant to deride Apple, but rather to draw the community&amp;rsquo;s attention to how Apple&amp;rsquo;s motivations and their own motivations are not the same. (This fact seems obvious to me but I often get pushback from community developers, which boggles my mind.)&lt;/p&gt;
+
+&lt;p&gt;&lt;blockquote class="twitter-tweet" data-conversation="none" data-lang="en"&gt;&lt;p lang="en" dir="ltr"&gt;Thinking critically about Apple would involve asking questions about their decisions. Let’s take how they deprecated OpenGL for example. Who does this benefit? Who does it harm? What are the implications? Those sorts of questions need to get asked.&lt;/p&gt;&amp;mdash; Ash Furrow (@ashfurrow) &lt;a href="https://twitter.com/ashfurrow/status/1004708649896435712?ref_src=twsrc%5Etfw"&gt;June 7, 2018&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src="https://platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt; &lt;/p&gt;
+
+&lt;p&gt;Sometimes, when trying to define a problem with how you work, it&amp;rsquo;s helpful to step outside your experience and get a different perspective. Let&amp;rsquo;s contrast how Apple treats its SDK design with another platform: React.&lt;/p&gt;
+
+&lt;p&gt;Whereas Apple&amp;rsquo;s philosophy could be characterized as &amp;ldquo;this is how to build software for our platform, take it or leave it&amp;rdquo;, React could described with &amp;ldquo;this is how to build software for our platform, but sometimes you might need to escape our abstractions, and here&amp;rsquo;s how to do that.&amp;rdquo; You might think I&amp;rsquo;m being hyperbolic, but let&amp;rsquo;s look at the docs for &lt;a href="https://reactjs.org/docs/refs-and-the-dom.html"&gt;imperatively accessing DOM elements outside of React&amp;rsquo;s lifecycle&lt;/a&gt;. The technical details don&amp;rsquo;t matter here – just pay attention to their tone:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Your first inclination may be to use refs to “make things happen” in your app. If this is the case, take a moment and think more critically about where state should be owned in the component hierarchy.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;And:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;In rare cases, you might want to have access to a child’s DOM node from a parent component. This is generally not recommended because it breaks component encapsulation, but it can occasionally be useful for triggering focus or measuring the size or position of a child DOM node.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;That&amp;rsquo;s a huge shift from Apple&amp;rsquo;s approach to, for example, the iPhone X API that I tweeted about yesterday. React&amp;rsquo;s docs caution you against overusing this escape hatch from their SDK, but they also explain in detail how to do it.&lt;/p&gt;
+
+&lt;p&gt;Maybe it&amp;rsquo;s just me, but this difference is really striking. It exemplifies the distinction that I&amp;rsquo;m trying to highlight.&lt;/p&gt;
+
+&lt;p&gt;I&amp;rsquo;m not saying Apple needs to change or that you need to change your mind or anything. Not everything I say is meant to be persuasive. All I&amp;rsquo;m saying is: Apple is it&amp;rsquo;s own company with its own motivations. Do not forget that, and do not conflate what&amp;rsquo;s good for you with what&amp;rsquo;s good for Apple.&lt;/p&gt;
+</content>
+  </entry>
   <entry>
     <title>Airbnb and React Native Expectations</title>
     <link rel="alternate" href="https://ashfurrow.com/blog/airbnb-and-react-native-expectations/"/>
@@ -296,57 +344,6 @@
 &lt;p&gt;&lt;/p&gt;
 
 &lt;p&gt;Freedom is an app I used that blocks websites like Twitter, Facebook, YouTube, etc by redirecting network requests to those sites to localhost, which essentially makes them unreachable. I use it in the morning to help me stay focused on getting out the door, and I&amp;rsquo;ve noticed that good mornings are correlated with good days. Freedom is a good treatment for &lt;a href="https://www.esquire.com/news-politics/a19505007/internet-broken-brain/"&gt;Internet Broken Brain Syndrome&lt;/a&gt;, so check it out if you too are Extremely Online.&lt;/p&gt;
-</content>
-  </entry>
-  <entry>
-    <title>All I Can Say is I'm Excited</title>
-    <link rel="alternate" href="https://ashfurrow.com/blog/all-i-can-say-is-im-excited/"/>
-    <id>https://ashfurrow.com/blog/all-i-can-say-is-im-excited/</id>
-    <published>2018-05-09T18:31:59+00:00</published>
-    <updated>2018-05-09T18:31:59+00:00</updated>
-    <author>
-      <name>Ash Furrow</name>
-    </author>
-    <content type="html">&lt;p&gt;So it&amp;rsquo;s been a few months since I&amp;rsquo;ve &lt;a href="https://ashfurrow.com/blog/mood-improvements/"&gt;last blogged about my mood improvements&lt;/a&gt; and I wanted to check in, because a lot has happened since then.&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;
-
-&lt;p&gt;To catch you up, I have completed my round of cognitive behavioural therapy (CBT) and am feeling great! My mood is consistent throughout the day, and usually hovers around &amp;ldquo;happy, excited.&amp;rdquo; I even have a graph for you to prove it, which I&amp;rsquo;m still a bit awestruck by (&lt;a href="https://gist.github.com/ashfurrow/406dfa25fa8aeba43abea5e52a81f2e8"&gt;plaintext data available&lt;/a&gt;).&lt;/p&gt;
-
-
-
-&lt;p&gt;&lt;img src="https://ashfurrow.com/img/blog/all-i-can-say-is-im-excited/graph.png" alt="Graph of my mood" /&gt;&lt;/p&gt;
-
-
-
-&lt;p&gt;So what does this mean? Well, you can see things got better after starting CBT. The graph doesn&amp;rsquo;t go back very far in time since I started keeping track of my mood shortly before starting CBT. But I was consistently feeling &amp;ldquo;down, worried&amp;rdquo;, &amp;ldquo;sad, unhappy&amp;rdquo;, or &amp;ldquo;miserable, nervous&amp;rdquo; (that last one indicates suicidal ideation, which you can see from the graph hasn&amp;rsquo;t occurred since February).&lt;/p&gt;
-
-&lt;p&gt;Even though mostly I feel &amp;ldquo;happy, excited&amp;rdquo;, I still dip down. I mean, everyone feels sad or anxious sometimes. The difference now is that I have skills to deal with those feelings. I have learned to separate my thoughts from my reaction &lt;em&gt;to&lt;/em&gt; those thoughts, which is a key part of CBT.&lt;/p&gt;
-
-&lt;p&gt;I can&amp;rsquo;t begin to tell you how different this feels. Because like, I&amp;rsquo;ve &lt;em&gt;been&lt;/em&gt; here before. I&amp;rsquo;ve felt better, I&amp;rsquo;ve &lt;a href="https://ashfurrow.com/blog/therapys-end/"&gt;blogged about ending therapy&lt;/a&gt;, I&amp;rsquo;ve felt good. But it never really lasted. This&amp;hellip; feels different. I think, for all the medications I&amp;rsquo;ve tried (and all the terrible side effects), all it took was a handful of CBT sessions.&lt;/p&gt;
-
-&lt;hr&gt;
-
-&lt;p&gt;My favourite musician, John K Samson, also suffers from depression. He wrote a song about someone with mental illness – well, it&amp;rsquo;s more of a poem set to music. It tells the story of someone who struggles with delusional thinking, which isn&amp;rsquo;t depression, but it influences their mood, too. It&amp;rsquo;s haunting.&lt;/p&gt;
-
-
-
-&lt;iframe src="https://open.spotify.com/embed/track/7jI7kdXqAgDpCq6Y6anYqc" width="100%" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"&gt;&lt;/iframe&gt;
-
-
-
-&lt;p&gt;The nice thing about this song is that it&amp;rsquo;s immediately followed on the record by what Samson calls &amp;ldquo;a happy ending, of sorts.&amp;rdquo; It&amp;rsquo;s not a resolution – the character still has delusions – but they find happiness.&lt;/p&gt;
-
-
-
-&lt;iframe src="https://open.spotify.com/embed/track/3GAoGRa1CilOHMQWb239Bm" width="100%" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"&gt;&lt;/iframe&gt;
-  
-
-
-
-&lt;p&gt;This song really resonated with me. Because the fact is, mental illnesses don&amp;rsquo;t really &lt;em&gt;have&lt;/em&gt; resolutions. Like, you can feel better, but it&amp;rsquo;s not like a stomach flu or something that you fully recover from. It sticks with you, and it&amp;rsquo;s going to stick with me, too. But you can live with it, which is what this character in the songs does. And it&amp;rsquo;s what I&amp;rsquo;m going to do.&lt;/p&gt;
-
-&lt;p&gt;All I can say is I&amp;rsquo;m excited.&lt;/p&gt;
 </content>
   </entry>
 </feed>
