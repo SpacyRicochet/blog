@@ -4,10 +4,82 @@
   <id>https://ashfurrow.com/blog</id>
   <link href="https://ashfurrow.com/"/>
   <link href="https://ashfurrow.com/feed.xml" rel="self"/>
-  <updated>2018-07-19T14:15:03+00:00</updated>
+  <updated>2018-07-21T14:09:45+00:00</updated>
   <author>
     <name>Ash Furrow</name>
   </author>
+  <entry>
+    <title>Snapshot Testing on iOS</title>
+    <link rel="alternate" href="https://ashfurrow.com/blog/snapshot-testing-on-ios/"/>
+    <id>https://ashfurrow.com/blog/snapshot-testing-on-ios/</id>
+    <published>2018-07-21T14:09:45+00:00</published>
+    <updated>2018-07-21T14:09:45+00:00</updated>
+    <author>
+      <name>Ash Furrow</name>
+    </author>
+    <content type="html">&lt;p&gt;&amp;ldquo;Snapshot testing&amp;rdquo; is a phrase that you&amp;rsquo;ll hear in circles of developers who are into unit testing. Conceptually, snapshot testing is a simple idea: take a screenshot of your user interface and store it as a reference image. Then, make unit tests to take screenshots of the same UI and compare it to the reference image. Facebook created, and Uber now maintains, &lt;a href="https://github.com/uber/ios-snapshot-test-case"&gt;ios-snapshot-test-case&lt;/a&gt;, a testing framework that makes this process really easy. Lots of us have written testing tools on top of ios-snapshot-test-case and have been using it in production for a few years now.&lt;/p&gt;
+
+&lt;p&gt;So here&amp;rsquo;s the question that I want to discuss: is it worth it?&lt;/p&gt;
+
+&lt;p&gt;tl;dr yeah it is totally worth it, but (like any technique) you want to be careful about over-doing it.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;
+
+&lt;p&gt;The idea to write this post came from a friend who shared this trick to display before and after screenshots in GitHub pull requests using Markdown tables.&lt;/p&gt;
+
+&lt;p&gt;&lt;blockquote class="twitter-tweet" data-lang="en"&gt;&lt;p lang="en" dir="ltr"&gt;🔥 Pull Request Description Tip&lt;br&gt;&lt;br&gt;Using tables is useful for showing before/after screenshots in PRs touching the UI. &lt;a href="https://t.co/lYhfQX30T5"&gt;pic.twitter.com/lYhfQX30T5&lt;/a&gt;&lt;/p&gt;&amp;mdash; Gio 💻🔧📚 (@mokagio) &lt;a href="https://twitter.com/mokagio/status/1019709696872087557?ref_src=twsrc%5Etfw"&gt;July 18, 2018&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src="https://platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt; &lt;/p&gt;
+
+&lt;p&gt;The conversation turned to snapshot testing; a consequence of snapshot testing  would be that you don&amp;rsquo;t &lt;em&gt;need&lt;/em&gt; to include before/after shots in your PR description because they&amp;rsquo;d be included for you in the PR&amp;rsquo;s changed files. Think about it: your reference images are essentially screenshots of your UI – and they&amp;rsquo;re stored in your repository. So when you open a PR that changes the UI, your PR will necessarily include changes to those references images, showing the before and after of the UI changes. Neat!&lt;/p&gt;
+
+&lt;p&gt;&lt;blockquote class="twitter-tweet" data-conversation="none" data-lang="en"&gt;&lt;p lang="en" dir="ltr"&gt;That’s awesome!&lt;br&gt;&lt;br&gt;I was considering a spike to set up some snapshot testing at work too. &lt;br&gt;&lt;br&gt;Would you say it’s worh the time? &lt;br&gt;&lt;br&gt;Does it often reveal defects like that? False positive?&lt;/p&gt;&amp;mdash; Gio 💻🔧📚 (@mokagio) &lt;a href="https://twitter.com/mokagio/status/1020081618239668224?ref_src=twsrc%5Etfw"&gt;July 19, 2018&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src="https://platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt; &lt;/p&gt;
+
+&lt;p&gt;Is it worth the time? Yes, for our team it was.&lt;/p&gt;
+
+&lt;p&gt;Does it reveal defects? Yes it does – let me give you an example from last week at Artsy.&lt;/p&gt;
+
+&lt;p&gt;We have this button class, &lt;a href="https://github.com/artsy/eigen/blob/052e79a29e6208a099a4972ad0c17158499776b0/Artsy/Views/Styled_Subclasses/Buttons/ARBidButton.m"&gt;&lt;code&gt;ARBidButton&lt;/code&gt;&lt;/a&gt;, which is given an &lt;code&gt;ARAuctionState&lt;/code&gt; and is responsible for updating its background colours, text colours, enabled state, and text. We include this button on artwork views in auctions so the user can bid on them. We wanted to change some of the render logic in the button, but we inadvertently broke another part of our app that we didn&amp;rsquo;t realize was using &lt;code&gt;ARBidButton&lt;/code&gt; too. &lt;a href="https://github.com/artsy/eigen/pull/2659"&gt;Here is the original pull request&lt;/a&gt; and &lt;a href="https://github.com/artsy/eigen/pull/2667"&gt;here is the second attempt&lt;/a&gt; we made (once we realized the button was used elsewhere).&lt;/p&gt;
+
+&lt;p&gt;If we hadn&amp;rsquo;t had snapshot tests for different parts of our UI, we wouldn&amp;rsquo;t have noticed that the small change we wanted to make would have inadvertent changes elsewhere in our app.&lt;/p&gt;
+
+&lt;p&gt;But what about drawbacks? Is snapshot testing worth it? Well, let&amp;rsquo;s back up and get more context.&lt;/p&gt;
+
+&lt;p&gt;Developers who are familiar with different testing strategies eventually form an intuitive understanding of what&amp;rsquo;s formally called the &amp;ldquo;testing pyramid.&amp;rdquo; Here is a depiction of the pyramid that I borrowed from &lt;a href="https://gkedge.gitbooks.io/javascript-acceptance-testing/content/"&gt;this unit testing book&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="https://ashfurrow.com/img/blog/snapshot-testing-on-ios/pyramid.jpg" alt="Unit testing triangle" /&gt;&lt;/p&gt;
+
+&lt;p&gt;The idea is that some tests are really quick to run (automated unit tests) and others take a really long time to run (manual tests). The testing pyramid models the spectrum between the two: if a test is expensive to run, the pyramid tells you to run fewer of those tests. The pyramid helps developers balance the competing demands of testing (to ensure quality) and shipping quickly (to stay in business).&lt;/p&gt;
+
+&lt;p&gt;Snapshot testing sits right on that barrier between &amp;ldquo;did we build it right?&amp;rdquo; and &amp;ldquo;did we build the right thing?&amp;rdquo; That means that, while snapshot testing is useful, it shouldn&amp;rsquo;t be your &lt;em&gt;entire&lt;/em&gt; testing strategy. You will still need unit tests and manual tests, but snapshot tests really help fill in the gap between the two.&lt;/p&gt;
+
+&lt;p&gt;So, with the testing pyramid in mind, let&amp;rsquo;s return to the question: is it worth it? Well, let&amp;rsquo;s run down some quick pros and cons.&lt;/p&gt;
+
+
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Pro&lt;/strong&gt;: Reference image changes provide an opportunity for designers to give feedback on pull requests.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Con&lt;/strong&gt;: Reference images have a large filesize and can change frequently, which can lead to a ballooning git repository size (&lt;a href="https://github.com/artsy/eigen"&gt;our repo&lt;/a&gt; that makes the heaviest use of snapshot testing is 500MB on disk).&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Pro&lt;/strong&gt;: &lt;a href="https://github.com/pointfreeco/swift-snapshot-testing"&gt;Lots&lt;/a&gt; &lt;a href="https://github.com/ashfurrow/Nimble-Snapshots"&gt;of&lt;/a&gt; &lt;a href="https://github.com/dblock/ios-snapshot-test-case-expecta"&gt;tools&lt;/a&gt; &lt;a href="https://github.com/ashfurrow/second_curtain"&gt;exist&lt;/a&gt; to make snapshot testing even more useful.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Con&lt;/strong&gt;: Tooling for snapshot testing, such as &lt;a href="https://github.com/orta/Snapshots"&gt;this project&lt;/a&gt;, are hampered by Xcode&amp;rsquo;s extremely limited plugin API.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Pro&lt;/strong&gt;: Snapshot tests are a very broad-strokes confirmation that your UI is &amp;ldquo;correct.&amp;rdquo;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Con&lt;/strong&gt;: Snapshot testing can only test static UIs and not things like animations or user interaction.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Pro&lt;/strong&gt;: Testing across devices, iOS versions, and size classes becomes trivial.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Con&lt;/strong&gt;: Snapshot testing introduces additional complexity to your testing setup.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Pro&lt;/strong&gt;: iOS-snapshot-test-case has tools for allowing a specified percentage of differing pixels, along with other cusotmization options.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Con&lt;/strong&gt;: iOS versions often include changes to text antialiasing, so your tests need to be tied to specific iOS versions. Updating reference images when you update your iOS versions introduces a lot of churn in reference image files, contributing to repo size bloat.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Pro&lt;/strong&gt;: Snapshot testing encourages you to write testable view controllers.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Con&lt;/strong&gt;: It&amp;rsquo;s easy to overdo snapshot tests, &lt;em&gt;feel&lt;/em&gt; confident in your app&amp;rsquo;s correctness, but not actually be testing the correct thing.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Con&lt;/strong&gt;: Snapshot test failures on CI can&amp;rsquo;t be reviewed, since the image files aren&amp;rsquo;t accessible (it&amp;rsquo;s &lt;a href="https://github.com/ashfurrow/second_curtain"&gt;not difficult to get around this with an S3 bucket&lt;/a&gt;).&lt;/li&gt;
+&lt;/ul&gt;
+
+
+
+&lt;p&gt;I have no regrets about our snapshot testing strategy, but others will have different approaches. A lot of the cons that I&amp;rsquo;ve outlined above have workarounds (one could, for example, store reference images in a submodule to mitigate repo bloat). And snapshot testing is really an open field: if you have an idea for a tool, you could probably build it on top of tools that already exist.&lt;/p&gt;
+
+&lt;p&gt;If you decide to try snapshot testing, I can&amp;rsquo;t recommend &lt;a href="https://www.kaleidoscopeapp.com"&gt;Kaleidoscope&lt;/a&gt; enough. It&amp;rsquo;s integration into &lt;code&gt;git difftool&lt;/code&gt; makes reviewing changes to reference images &lt;em&gt;before&lt;/em&gt; opening a PR really easy.&lt;/p&gt;
+
+&lt;p&gt;I hope that gives you a clear picture of what snapshot tests are and how they can be used as a part of a comprehensive testing strategy. It&amp;rsquo;s a cliché, but snapshot tests are not a silver bullet. They will not be a replacement for unit testing. But they can help you write better code, be more confident in your product, and open up whole new ways to collaborate with non-developer colleagues. They&amp;rsquo;re definitely worth learning about – a tool worth having in your toolbox.&lt;/p&gt;
+</content>
+  </entry>
   <entry>
     <title>Thinking Critically About Apple</title>
     <link rel="alternate" href="https://ashfurrow.com/blog/thinking-critically-about-apple/"/>
@@ -328,22 +400,6 @@
 &lt;p&gt;Let&amp;rsquo;s try to go easy on complaining when other people like different abstraction levels than the ones we like. And when we disagree with someone about something technical, we can save a lot of back-and-forth by asking ourselves &amp;ldquo;are we talking in the same abstraction level?&amp;rdquo; &lt;/p&gt;
 
 &lt;p&gt;You&amp;rsquo;ll figure this out, we all will. Just remember: expertise is only just informed opinion (and a little ZF Set Theory, I guess).&lt;/p&gt;
-</content>
-  </entry>
-  <entry>
-    <title>Freedom Interview</title>
-    <link rel="alternate" href="https://ashfurrow.com/blog/freedom-interview/"/>
-    <id>https://ashfurrow.com/blog/freedom-interview/</id>
-    <published>2018-05-10T14:55:04+00:00</published>
-    <updated>2018-05-10T14:55:04+00:00</updated>
-    <author>
-      <name>Ash Furrow</name>
-    </author>
-    <content type="html">&lt;p&gt;I was was &lt;a href="https://freedom.to/blog/ios-developer-ash-furrow-on-fighting-distraction-and-forgetting-fomo/"&gt;interviewed on the Freedom blog&lt;/a&gt; about fighting distraction and fear-of-missing-out. Check it out!&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;
-
-&lt;p&gt;Freedom is an app I used that blocks websites like Twitter, Facebook, YouTube, etc by redirecting network requests to those sites to localhost, which essentially makes them unreachable. I use it in the morning to help me stay focused on getting out the door, and I&amp;rsquo;ve noticed that good mornings are correlated with good days. Freedom is a good treatment for &lt;a href="https://www.esquire.com/news-politics/a19505007/internet-broken-brain/"&gt;Internet Broken Brain Syndrome&lt;/a&gt;, so check it out if you too are Extremely Online.&lt;/p&gt;
 </content>
   </entry>
 </feed>
