@@ -64,7 +64,7 @@
 &lt;li&gt;&lt;strong&gt;Con&lt;/strong&gt;: Snapshot testing can only test static UIs and not things like animations or user interaction.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Pro&lt;/strong&gt;: Testing across devices, iOS versions, and size classes becomes trivial.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Con&lt;/strong&gt;: Snapshot testing introduces additional complexity to your testing setup.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Pro&lt;/strong&gt;: iOS-snapshot-test-case has tools for allowing a specified percentage of differing pixels, along with other cusotmization options.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Pro&lt;/strong&gt;: iOS-snapshot-test-case has tools for allowing a specified percentage of differing pixels, along with other customization options.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Con&lt;/strong&gt;: iOS versions often include changes to text antialiasing, so your tests need to be tied to specific iOS versions. Updating reference images when you update your iOS versions introduces a lot of churn in reference image files, contributing to repo size bloat.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Pro&lt;/strong&gt;: Snapshot testing encourages you to write testable view controllers.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Con&lt;/strong&gt;: It&amp;rsquo;s easy to overdo snapshot tests, &lt;em&gt;feel&lt;/em&gt; confident in your app&amp;rsquo;s correctness, but not actually be testing the correct thing.&lt;/li&gt;
