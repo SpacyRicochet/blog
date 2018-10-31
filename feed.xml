@@ -4,10 +4,34 @@
   <id>https://ashfurrow.com/blog</id>
   <link href="https://ashfurrow.com/"/>
   <link href="https://ashfurrow.com/feed.xml" rel="self"/>
-  <updated>2018-10-05T00:30:52+00:00</updated>
+  <updated>2018-10-31T18:02:12+00:00</updated>
   <author>
     <name>Ash Furrow</name>
   </author>
+  <entry>
+    <title>First JS Meetup Talk</title>
+    <link rel="alternate" href="https://ashfurrow.com/blog/first-js-meetup-talk/"/>
+    <id>https://ashfurrow.com/blog/first-js-meetup-talk/</id>
+    <published>2018-10-31T18:02:12+00:00</published>
+    <updated>2018-10-31T18:02:12+00:00</updated>
+    <author>
+      <name>Ash Furrow</name>
+    </author>
+    <content type="html">&lt;p&gt;Hey! So not a lot of posts over the past six months, what&amp;rsquo;s Ash been up to, eh? Well, besides moving to a new apartment, and &lt;a href="http://artsy.github.io/author/ash/"&gt;blogging for Artsy&lt;/a&gt;, I&amp;rsquo;ve been learning more JavaScript! Specifically, a lot more about JS tooling. &lt;/p&gt;
+
+&lt;p&gt;Last night, I gave &lt;a href="https://www.meetup.com/TypeScriptNYC/events/255170060/"&gt;my first meetup talk&lt;/a&gt; in the JavaScript developer community at &lt;a href="https://www.meetup.com/TypeScriptNYC/"&gt;TypeScript NYC&lt;/a&gt;. It went really well!&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;
+
+&lt;p&gt;I did a live coding demo of how to write custom &lt;a href="https://palantir.github.io/tslint/"&gt;TSLint&lt;/a&gt; rules. TSLint is a tool that checks your &lt;a href="https://www.typescriptlang.org"&gt;TypeScript&lt;/a&gt; code for style problems. You can think of it like &lt;a href="https://github.com/realm/SwiftLint"&gt;SwiftLint&lt;/a&gt;, but for TypeScript. I&amp;rsquo;ve been working on some TSLint rules at Artsy and I thought I would share what I&amp;rsquo;ve learned over the past month or so.&lt;/p&gt;
+
+&lt;p&gt;The talk wasn&amp;rsquo;t recorded, but &lt;a href="https://speakerdeck.com/ashfurrow/building-custom-tslint-rules"&gt;the slides are available&lt;/a&gt; and the &lt;a href="https://github.com/ashfurrow/tsnyc-tslint-rules/blob/master/STEPS.md"&gt;steps I took are documented&lt;/a&gt;. I also have &lt;a href="https://github.com/ashfurrow/tslint-playground"&gt;further reading in this readme&lt;/a&gt;. The meetup audience was very patient and helpful as I worked through the live-coding demo, and were appropriately mind-blown at the end of the talk. I&amp;rsquo;ll definitely come back to this meetup, because the other talks were really interesting, too.&lt;/p&gt;
+
+&lt;p&gt;In 2018, I&amp;rsquo;ve had a blast learning more about module resolution, Babel, the TypeScript compiler, and more. It&amp;rsquo;s a really exciting time for me because I&amp;rsquo;m starting to feel both productive and confident when working in Artsy&amp;rsquo;s various JS-based projects. I&amp;rsquo;ve said this before, but I don&amp;rsquo;t consider myself an &amp;ldquo;iOS developer&amp;rdquo; anymore because the title is too limiting. I solve problems; sometimes that means &lt;a href="https://github.com/artsy/emission/pull/1211"&gt;hunting down crashes in Objective-C&lt;/a&gt; and sometimes that means &lt;a href="https://github.com/Microsoft/TypeScript/pull/28196"&gt;sending the TypeScript compiler a pull request&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;I&amp;rsquo;m excited.&lt;/p&gt;
+</content>
+  </entry>
   <entry>
     <title>Sad &amp; Sappy Songs</title>
     <link rel="alternate" href="https://ashfurrow.com/blog/sad-sappy-songs/"/>
@@ -298,42 +322,6 @@
 &lt;p&gt;A lot of iOS apps (many? most?) can be entirely described as &amp;ldquo;software that turns API calls into user interfaces, and user interactions into API calls.&amp;rdquo; That&amp;rsquo;s a problem that React is tailored to solve, and React Native adopts that solution to iOS and Android really really well.&lt;/p&gt;
 
 &lt;p&gt;React Native isn&amp;rsquo;t perfect, and it&amp;rsquo;s not suitable for every app. But nothing is! UIKit isn&amp;rsquo;t perfect for every app, either. There simply are no silver bullets in programming. React solves the problem of programming UIs to such a degree of success that, when combined with a fantastic language and a vibrant ecosystem, it makes a compelling case for use in a lot of apps.&lt;/p&gt;
-</content>
-  </entry>
-  <entry>
-    <title>A Year of Mastodon User Activity</title>
-    <link rel="alternate" href="https://ashfurrow.com/blog/a-year-of-mastodon-user-activity/"/>
-    <id>https://ashfurrow.com/blog/a-year-of-mastodon-user-activity/</id>
-    <published>2018-06-09T14:50:30+00:00</published>
-    <updated>2018-06-09T14:50:30+00:00</updated>
-    <author>
-      <name>Ash Furrow</name>
-    </author>
-    <content type="html">&lt;p&gt;Oh hey, remember &lt;a href="https://joinmastodon.org"&gt;Mastodon&lt;/a&gt;? Remember how I &lt;a href="https://ashfurrow.com/blog/mastodon/"&gt;started my own Mastodon instance&lt;/a&gt;? How&amp;rsquo;s that been going, anyway? Well it&amp;rsquo;s been (over) a year so let&amp;rsquo;s check in, shall we?&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;
-
-&lt;p&gt;Things have been going well on my instance, &lt;a href="https://mastodon.technology"&gt;mastodon.technology&lt;/a&gt;. I&amp;rsquo;ve learned a tonne, I&amp;rsquo;ve contributed here and there, and I&amp;rsquo;ve gotten to know some of the other instance admins (they rock!). I&amp;rsquo;m more of a lurker on Mastodon than on Twitter, but it&amp;rsquo;s been nice.&lt;/p&gt;
-
-&lt;p&gt;Okay on to the good stuff. Mastodon added the feature of keeping track of user counts over time, but I&amp;rsquo;ve been logging in to the Rails console since I started to check how many users have logged in within one- and two-week timeframes. Not a perfect metric, but it&amp;rsquo;s interesting nonetheless. The account metrics are based on &lt;a href="https://github.com/plataformatec/devise"&gt;devise&lt;/a&gt; and I collected stats with the following two commands:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre class="highlight ruby"&gt;&lt;code&gt;&lt;span class="no"&gt;User&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;where&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'last_sign_in_at &amp;gt; ?'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;week&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;ago&lt;/span&gt;&lt;span class="p"&gt;).&lt;/span&gt;&lt;span class="nf"&gt;count&lt;/span&gt;
-&lt;span class="no"&gt;User&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;where&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'last_sign_in_at &amp;gt; ?'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;weeks&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;ago&lt;/span&gt;&lt;span class="p"&gt;).&lt;/span&gt;&lt;span class="nf"&gt;count&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;All the data is &lt;a href="https://gist.github.com/ashfurrow/1954350316c180affa879ac3e74caba9"&gt;available in plaintext&lt;/a&gt;, but here&amp;rsquo;s a pretty graph:&lt;/p&gt;
-
-
-
-&lt;p&gt;&lt;img src="https://ashfurrow.com/img/blog/a-year-of-mastodon-user-activity/graph.png" alt="Graph of Mastodon login counts over a year" /&gt;&lt;/p&gt;
-
-
-
-&lt;p&gt;So that&amp;rsquo;s cool! Let&amp;rsquo;s contextualize things a bit. The spike in April came in light of the Cambridge Analytica and Facebook controversy. People were angry about Facebook and surveillance capitalism, and they took to Mastodon for an alternative social network. Cool! I was curious to see if that surge of popularity would last, and it &lt;em&gt;seems&lt;/em&gt; to have, so far anyway.&lt;/p&gt;
-
-&lt;p&gt;The Fediverse was also recently hit by a wave of spam accounts, which &lt;em&gt;could&lt;/em&gt; be inflating login counts slightly, but it&amp;rsquo;s hard to say.&lt;/p&gt;
-
-&lt;p&gt;All in all, I&amp;rsquo;m pretty happy with things. Aside from the &lt;a href="https://github.com/tootsuite/mastodon/issues/6734"&gt;occasional problem&lt;/a&gt; or &lt;a href="https://gist.github.com/ashfurrow/abd1418399883b2bdfdd9a1f6120f139"&gt;misconfigured database backups&lt;/a&gt;, running a Mastodon instance hasn&amp;rsquo;t been particularly onerous. This is good, since I have a life and a job and running mastodon.technology can&amp;rsquo;t be like a full-time commitment for me. Having the hosting costs &lt;a href="https://www.patreon.com/ashfurrow"&gt;covered by donations&lt;/a&gt; also helps &lt;em&gt;a lot&lt;/em&gt;, since it removes the financial burden from me. Of course, there are occasional moderation duties, but for the most part users on my instance have adhered to the &lt;a href="https://mastodon.technology/about/more"&gt;Code of Conduct&lt;/a&gt;. A healthy admin support network helps, too.&lt;/p&gt;
-
-&lt;p&gt;It&amp;rsquo;s not all roses. Some instances have been lost in the past year, some intentionally, some accidentally. But we&amp;rsquo;re all figuring this out together and I&amp;rsquo;ve learned a lot running this service over the past year. Hopefully I can follow this post up in 2019 with updated stats.&lt;/p&gt;
 </content>
   </entry>
 </feed>
