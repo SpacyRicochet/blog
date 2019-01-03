@@ -1067,7 +1067,7 @@ loadCSS('/css/all.css');</script><noscript><link href="/css/all.css" rel="styles
 
 <p>This is a standard <code>IBOutlet</code>, except I marked it as private. This is to create a separation of concerns – our view controller shouldn’t be accessing the collection view through the table view cell. </p>
 
-<p>Instead, we’ll create a function to set the delegate, datasource, and row number on the collection view. Swift’s handling of a type with multiple protocols is a bit weird, but this is the function.</p>
+<p>Instead, we’ll create a function to set the delegate, datasource, and row number on the collection view. Here, note how we can use <a href="https://docs.swift.org/swift-book/LanguageGuide/Protocols.html#ID282">Protocol Composition</a>, available <a href="https://github.com/apple/swift-evolution/blob/master/proposals/0095-any-as-existential.md">since Swift 3</a>.</p>
 
         </div> <!-- col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 -->
       </div> <!-- row -->
@@ -1075,10 +1075,7 @@ loadCSS('/css/all.css');</script><noscript><link href="/css/all.css" rel="styles
       <div class="row">
         <div class="col-lg-10 col-lg-offset-1 col-md-12">
           
-<div class="highlight"><pre class="highlight swift"><code><span class="kd">func</span> <span class="n">setCollectionViewDataSourceDelegate</span>
-    <span class="o">&lt;</span><span class="kt">D</span><span class="p">:</span> <span class="kd">protocol</span><span class="o">&lt;</span><span class="kt">UICollectionViewDataSource</span><span class="p">,</span> <span class="kt">UICollectionViewDelegate</span><span class="o">&gt;&gt;</span>
-    <span class="p">(</span><span class="nv">dataSourceDelegate</span><span class="p">:</span> <span class="kt">D</span><span class="p">,</span> <span class="n">forRow</span> <span class="nv">row</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="p">{</span>
-
+<div class="highlight"><pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">setCollectionViewDataSourceDelegate</span><span class="p">(</span><span class="nv">dataSourceDelegate</span><span class="p">:</span> <span class="kt">UICollectionViewDataSource</span> <span class="o">&amp;</span> <span class="kt">UICollectionViewDelegate</span><span class="p">,</span> <span class="n">forRow</span> <span class="nv">row</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="p">{</span>
     <span class="n">collectionView</span><span class="o">.</span><span class="n">delegate</span> <span class="o">=</span> <span class="n">dataSourceDelegate</span>
     <span class="n">collectionView</span><span class="o">.</span><span class="n">dataSource</span> <span class="o">=</span> <span class="n">dataSourceDelegate</span>
     <span class="n">collectionView</span><span class="o">.</span><span class="n">tag</span> <span class="o">=</span> <span class="n">row</span>
