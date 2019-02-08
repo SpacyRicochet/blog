@@ -314,7 +314,7 @@ iframe.instagram-media {
   margin: 10px auto !important; }
 
 /* Centres tweet embeds in Chrome. */
-twitterwidget {
+.twitter-tweet, twitterwidget {
   margin: auto; }
 
 /* Makes the subtitle of non-post headers bigger than the template. */
