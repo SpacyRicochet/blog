@@ -4,10 +4,55 @@
   <id>https://ashfurrow.com/blog</id>
   <link href="https://ashfurrow.com/"/>
   <link href="https://ashfurrow.com/feed.xml" rel="self"/>
-  <updated>2019-02-08T15:40:36+00:00</updated>
+  <updated>2019-02-17T01:00:00+00:00</updated>
   <author>
     <name>Ash Furrow</name>
   </author>
+  <entry>
+    <title>Senior Engineering and Building a Better World</title>
+    <link rel="alternate" href="https://ashfurrow.com/blog/senior-engineering-and-building-a-better-world/"/>
+    <id>https://ashfurrow.com/blog/senior-engineering-and-building-a-better-world/</id>
+    <published>2019-02-17T01:00:00+00:00</published>
+    <updated>2019-02-17T01:00:00+00:00</updated>
+    <author>
+      <name>Ash Furrow</name>
+    </author>
+    <content type="html">&lt;p&gt;I wrote &lt;a href="https://ashfurrow.com/blog/what-is-a-senior-engineer/"&gt;this blog post&lt;/a&gt; in response to &lt;a href="https://twitter.com/gjtorikian/status/1091465574998249472"&gt;this tweet&lt;/a&gt; on what it means to be a senior engineer.&lt;/p&gt;
+
+&lt;p&gt;I think I muddled the point of my post somewhat by trying to express two ideas: an ongoing personal search to figure out how to be the best senior engineer &lt;em&gt;I&lt;/em&gt; can be, and a very subtle point about the role of a senior engineer. Let&amp;rsquo;s explore that &lt;strong&gt;latter&lt;/strong&gt; point in a little more depth.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;
+
+&lt;p&gt;To reiterate, I fully agree with everything in the initial tweet:&lt;/p&gt;
+
+&lt;p&gt;&lt;blockquote class="twitter-tweet" data-lang="en"&gt;&lt;p lang="en" dir="ltr"&gt;A Sr. Engineer’s responsibility isn’t to make puns, work on whatever they want, &amp;amp; fly around the world giving talks.&lt;br&gt;&lt;br&gt;MENTOR others to become better than you.&lt;br&gt;DENOUNCE toxic culture.&lt;br&gt;CRITICIZE decisions that hurt others.&lt;br&gt;&lt;br&gt;Programming is EASY. &lt;br&gt;&lt;br&gt;Being a decent human is still hard.&lt;/p&gt;&amp;mdash; Garen 🥀 Torikian (@gjtorikian) &lt;a href="https://twitter.com/gjtorikian/status/1091465574998249472?ref_src=twsrc%5Etfw"&gt;February 1, 2019&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src="https://platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;I&amp;rsquo;d like to take a moment to build upon what Garen Torikian says here, and what being senior engineer &lt;em&gt;is&lt;/em&gt; – what &amp;ldquo;being a decent human being&amp;rdquo; actually &lt;em&gt;means&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;I firmly believe that &amp;ldquo;denouncing toxic culture&amp;rdquo; and &amp;ldquo;criticizing decisions that hurt others&amp;rdquo; are &lt;em&gt;parts&lt;/em&gt; of being a decent human being, and I would group them under the umbrella idea of &amp;ldquo;improving the world.&amp;rdquo; Expanding this idea a little further: if improving the world is what makes you a decent human being, then &lt;em&gt;building a better world&lt;/em&gt; is what makes you a decent senior engineer. And critique alone is insufficient to build a better world.&lt;/p&gt;
+
+&lt;p&gt;That last point is really subtle so I want to be clear: if you only frame your engineering practice in terms of critiquing what already exists, then you are limiting yourself to changing what already exists (instead of building new possibilities).&lt;/p&gt;
+
+&lt;p&gt;Let&amp;rsquo;s think about this in terms of code. If you&amp;rsquo;re working in a poorly-built codebase, then critiquing that codebases is going to be a necessary step to improving it. You should have a list of what&amp;rsquo;s wrong with the codebase before you start to improve it. However, this critique can only tell you what &lt;em&gt;should) be improved; it won&amp;rsquo;t tell you _how&lt;/em&gt; to actually improve it. That&amp;rsquo;s going to take imagination and a belief that improving it is even possible. Prepared with your list of problems, your job as a senior engineer is to brainstorm and refine ideas to fix those problems (effectively, coordinating the efforts to fix intersecting problems). That second part is what I felt was missing from Torikian&amp;rsquo;s tweet.&lt;/p&gt;
+
+&lt;p&gt;Part of building a better world is helping people to believe that a better world is even possible. Criticism of an existing bad world is &lt;em&gt;necessary&lt;/em&gt;, but it&amp;rsquo;s not &lt;em&gt;sufficient&lt;/em&gt; to inspire people.&lt;/p&gt;
+
+&lt;p&gt;Balancing both critique (of what is) and movement (towards what could be) is necessary to build others up &lt;em&gt;and&lt;/em&gt; to keep yourself motivated. This is what I meant by &amp;ldquo;critique is so exhausting&amp;rdquo; in the previous post. If all a senior engineer does is focus on what&amp;rsquo;s wrong, they will burn out. And I can&amp;rsquo;t be an effective senior engineer if I burn out.&lt;/p&gt;
+
+&lt;p&gt;Unsurprisingly, I think John K Samson &lt;a href="https://open.spotify.com/track/4REBFPIZGxcFeaPjTz5P24?si=tBQ5gQjWT_qJ3WUB7nOxAA"&gt;puts this best&lt;/a&gt;:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;I swear I way more than half believe it when I say &lt;br /&gt;
+that somewhere love and justice shine. &lt;br /&gt;
+Cynicism falls asleep. &lt;br /&gt;
+Tyranny talks to itself. &lt;br /&gt;
+Sappy slogans all come true. &lt;br /&gt;
+We forget to feed our fear. &lt;br /&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;So yes. Absolutely it is a senior engineer&amp;rsquo;s job to denounce toxicity and criticize cruelty, but it&amp;rsquo;s &lt;em&gt;also&lt;/em&gt; a senior engineer&amp;rsquo;s job to build up an empowering, nourishing culture. It&amp;rsquo;s their job to actually believe that things can get better, and to make that happen.&lt;/p&gt;
+</content>
+  </entry>
   <entry>
     <title>What is a Senior Engineer, Even?</title>
     <link rel="alternate" href="https://ashfurrow.com/blog/what-is-a-senior-engineer/"/>
@@ -206,82 +251,6 @@
 &lt;p&gt;Maybe it&amp;rsquo;s just me, but this difference is really striking. It exemplifies the distinction that I&amp;rsquo;m trying to highlight.&lt;/p&gt;
 
 &lt;p&gt;I&amp;rsquo;m not saying Apple needs to change or that you need to change your mind or anything. Not everything I say is meant to be persuasive. All I&amp;rsquo;m saying is: Apple is its own company with its own motivations. Do not forget that, and do not conflate what&amp;rsquo;s good for you with what&amp;rsquo;s good for Apple.&lt;/p&gt;
-</content>
-  </entry>
-  <entry>
-    <title>Airbnb and React Native Expectations</title>
-    <link rel="alternate" href="https://ashfurrow.com/blog/airbnb-and-react-native-expectations/"/>
-    <id>https://ashfurrow.com/blog/airbnb-and-react-native-expectations/</id>
-    <published>2018-06-23T16:42:18+00:00</published>
-    <updated>2018-06-23T16:42:18+00:00</updated>
-    <author>
-      <name>Ash Furrow</name>
-    </author>
-    <content type="html">&lt;p&gt;By now, most iOS developers have probably heard the news that &lt;a href="https://medium.com/airbnb-engineering/react-native-at-airbnb-f95aa460be1c"&gt;Airbnb is moving away from React Native&lt;/a&gt;. It&amp;rsquo;s kind of weird to see the reaction online – people are acting jubilant, almost &lt;em&gt;celebrating&lt;/em&gt; the announcement. I see some iOS developers on twitter practically &lt;em&gt;rolling their eyes&lt;/em&gt; at Airbnb for even &lt;em&gt;trying&lt;/em&gt; React Native. But I&amp;rsquo;m not here to talk about insularity of the iOS developer community, I&amp;rsquo;m here to talk about Airbnb&amp;rsquo;s (quite excellent) blog posts.&lt;/p&gt;
-
-&lt;p&gt;These blog posts are excellent because Airbnb first lays out its expectations for React Native, and then explains how well the technology met (or failed to meet) those expectations. It&amp;rsquo;s a thorough, honest discussion about how large teams evaluate technologies, as well as how those team live with the consequences of their decisions.&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;
-
-&lt;p&gt;So I really like these posts, but I wouldn&amp;rsquo;t say that they&amp;rsquo;re &lt;em&gt;complete&lt;/em&gt;. More on that later. First, I want to discuss Airbnb&amp;rsquo;s actual expectations. I&amp;rsquo;m going to summarize them here, but you really, really should &lt;a href="https://medium.com/airbnb-engineering/react-native-at-airbnb-f95aa460be1c"&gt;read the posts yourself&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Here are Airbnb&amp;rsquo;s goals for React Native, which I&amp;rsquo;m interpreting as their expectations for the technology:&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;Allow us to &lt;strong&gt;move faster&lt;/strong&gt; as an organization.&lt;/li&gt;
-&lt;li&gt;Maintain the &lt;strong&gt;quality bar&lt;/strong&gt; set by native.&lt;/li&gt;
-&lt;li&gt;Write product code &lt;strong&gt;once&lt;/strong&gt; for mobile instead of &lt;strong&gt;twice&lt;/strong&gt;.&lt;/li&gt;
-&lt;li&gt;Improve upon the &lt;strong&gt;developer experience&lt;/strong&gt;.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;Okay, so how did those four things go? Well, I&amp;rsquo;ll summarize again:&lt;/p&gt;
-
-
-
-&lt;ol&gt;
-&lt;li&gt;&lt;em&gt;&amp;ldquo;Engineers were able to move at an unparalleled speed&amp;rdquo;&lt;/em&gt;, but also there were also technical and cultural hurdles that mitigated this success.&lt;/li&gt;
-&lt;li&gt;Again, a qualified success: &lt;em&gt;&amp;ldquo;we were able to accomplish a number of things that we weren’t sure were possible.&amp;rdquo;&lt;/em&gt; But they point to the same technical challenges and a lack of internal engineering resources that frustrated their team sometimes.&lt;/li&gt;
-&lt;li&gt;This was a failure(&lt;strong&gt;*&lt;/strong&gt;): &lt;em&gt;&amp;ldquo;we wound up supporting code on three platforms instead of two&amp;rdquo;&lt;/em&gt;, which sounds grim. But also, &lt;em&gt;&amp;ldquo;only a small percentage of our app was React Native&amp;rdquo;&lt;/em&gt;, meaning they had a lot of overhead for not a lot benefit. I want to discuss this expectation in more detail, but more on that in a minute.&lt;/li&gt;
-&lt;li&gt;A &lt;em&gt;&amp;ldquo;mixed bag&amp;rdquo;&lt;/em&gt;, which some things being way easier and faster, while other things were worse.&lt;/li&gt;
-&lt;/ol&gt;
-
-
-
-&lt;p&gt;(&lt;strong&gt;*Note&lt;/strong&gt;: my characterization of #3 as a failure has been disputed; you should go read &lt;a href="https://twitter.com/intelligibabble/status/1010948686501691393"&gt;Leland Richardson&amp;rsquo;s thread&lt;/a&gt; responding to me to get a really great, nuanced clarification of Airbnb&amp;rsquo;s experience sharing code between Android and iOS.)&lt;/p&gt;
-
-&lt;p&gt;Okay so at first glance, this seems kind of promising, right? I mean, Airbnb says that &amp;ldquo;60% [of engineers] would describe their experience as amazing&amp;rdquo;, so a &lt;em&gt;majority&lt;/em&gt; of your team is on board. But 5% were &amp;ldquo;strongly negative&amp;rdquo;? Interesting. Very interesting. We&amp;rsquo;ll get back to this shortly, first let&amp;rsquo;s talk about that third expectation.&lt;/p&gt;
-
-&lt;p&gt;The big point everyone is talking about is number three: Airbnb expected to be able to reuse code across Android and iOS but were let down. They wanted that &amp;ldquo;write once, run everywhere&amp;rdquo; experience. And that&amp;rsquo;s the problem that I have with these posts and how they&amp;rsquo;re being discussed.&lt;/p&gt;
-
-&lt;p&gt;React Native is &lt;a href="https://code.facebook.com/posts/1014532261909640/react-native-bringing-modern-web-techniques-to-mobile/"&gt;explicitly &lt;strong&gt;not&lt;/strong&gt; &amp;ldquo;write once, run everywhere&amp;rdquo;&lt;/a&gt;, although this is a common misconception. The idea that you can write one app and deploy to Android and iOS is attractive, and solutions like &lt;a href="https://expo.io"&gt;Expo&lt;/a&gt; do exist to do that, but cross-platform code reuse is &lt;em&gt;not&lt;/em&gt; the central selling point of React Native. React Native is a &amp;ldquo;learn once, write everywhere&amp;rdquo; platform; instead of building one app for multiple platforms, the main selling point of React Native is that &lt;a href="https://ashfurrow.com/blog/the-case-for-react-native/"&gt;it lets you use React&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;And that&amp;rsquo;s it.&lt;/p&gt;
-
-&lt;p&gt;So when people frame Airbnb&amp;rsquo;s decision as a &lt;em&gt;failure&lt;/em&gt; of React Native, I wonder about how much they really understand about what React Native is &lt;em&gt;for&lt;/em&gt;. If you have an expectation that a technology can do something that it&amp;rsquo;s not designed for, and then you&amp;rsquo;re disappointed when it fails to deliver, it&amp;rsquo;s not really the technology&amp;rsquo;s fault, is it? And further, if &amp;ldquo;only a small percentage&amp;rdquo; of your app even &lt;em&gt;uses&lt;/em&gt; that technology, then you don&amp;rsquo;t get as much of the benefits.&lt;/p&gt;
-
-&lt;p&gt;I&amp;rsquo;m trying not to frame this as an Artsy-vs-Airbnb discussion, but it&amp;rsquo;s hard to avoid the comparison because Artsy has had &lt;a href="http://artsy.github.io/series/react-native-at-artsy/"&gt;such overwhelming success&lt;/a&gt; with our React Native stack. I think a big part of that comes from how we structured our React Native code: all the JavaScript is in &lt;a href="https://github.com/artsy/emission"&gt;its own repository&lt;/a&gt; and it &lt;a href="http://artsy.github.io/blog/2018/04/17/making-a-components-pod/"&gt;gets shipped as a CocoaPod&lt;/a&gt;. The &lt;a href="https://github.com/artsy/eigen"&gt;native app&lt;/a&gt; just imports that pod and instantiates view controllers from it as if they were normal view controllers (because they &lt;em&gt;are&lt;/em&gt;, their views just happen to be React Native components). Our native codebase was using React Native for a year before I even wrote &lt;em&gt;any&lt;/em&gt; JavaScript, which minimized the overhead for me, a person who was pretty unhappy that JavaScript was in Artsy&amp;rsquo;s app at all.&lt;/p&gt;
-
-&lt;p&gt;And that kind of leads me back to culture. I think these blog posts do an excellent job of describing the &lt;em&gt;technical&lt;/em&gt; parts of their experience, but they lack a detailed description of non-technical barriers to adopting React Native.&lt;/p&gt;
-
-&lt;p&gt;What kind of barriers? Well, not to bring up the insularity of the iOS developer community again, but&amp;hellip; iOS developers kind of have a reputation within the broader software industry. Charlie Cheever, &lt;a href="https://blog.expo.io/should-we-use-react-native-1465d8b607ac"&gt;writing about this topic&lt;/a&gt; from Expo&amp;rsquo;s perspective, has this to say:&lt;/p&gt;
-
-
-
-&lt;blockquote&gt;
-&lt;p&gt;[&amp;hellip;] organizations where there are people who identify themselves strongly as iOS programmers and Android programmers have a really hard time being happy with React Native. &lt;strong&gt;iOS programmers in particular are very unhappy&lt;/strong&gt; with it and generally &lt;strong&gt;regard JS as an infestation&lt;/strong&gt; of the company’s codebase, while Android programmers have more mixed feelings.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-
-
-&lt;p&gt;(Emphasis added.)&lt;/p&gt;
-
-&lt;p&gt;When I see a majority of a team describe their experience as &amp;ldquo;amazing&amp;rdquo;, and a very small (but very vocal, I&amp;rsquo;m sure) minority of the team describe it as &amp;ldquo;strongly negative&amp;rdquo;, it really makes me wonder about the internal discussions about React Native at Airbnb.&lt;/p&gt;
-
-&lt;p&gt;And I get it, I really do. &lt;em&gt;I&lt;/em&gt; thought JavaScript was an infestation, too. It &lt;a href="https://ashfurrow.com/blog/swift-vs-react-native-feels/"&gt;took a long time for me to get over it&lt;/a&gt;. I mean, if you&amp;rsquo;ve been hired to write Swift/Objective-C and all of a sudden your team asks you to use JavaScript instead, it&amp;rsquo;s natural to feel frustrated, or even angry. But you know what else? Engineers don&amp;rsquo;t just write code, they &lt;em&gt;solve problems&lt;/em&gt;. Of course engineers are going to have feelings about the tools their team use, and I think a future blog post should cover how Artsy worked to mitigate the cultural tensions between native iOS developers and our React Native choice. But I wish we&amp;rsquo;d keep our feelings in check a little bit more.&lt;/p&gt;
-
-&lt;p&gt;Airbnb&amp;rsquo;s experience has been compared, &lt;a href="https://twitter.com/spikebrehm/status/1010279535319879680"&gt;appropriately&lt;/a&gt;, to a rejected organ transplant. If your company&amp;rsquo;s culture is really, really into iOS native development, then the organ will be rejected.&lt;/p&gt;
-
-&lt;p&gt;The reasons that Airbnb chose to move away from React Native are cultural as much as they are technical, and while I understand why they didn&amp;rsquo;t publicize these tensions, it gives the impression that Airbnb&amp;rsquo;s decision was based entirely in technical merit. And that&amp;rsquo;s just not the case.&lt;/p&gt;
 </content>
   </entry>
 </feed>

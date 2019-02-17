@@ -3808,6 +3808,15 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>https://ashfurrow.com/blog/senior-engineering-and-building-a-better-world/</loc>
+    <lastmod>2019-02-17T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <image:image>
+      <image:loc>https://ashfurrow.com/img/blog/senior-engineering-and-building-a-better-world/background.jpg</image:loc>
+    </image:image>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://ashfurrow.com/blog/classic-tradeoff-of-space-vs-speed-vs-stupidity/</loc>
     <lastmod>2019-02-17T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>

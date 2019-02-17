@@ -4,28 +4,28 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
 <meta content="IE=edge" http-equiv="X-UA-Compatible">
-<title>Building Static Sites with Middleman - Ash Furrow</title>
+<title>Senior Engineering and Building a Better World - Ash Furrow</title>
 <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="//feed.ashfurrow.com/feed.xml">
 <link rel="alternate" type="application/rss+xml" title="RSS Feed" href="//feed.ashfurrow.com/feed.rss.xml">
 <meta content="width=device-width initial-scale=1 viewport-fit=cover" name="viewport">
-<link href="https://ashfurrow.com/blog/building-static-sites-with-middleman/" rel="canonical">
+<link href="https://ashfurrow.com/blog/senior-engineering-and-building-a-better-world/" rel="canonical">
 <meta content="Ash Furrow" itemprop="name">
-<meta content="https://ashfurrow.com/blog/building-static-sites-with-middleman/" itemprop="url">
-<meta content="I recently launched this Peer Lab website to list the peer labs around the world and to provide instructions on starting one. It’s a small site with no need for a backend, so I decided to host it as static HTML. However, it was important that adding new labs would be easy for outside contributors. Since I had used the tool before to build a few static websites – including this blog – I turned to Middleman. Let’s explore the exact process I went through. I’m going to provide a series of high-level steps and link to actual code when I can, so you can replicate this for whatever site you need to build. However, every website is different, so “some assembly required” 😉" itemprop="about">
-<meta content="I recently launched this Peer Lab website to list the peer labs around the world and to provide instructions on starting one. It’s a small site with no need for a backend, so I decided to host it as static HTML. However, it was important that adding new labs would be easy for outside contributors. Since I had used the tool before to build a few static websites – including this blog – I turned to Middleman. Let’s explore the exact process I went through. I’m going to provide a series of high-level steps and link to actual code when I can, so you can replicate this for whatever site you need to build. However, every website is different, so “some assembly required” 😉" itemprop="description">
+<meta content="https://ashfurrow.com/blog/senior-engineering-and-building-a-better-world/" itemprop="url">
+<meta content="I wrote this blog post in response to this tweet on what it means to be a senior engineer. I think I muddled the point of my post somewhat by trying to express two ideas: an ongoing personal search to figure out how to be the best senior engineer I can be, and a very subtle point about the role of a senior engineer. Let’s explore that latter point in a little more depth." itemprop="about">
+<meta content="I wrote this blog post in response to this tweet on what it means to be a senior engineer. I think I muddled the point of my post somewhat by trying to express two ideas: an ongoing personal search to figure out how to be the best senior engineer I can be, and a very subtle point about the role of a senior engineer. Let’s explore that latter point in a little more depth." itemprop="description">
 <meta content="https://ashfurrow.com/img/siteimage_dark.png" itemprop="thumbnailUrl">
 <meta content="Ash Furrow" property="og:site_name">
-<meta content="Building Static Sites with Middleman" property="og:title">
-<meta content="https://ashfurrow.com/blog/building-static-sites-with-middleman/" property="og:url">
+<meta content="Senior Engineering and Building a Better World" property="og:title">
+<meta content="https://ashfurrow.com/blog/senior-engineering-and-building-a-better-world/" property="og:url">
 <meta content="website" property="og:type">
-<meta content="I recently launched this Peer Lab website to list the peer labs around the world and to provide instructions on starting one. It’s a small site with no need for a backend, so I decided to host it as static HTML. However, it was important that adding new labs would be easy for outside contributors. Since I had used the tool before to build a few static websites – including this blog – I turned to Middleman. Let’s explore the exact process I went through. I’m going to provide a series of high-level steps and link to actual code when I can, so you can replicate this for whatever site you need to build. However, every website is different, so “some assembly required” 😉" property="og:description">
-<meta content="https://ashfurrow.com/img/blog/building-static-sites-with-middleman/imessage.png" property="og:image">
+<meta content="I wrote this blog post in response to this tweet on what it means to be a senior engineer. I think I muddled the point of my post somewhat by trying to express two ideas: an ongoing personal search to figure out how to be the best senior engineer I can be, and a very subtle point about the role of a senior engineer. Let’s explore that latter point in a little more depth." property="og:description">
+<meta content="https://ashfurrow.com/img/blog/senior-engineering-and-building-a-better-world/background.jpg" property="og:image">
 <meta content="summary" name="twitter:card">
 <meta content="@ashfurrow" name="twitter:site">
 <meta content="@ashfurrow" name="twitter:creator">
-<meta content="Building Static Sites with Middleman" name="twitter:title">
-<meta content="I recently launched this Peer Lab website to list the peer labs around the world and to provide instructions on starting one. It’s a small site with no need for a backend, so I decided to host it as static HTML. However, it was important that adding new labs would be easy for outside contributors. Since I had used the tool before to build a few static websites – including this blog – I turned to Middleman. Let’s explore the exact process I went through. I’m going to provide a series of high-level steps and link to actual code when I can, so you can replicate this for whatever site you need to build. However, every website is different, so “some assembly required” 😉" name="twitter:description">
-<meta content="https://ashfurrow.com/img/blog/building-static-sites-with-middleman/imessage.png" name="twitter:image">
+<meta content="Senior Engineering and Building a Better World" name="twitter:title">
+<meta content="I wrote this blog post in response to this tweet on what it means to be a senior engineer. I think I muddled the point of my post somewhat by trying to express two ideas: an ongoing personal search to figure out how to be the best senior engineer I can be, and a very subtle point about the role of a senior engineer. Let’s explore that latter point in a little more depth." name="twitter:description">
+<meta content="https://ashfurrow.com/img/blog/senior-engineering-and-building-a-better-world/background.jpg" name="twitter:image">
 <link href="https://ashfurrow.com/img/siteimage_dark.png" rel="image_src">
 <meta content="https://ashfurrow.com/img/siteimage_dark.png" itemprop="image">
 <link href="/favicon.ico" rel="shortcut icon" type="image/x-icon">
@@ -54,10 +54,10 @@
   {"@context":"http://schema.org","@type":"WebSite","url":"https://ashfurrow.com","potentialAction":{"@type":"SearchAction","target":"https://ashfurrow.com/search?q={search_term_string}","query-input":"required name=search_term_string"}}
 </script>
 <script type="application/ld+json">
-  {"@context":"http://schema.org","@type":"NewsArticle","image":["https://ashfurrow.com/img/blog/building-static-sites-with-middleman/imessage.png","https://ashfurrow.com/img/blog/building-static-sites-with-middleman/background.jpg"],"author":"Ash Furrow","datePublished":"2017-01-09 19:58:57 UTC","headLine":"Building Static Sites with Middleman","mainEntityOfPage":{"@type":"WebPage","@id":"https://ashfurrow.com/blog/building-static-sites-with-middleman/"},"publisher":{"@type":"Organization","name":"Ash Furrow","logo":{"@type":"ImageObject","url":"https://static.ashfurrow.com/ashfurrow_thumbsup_square.jpeg"}}}
+  {"@context":"http://schema.org","@type":"NewsArticle","image":["https://ashfurrow.com/img/blog/senior-engineering-and-building-a-better-world/background.jpg"],"author":"Ash Furrow","datePublished":"2019-02-17 01:00:00 UTC","headLine":"Senior Engineering and Building a Better World","mainEntityOfPage":{"@type":"WebPage","@id":"https://ashfurrow.com/blog/senior-engineering-and-building-a-better-world/"},"publisher":{"@type":"Organization","name":"Ash Furrow","logo":{"@type":"ImageObject","url":"https://static.ashfurrow.com/ashfurrow_thumbsup_square.jpeg"}}}
 </script>
 <script type="application/ld+json">
-  {"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://ashfurrow.com","name":"Ash Furrow","image":"https://static.ashfurrow.com/ashfurrow_thumbsup_square.jpeg"}},{"@type":"ListItem","position":2,"item":{"@id":"https://ashfurrow.com/blog","name":"Blog","image":"https://ashfurrow.com/img/siteimage_dark.png"}},{"@type":"ListItem","position":3,"item":{"@id":"https://ashfurrow.com/blog/building-static-sites-with-middleman/","name":"Building Static Sites with Middleman","image":"https://ashfurrow.com/img/blog/building-static-sites-with-middleman/imessage.png"}}]}
+  {"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://ashfurrow.com","name":"Ash Furrow","image":"https://static.ashfurrow.com/ashfurrow_thumbsup_square.jpeg"}},{"@type":"ListItem","position":2,"item":{"@id":"https://ashfurrow.com/blog","name":"Blog","image":"https://ashfurrow.com/img/siteimage_dark.png"}},{"@type":"ListItem","position":3,"item":{"@id":"https://ashfurrow.com/blog/senior-engineering-and-building-a-better-world/","name":"Senior Engineering and Building a Better World","image":"https://ashfurrow.com/img/blog/senior-engineering-and-building-a-better-world/background.jpg"}}]}
 </script><style type="text/css">html {
   font-family: sans-serif;
   -webkit-text-size-adjust: 100%;
@@ -920,139 +920,56 @@ loadCSS('/css/all.css');</script><noscript><link href="/css/all.css" rel="styles
 <a href="//feed.ashfurrow.com/feed.xml" class="text-link">Blog Feed</a><a href="//feed.ashfurrow.com/feed.xml" class="icon-link"><i class="fa fa-rss-square"></i></a>
 </li>
 </ul></div>
-</div></nav><header class="intro-header" style="background-image: url('https://ashfurrow.com/img/blog/building-static-sites-with-middleman/background.jpg');"><div class="header-dimmer"></div>
+</div></nav><header class="intro-header" style="background-image: url('/img/blog/senior-engineering-and-building-a-better-world/background.jpg');"><div class="header-dimmer"></div>
 <div class="container"><div class="row"><div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1"><div class="post-heading">
-<h1>Building Static Sites with Middleman</h1>
+<h1>Senior Engineering and Building a Better World</h1>
 <hr class="small">
-<span class="subheading">January  9, 2017</span>
+<span class="subheading">February 17, 2019</span>
 </div></div></div></div>
-<div class="header_image_link_container"><a href="https://twitter.com/CloudyConway/status/817193041161232385"><i class="fa fa-image"></i></a></div></header><div class="container">
+<div class="header_image_link_container"><a href="https://twitter.com/CloudyConway/status/1096785169569251328"><i class="fa fa-image"></i></a></div></header><div class="container">
 <article><div class="row"><div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-<p>I recently launched this <a href="http://peerlab.community">Peer Lab website</a> to list the peer labs around the world and to provide instructions on starting one. It’s a small site with no need for a backend, so I decided to host it as static HTML. However, it was important that adding new labs would be easy for outside contributors. Since I had used the tool before to build a few static websites – including this blog – I turned to <a href="https://middlemanapp.com">Middleman</a>.</p>
+<p>I wrote <a href="/blog/what-is-a-senior-engineer/">this blog post</a> in response to <a href="https://twitter.com/gjtorikian/status/1091465574998249472">this tweet</a> on what it means to be a senior engineer.</p>
 
-<p>Let’s explore the exact process I went through. I’m going to provide a series of high-level steps and link to actual code when I can, so you can replicate this for whatever site you need to build. However, every website is different, so “some assembly required” 😉</p>
+<p>I think I muddled the point of my post somewhat by trying to express two ideas: an ongoing personal search to figure out how to be the best senior engineer <em>I</em> can be, and a very subtle point about the role of a senior engineer. Let’s explore that <strong>latter</strong> point in a little more depth.</p>
 
 <p></p>
 
-<p>The first thing you’ve got to do is create a new GitHub repository. We’ll use the repo to store the source code and also to host the site (each on their own branch, but more on that later). Install Middleman with <code>gem install middleman</code>, and then run <code>middleman init</code> to create the empty scaffold of your site. You can now run <code>middleman</code> to start a server and browse the site locally. Nice! Time to commit your changes and push.</p>
+<p>To reiterate, I fully agree with everything in the initial tweet:</p>
 
-<p>Okay, so we’re running locally. Now we need to be able to deploy. I added the <code>middleman-gh-pages</code> gem to my Gemfile and ran <code>bundle install</code>, and followed <a href="https://github.com/edgecase/middleman-gh-pages#installation">their instructions</a> to create a new Rake task. Now deploying to GitHub Pages is as easy as typing <code>rake publish</code>. Try it out to make sure it works: it will build the site using Middleman and push a copy of the static HTML to the <code>gh-pages</code> branch of your repo. Nice! Commit your changes and push them.</p>
+<p></p>
+<blockquote class="twitter-tweet" data-lang="en">
+<p lang="en" dir="ltr">A Sr. Engineer’s responsibility isn’t to make puns, work on whatever they want, &amp; fly around the world giving talks.<br><br>MENTOR others to become better than you.<br>DENOUNCE toxic culture.<br>CRITICIZE decisions that hurt others.<br><br>Programming is EASY. <br><br>Being a decent human is still hard.</p>— Garen 🥀 Torikian (@gjtorikian) <a href="https://twitter.com/gjtorikian/status/1091465574998249472?ref_src=twsrc%5Etfw">February 1, 2019</a>
+</blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-<p>Optionally, follow the <a href="https://help.github.com/articles/using-a-custom-domain-with-github-pages/">GitHub Pages documentation</a> on using a custom domain name. Put the <code>CNAME</code> file in the <code>source</code> directory of your site’s repo.</p>
+<p>I’d like to take a moment to build upon what Garen Torikian says here, and what being senior engineer <em>is</em> – what “being a decent human being” actually <em>means</em>.</p>
 
-<p>Now that we have deploys working, it’s time to automate them. Set up a new CI project on Travis or Circle CI (I used Travis, but they’re both awesome choices). CI is going to need to be able to push to your GitHub repo, so you’ll need a GitHub personal access token with the necessary permissions, stored in a CI secure environment variable. Once you’ve done that, we need to tell <code>git</code> to use the token when pushing to GitHub. In your CI setup, add something like the following:</p>
+<p>I firmly believe that “denouncing toxic culture” and “criticizing decisions that hurt others” are <em>parts</em> of being a decent human being, and I would group them under the umbrella idea of “improving the world.” Expanding this idea a little further: if improving the world is what makes you a decent human being, then <em>building a better world</em> is what makes you a decent senior engineer. And critique alone is insufficient to build a better world.</p>
 
-        </div> <!-- col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 -->
-      </div> <!-- row -->
+<p>That last point is really subtle so I want to be clear: if you only frame your engineering practice in terms of critiquing what already exists, then you are limiting yourself to changing what already exists (instead of building new possibilities).</p>
 
-      <div class="row">
-        <div class="col-lg-10 col-lg-offset-1 col-md-12">
-          
-<div class="highlight"><pre class="highlight yaml"><code><span class="na">before_install</span><span class="pi">:</span>
-  <span class="pi">-</span> <span class="s">echo -e "machine github.com\n  login ci-user\n  password $GITHUB_API_KEY" &gt;&gt; ~/.netrc</span>
-  <span class="pi">-</span> <span class="s">chmod 600 ~/.netrc</span>
-  <span class="pi">-</span> <span class="s">git config --global user.email "ash@ashfurrow.com"</span>
-  <span class="pi">-</span> <span class="s">git config --global user.name "Ash Furrow (via Travis)"</span>
-</code></pre></div>
+<p>Let’s think about this in terms of code. If you’re working in a poorly-built codebase, then critiquing that codebases is going to be a necessary step to improving it. You should have a list of what’s wrong with the codebase before you start to improve it. However, this critique can only tell you what <em>should) be improved; it won’t tell you _how</em> to actually improve it. That’s going to take imagination and a belief that improving it is even possible. Prepared with your list of problems, your job as a senior engineer is to brainstorm and refine ideas to fix those problems (effectively, coordinating the efforts to fix intersecting problems). That second part is what I felt was missing from Torikian’s tweet.</p>
 
-        </div>
-      </div>
+<p>Part of building a better world is helping people to believe that a better world is even possible. Criticism of an existing bad world is <em>necessary</em>, but it’s not <em>sufficient</em> to inspire people.</p>
 
-      <div class="row">
-        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+<p>Balancing both critique (of what is) and movement (towards what could be) is necessary to build others up <em>and</em> to keep yourself motivated. This is what I meant by “critique is so exhausting” in the previous post. If all a senior engineer does is focus on what’s wrong, they will burn out. And I can’t be an effective senior engineer if I burn out.</p>
 
+<p>Unsurprisingly, I think John K Samson <a href="https://open.spotify.com/track/4REBFPIZGxcFeaPjTz5P24?si=tBQ5gQjWT_qJ3WUB7nOxAA">puts this best</a>:</p>
 
-<p>Storing the access token in <code>.netrc</code> provides the login info for when <code>git</code> tries to push to GitHub, via the <code>middleman-gh-pages</code> gem. Nice. </p>
+<blockquote>
+<p>I swear I way more than half believe it when I say <br>
+that somewhere love and justice shine. <br>
+Cynicism falls asleep. <br>
+Tyranny talks to itself. <br>
+Sappy slogans all come true. <br>
+We forget to feed our fear. <br></p>
+</blockquote>
 
-<p>Your CI needs some sort of script to test that the site generated successfully. I use <code>bundle exec middleman build --build-dir=test</code> to generate the site in a <code>test</code> directory. I want the testing and the deploying to be separate, but this means that we’re actually building the site twice. It’s a performance hit, but not a huge deal unless your site is huge.</p>
-
-<p>Ok, so in your CI config, after a successful build, we’ll want to add the following line: <code>bundle exec rake travis ALLOW_DIRTY=true</code>. This executes the <code>travis</code> Rake task with <code>ALLOW_DIRTY</code>, needed for the GitHub Pages deploy gem. Let’s create that Rake task to <em>only</em> deploy on pushes to master. Here’s what it looks like for Travis:</p>
-
-        </div> <!-- col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 -->
-      </div> <!-- row -->
-
-      <div class="row">
-        <div class="col-lg-10 col-lg-offset-1 col-md-12">
-          
-<div class="highlight"><pre class="highlight ruby"><code><span class="n">task</span> <span class="ss">:travis</span> <span class="k">do</span>
-  <span class="n">branch</span> <span class="o">=</span> <span class="no">ENV</span><span class="p">[</span><span class="s1">'TRAVIS_BRANCH'</span><span class="p">]</span>
-  <span class="n">pull_request</span> <span class="o">=</span> <span class="no">ENV</span><span class="p">[</span><span class="s1">'TRAVIS_PULL_REQUEST'</span><span class="p">]</span>
-
-  <span class="nb">abort</span> <span class="s1">'Must be run on Travis'</span> <span class="k">unless</span> <span class="n">branch</span>
-
-  <span class="k">if</span> <span class="n">pull_request</span> <span class="o">!=</span> <span class="s1">'false'</span>
-    <span class="nb">puts</span> <span class="s1">'Skipping deploy for pull request; can only be deployed from master branch.'</span>
-    <span class="nb">exit</span> <span class="mi">0</span>
-  <span class="k">end</span>
-
-  <span class="k">if</span> <span class="n">branch</span> <span class="o">!=</span> <span class="s1">'master'</span>
-    <span class="nb">puts</span> <span class="s2">"Skipping deploy for </span><span class="si">#{</span> <span class="n">branch</span> <span class="si">}</span><span class="s2">; can only be deployed from master branch."</span>
-    <span class="nb">exit</span> <span class="mi">0</span>
-  <span class="k">end</span>
-
-  <span class="no">Rake</span><span class="o">::</span><span class="no">Task</span><span class="p">[</span><span class="s1">'publish'</span><span class="p">].</span><span class="nf">invoke</span>
-<span class="k">end</span>
-</code></pre></div>
-
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-
-
-<p>This script will look different for Circle, check out <a href="https://circleci.com/docs/environment-variables/">their documentation</a> for more details. Commit your changes and push them to GitHub. Watch your CI and – if everything goes right – your site should be deployed automatically, within minutes. Awesome!</p>
-
-<p>Now that the deploy process is automated, we can really quickly iterate on the site’s content and design. Oh hey, design, that’s a great idea! Time to replace the Middleman scaffold. </p>
-
-<p>Head over to <a href="https://startbootstrap.com">Start Bootstrap</a> and grab one of their templates. After you’ve picked one, give it attribution in your site’s Readme. Importing the template itself is kind of tricky, as it’s different for each template. You’ll want to start by moving the templates’ JavaScript files into the <code>source/javascripts</code> directory of your Middleman site, and do the same for any images and stylesheets. Now comes the really tricky part.</p>
-
-<p>The template files are plain HTML, but Middleman uses ERB to construct the pages. You can use Slim or HAML or whatever you like, but I stuck with ERB for this project. You’re going to have to migrate the HTML over into the ERB files manually.</p>
-
-<p>Each page is wrapped using <code>layout.erb</code>. You’ll want to move the parts of the template that apply to every page (like the like HTML <code>&lt;head&gt;</code> section, navigation, and footer) into the <code>layout.erb</code> file. Move the landing page-specific content into <code>index.html.erb</code>. This involves a lot of trial-and-error, just keep at it until it looks right. If you get stuck with a weird error, Google it and I’m sure you’ll find someone else with the same problem (and you can benefit from their solution).</p>
-
-<p>Writing your content and getting it to display correctly is beyond the scope of this blog post, and it’s going to depend a lot on what your site is about. Remember to make frequent, small changes, and that deploys are automated when you push to GitHub.</p>
-
-<p>The Peer Lab site has a list of peer labs around the world, and this list is generated from a <a href="https://github.com/ashfurrow/peerlab.community/blob/5792eebad29156ea56f60e7304fd29dba3dbe55a/data/events.yml">yaml file</a>. If you want to do something similar, create a new <code>data</code> directory in the root of your repo and, within it, create a new <code>.yml</code> file. You’ll be able to access the contents of this file <em>as</em> Ruby objects. There’s more info <a href="https://middlemanapp.com/advanced/data_files/#toc">in the Middleman docs</a>, and you can check out my implementation <a href="https://github.com/ashfurrow/peerlab.community/blob/5792eebad29156ea56f60e7304fd29dba3dbe55a/source/find.html.erb#L20-L56">here</a>. I also added <a href="https://github.com/ashfurrow/peerlab.community#adding-your-peer-lab">documentation</a> about the format of the yaml file to my Readme, you should consider doing it too.</p>
-
-<p>Okay, almost done! The final thing we need to do is think about SEO. Yes, SEO. When someone shares your site on Facebook or Twitter, or sends it as an iMessage, you want it to expand and have a summary card instead of just being an ordinary URL. </p>
-
-<p><img src="/img/blog/building-static-sites-with-middleman/imessage.png" alt="iMessage expansion"></p>
-
-<p>There are three groups of <code>&lt;meta&gt;</code> tags to add to your <code>&lt;head&gt;</code>: ordinary tags, Twitter Card tags, and Facebook Open Graph tags. The content of these tags is going to depend on your individual site, but for reference here’s the <a href="https://dev.twitter.com/cards/overview">Twitter Cards documentation</a>, the <a href="https://developers.facebook.com/docs/sharing/opengraph">Facebook Open Graph documentation</a>, and <a href="https://github.com/ashfurrow/peerlab.community/blob/5792eebad29156ea56f60e7304fd29dba3dbe55a/source/layouts/layout.erb#L8-L34">my implementation</a> for the Peer Lab site. Use the <a href="https://developers.facebook.com/tools/debug/">Open Graph Debugger</a> to preview what your site looks like when people share it. Nice.</p>
-
+<p>So yes. Absolutely it is a senior engineer’s job to denounce toxicity and criticize cruelty, but it’s <em>also</em> a senior engineer’s job to build up an empowering, nourishing culture. It’s their job to actually believe that things can get better, and to make that happen.</p>
 <hr>
-
-<p>So that’s a rundown on how to quickly create a static website using Middleman. I’ve done this a few times and every time I do, I need to remember all the steps. Now, at the very least, I’ve got documentation 😅</p>
-
-<p>The peer lab site is <a href="https://github.com/ashfurrow/peerlab.community">open source</a>, as is <a href="https://github.com/ashfurrow/blog">this blog</a>, and both are built with Middleman. My blog is significantly more complicated, though. I’m happy to answer questions about either, just open a GitHub issue and I’ll answer there. Good luck!</p>
-
-<p><strong>Update</strong>: I’ve since given a lunch &amp; learn at work on this topic, you can check it out here:</p>
-
-        </div> <!-- col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 -->
-      </div> <!-- row -->
-
-      <div class="row">
-        <div class="col-lg-10 col-lg-offset-1 col-md-12">
-          
-
-<div class='embed-responsive embed-responsive-16by9'><iframe src='//www.youtube.com/embed/yoGielteT64' frameborder='0' allowfullscreen></iframe></div>
-
-
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-
-<hr>
-<span class="meta"><a href="https://github.com/ashfurrow/blog/blob/master/source/blog/2017-01-09-building-static-sites-with-middleman.html.markdown">Please submit typo corrections on GitHub</a></span>
+<span class="meta"><a href="https://github.com/ashfurrow/blog/blob/master/source/blog/2019-02-17-senior-engineering-and-building-a-better-world.html.markdown">Please submit typo corrections on GitHub</a></span>
 </div></div></article><div class="row"><div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
 <hr>
-<ul class="pager article_pager">
-<li class="next"><a href="/blog/naming-things-in-swift/"><div>Naming Things in Swift</div></a></li>
-<li class="previous"><a href="/blog/craft-and-tooling/"><div>Craft and Tooling</div></a></li>
-</ul>
+<ul class="pager article_pager"><li class="previous"><a href="/blog/what-is-a-senior-engineer/"><div>What is a Senior Engineer, Even?</div></a></li></ul>
 </div></div>
 </div>
 <hr id="page_footer">
